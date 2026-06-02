@@ -101,6 +101,21 @@ function initFaqAccessibility() {
   })
 }
 
+function initDeveloperCredit() {
+  const footer = document.getElementById('global-footer')
+  if (!footer || footer.querySelector('[data-developer-credit]')) return
+
+  const wrap = document.createElement('div')
+  wrap.setAttribute('data-developer-credit', '')
+  wrap.className = 'border-t border-[#9B7EBD]/20 mt-6 pt-4 text-center'
+  wrap.innerHTML =
+    '<p class="text-[#B8A4C9]/70 text-xs">' +
+    'Desarrollado por ' +
+    '<a href="https://adrianmarquez.es" class="text-[#B8A4C9] hover:text-[#D4AF37] transition-colors underline-offset-2 hover:underline" rel="noopener noreferrer">Adrián Márquez</a>' +
+    '</p>'
+  footer.querySelector('.max-w-7xl')?.appendChild(wrap)
+}
+
 function initSocialAriaLabels() {
   const labels = [
     ['instagram.com', 'Instagram de Luisa Corral'],
@@ -125,6 +140,7 @@ function run() {
   initCookieBannerOnce()
   initFaqAccessibility()
   initSocialAriaLabels()
+  initDeveloperCredit()
 }
 
 if (document.readyState === 'loading') {
