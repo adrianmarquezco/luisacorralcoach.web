@@ -1,0 +1,1052 @@
+<!DOCTYPE html><html lang="es"><head>
+    <script src="/public/main.umd.js" defer=""></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;family=Nunito+Sans:wght@300;400;500;600;700&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </noscript>
+    <style>*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*,::after,::before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.pointer-events-none{pointer-events:none}.visible{visibility:visible}.invisible{visibility:hidden}.static{position:static}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.-bottom-4{bottom:-1rem}.-bottom-6{bottom:-1.5rem}.-left-4{left:-1rem}.-left-6{left:-1.5rem}.-right-4{right:-1rem}.-top-4{top:-1rem}.bottom-0{bottom:0}.bottom-20{bottom:5rem}.left-0{left:0}.left-10{left:2.5rem}.left-\[60\%\]{left:60%}.right-0{right:0}.right-10{right:2.5rem}.right-6{right:1.5rem}.right-full{right:100%}.top-0{top:0}.top-10{top:2.5rem}.top-20{top:5rem}.-z-10{z-index:-10}.z-10{z-index:10}.z-40{z-index:40}.z-50{z-index:50}.z-\[2147483647\]{z-index:2147483647}.mx-auto{margin-left:auto;margin-right:auto}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:.5rem}.ml-auto{margin-left:auto}.mr-1{margin-right:.25rem}.mr-2{margin-right:.5rem}.mr-3{margin-right:.75rem}.mt-0{margin-top:0}.mt-1{margin-top:.25rem}.mt-10{margin-top:2.5rem}.mt-12{margin-top:3rem}.mt-16{margin-top:4rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-0{height:0}.h-0\.5{height:.125rem}.h-10{height:2.5rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-20{height:5rem}.h-32{height:8rem}.h-48{height:12rem}.h-5{height:1.25rem}.h-\[350px\]{height:350px}.h-\[500px\]{height:500px}.h-\[600px\]{height:600px}.h-full{height:100%}.min-h-\[90vh\]{min-height:90vh}.w-10{width:2.5rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-20{width:5rem}.w-32{width:8rem}.w-48{width:12rem}.w-5{width:1.25rem}.w-56{width:14rem}.w-\[80\%\]{width:80%}.w-auto{width:auto}.w-full{width:100%}.max-w-3xl{max-width:48rem}.max-w-7xl{max-width:80rem}.max-w-none{max-width:none}.max-w-xl{max-width:36rem}.max-w-xs{max-width:20rem}.flex-shrink-0{flex-shrink:0}.-translate-y-2{--tw-translate-y:-0.5rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-x-0{--tw-translate-x:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-0{--tw-scale-x:0;--tw-scale-y:0;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.resize-none{resize:none}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-12{gap:3rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-8>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem * var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem * var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-xl{border-radius:.75rem}.rounded-b-xl{border-bottom-right-radius:.75rem;border-bottom-left-radius:.75rem}.rounded-t-xl{border-top-left-radius:.75rem;border-top-right-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-l-2{border-left-width:2px}.border-t{border-top-width:1px}.border-\[\#9B7EBD\]{--tw-border-opacity:1;border-color:rgb(155 126 189 / var(--tw-border-opacity))}.border-\[\#9B7EBD\]\/30{border-color:rgb(155 126 189 / .3)}.border-\[\#D4AF37\]{--tw-border-opacity:1;border-color:rgb(212 175 55 / var(--tw-border-opacity))}.border-\[\#E5D9F2\]{--tw-border-opacity:1;border-color:rgb(229 217 242 / var(--tw-border-opacity))}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity))}.bg-\[\#25D366\]{--tw-bg-opacity:1;background-color:rgb(37 211 102 / var(--tw-bg-opacity))}.bg-\[\#2D1B3D\]{--tw-bg-opacity:1;background-color:rgb(45 27 61 / var(--tw-bg-opacity))}.bg-\[\#4A3565\]\/50{background-color:rgb(74 53 101 / .5)}.bg-\[\#7A5FA0\]{--tw-bg-opacity:1;background-color:rgb(122 95 160 / var(--tw-bg-opacity))}.bg-\[\#9B7EBD\]{--tw-bg-opacity:1;background-color:rgb(155 126 189 / var(--tw-bg-opacity))}.bg-\[\#9B7EBD\]\/30{background-color:rgb(155 126 189 / .3)}.bg-\[\#D4AF37\]{--tw-bg-opacity:1;background-color:rgb(212 175 55 / var(--tw-bg-opacity))}.bg-\[\#D4AF37\]\/20{background-color:rgb(212 175 55 / .2)}.bg-\[\#E8D7F1\]{--tw-bg-opacity:1;background-color:rgb(232 215 241 / var(--tw-bg-opacity))}.bg-\[\#FAF7FC\]{--tw-bg-opacity:1;background-color:rgb(250 247 252 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top,var(--tw-gradient-stops))}.from-\[\#2D1B3D\]\/30{--tw-gradient-from:rgb(45 27 61 / 0.3) var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(45 27 61 / 0) var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#3D2A52\]{--tw-gradient-from:#3D2A52 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(61 42 82 / 0) var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#9B7EBD\]{--tw-gradient-from:#9B7EBD var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(155 126 189 / 0) var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#D4AF37\]{--tw-gradient-from:#D4AF37 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(212 175 55 / 0) var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#F0EAF7\]{--tw-gradient-from:#F0EAF7 var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(240 234 247 / 0) var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#FAF7FC\]{--tw-gradient-from:#FAF7FC var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(250 247 252 / 0) var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-\[\#4A3565\]{--tw-gradient-via-position: ;--tw-gradient-to:rgb(74 53 101 / 0) var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from),#4A3565 var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-\[\#F0EAF7\]{--tw-gradient-via-position: ;--tw-gradient-to:rgb(240 234 247 / 0) var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from),#F0EAF7 var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-\[\#FAF7FC\]{--tw-gradient-via-position: ;--tw-gradient-to:rgb(250 247 252 / 0) var(--tw-gradient-to-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from),#FAF7FC var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-\[\#2D1B3D\]{--tw-gradient-to:#2D1B3D var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-\[\#7A5FA0\]{--tw-gradient-to:#7A5FA0 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-\[\#9B7EBD\]{--tw-gradient-to:#9B7EBD var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-\[\#B8962E\]{--tw-gradient-to:#B8962E var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-\[\#E8D7F1\]{--tw-gradient-to:#E8D7F1 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-\[\#F0EAF7\]{--tw-gradient-to:#F0EAF7 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position);--tw-gradient-to-position: }.object-cover{-o-object-fit:cover;object-fit:cover}.p-2{padding:.5rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pl-4{padding-left:1rem}.pt-8{padding-top:2rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-tight{line-height:1.25}.text-\[\#25D366\]{--tw-text-opacity:1;color:rgb(37 211 102 / var(--tw-text-opacity))}.text-\[\#2D1B3D\]{--tw-text-opacity:1;color:rgb(45 27 61 / var(--tw-text-opacity))}.text-\[\#6B5B7A\]{--tw-text-opacity:1;color:rgb(107 91 122 / var(--tw-text-opacity))}.text-\[\#7A5FA0\]{--tw-text-opacity:1;color:rgb(122 95 160 / var(--tw-text-opacity))}.text-\[\#9B7EBD\]{--tw-text-opacity:1;color:rgb(155 126 189 / var(--tw-text-opacity))}.text-\[\#B8A4C9\]{--tw-text-opacity:1;color:rgb(184 164 201 / var(--tw-text-opacity))}.text-\[\#D4AF37\]{--tw-text-opacity:1;color:rgb(212 175 55 / var(--tw-text-opacity))}.text-\[\#E8D7F1\]{--tw-text-opacity:1;color:rgb(232 215 241 / var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.underline{text-decoration-line:underline}.opacity-0{opacity:0}.opacity-10{opacity:.1}.opacity-100{opacity:1}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1),0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1),0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1),0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-\[\#9B7EBD\]\/20{--tw-ring-color:rgb(155 126 189 / 0.2)}.blur-3xl{--tw-blur:blur(64px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}.duration-200{transition-duration:.2s}.duration-300{transition-duration:.3s}.duration-500{transition-duration:.5s}.ease-in-out{transition-timing-function:cubic-bezier(0.4,0,0.2,1)}.hover\:-translate-y-0:hover{--tw-translate-y:-0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:-translate-y-0\.5:hover{--tw-translate-y:-0.125rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:-translate-y-2:hover{--tw-translate-y:-0.5rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-\[\#9B7EBD\]:hover{--tw-border-opacity:1;border-color:rgb(155 126 189 / var(--tw-border-opacity))}.hover\:bg-\[\#20BD5A\]:hover{--tw-bg-opacity:1;background-color:rgb(32 189 90 / var(--tw-bg-opacity))}.hover\:bg-\[\#7A5FA0\]:hover{--tw-bg-opacity:1;background-color:rgb(122 95 160 / var(--tw-bg-opacity))}.hover\:bg-\[\#B8962E\]:hover{--tw-bg-opacity:1;background-color:rgb(184 150 46 / var(--tw-bg-opacity))}.hover\:bg-\[\#F5F0FA\]:hover{--tw-bg-opacity:1;background-color:rgb(245 240 250 / var(--tw-bg-opacity))}.hover\:bg-\[\#FAF7FC\]:hover{--tw-bg-opacity:1;background-color:rgb(250 247 252 / var(--tw-bg-opacity))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.hover\:text-\[\#2D1B3D\]:hover{--tw-text-opacity:1;color:rgb(45 27 61 / var(--tw-text-opacity))}.hover\:text-\[\#7A5FA0\]:hover{--tw-text-opacity:1;color:rgb(122 95 160 / var(--tw-text-opacity))}.hover\:text-\[\#9B7EBD\]:hover{--tw-text-opacity:1;color:rgb(155 126 189 / var(--tw-text-opacity))}.hover\:text-\[\#D4AF37\]:hover{--tw-text-opacity:1;color:rgb(212 175 55 / var(--tw-text-opacity))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:shadow-2xl:hover{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1),0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1),0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.focus\:border-\[\#9B7EBD\]:focus{--tw-border-opacity:1;border-color:rgb(155 126 189 / var(--tw-border-opacity))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-\[\#9B7EBD\]:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(155 126 189 / var(--tw-ring-opacity))}.focus\:ring-\[\#9B7EBD\]\/20:focus{--tw-ring-color:rgb(155 126 189 / 0.2)}.group:hover .group-hover\:visible{visibility:visible}.group:hover .group-hover\:translate-x-1{--tw-translate-x:0.25rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:translate-x-2{--tw-translate-x:0.5rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width:640px){.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:p-3{padding:.75rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-sm{font-size:.875rem;line-height:1.25rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width:768px){.md\:bottom-6{bottom:1.5rem}.md\:block{display:block}.md\:h-16{height:4rem}.md\:h-24{height:6rem}.md\:h-32{height:8rem}.md\:h-40{height:10rem}.md\:w-16{width:4rem}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:p-10{padding:2.5rem}.md\:p-12{padding:3rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width:1024px){.lg\:col-span-1{grid-column:span 1/span 1}.lg\:mx-0{margin-left:0;margin-right:0}.lg\:block{display:block}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\:justify-start{justify-content:flex-start}.lg\:gap-12{gap:3rem}.lg\:gap-20{gap:5rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-left{text-align:left}.lg\:text-6xl{font-size:3.75rem;line-height:1}}.opacity-0{opacity:0}.opacity-5{opacity:.05}.opacity-10{opacity:.1}.opacity-15{opacity:.15}.opacity-20{opacity:.2}.opacity-25{opacity:.25}.opacity-30{opacity:.3}.opacity-35{opacity:.35}.opacity-40{opacity:.4}.opacity-45{opacity:.45}.opacity-50{opacity:.5}.opacity-55{opacity:.55}.opacity-60{opacity:.6}.opacity-65{opacity:.65}.opacity-70{opacity:.7}.opacity-75{opacity:.75}.opacity-80{opacity:.8}.opacity-85{opacity:.85}.opacity-90{opacity:.9}.opacity-95{opacity:.95}.opacity-100{opacity:1}</style>
+    <link rel="icon" type="image/png" href="/assets/uploads/b3f76780-ddae-46b6-b492-f8eaf4baab97/7cec306b-129e-4df9-bd7e-4bd3b2f7e77d.webp">
+<link rel="apple-touch-icon" type="image/png" href="/assets/uploads/b3f76780-ddae-46b6-b492-f8eaf4baab97/7cec306b-129e-4df9-bd7e-4bd3b2f7e77d.webp">
+
+<!-- Información estructurada para crawlers de IA -->
+<meta name="ai-description" content="Luisa Corral es coach holística certificada con más de 8 años de experiencia. Ofrece sesiones de Flores de Bach (sistema del Dr. Edward Bach), Coaching Angelical, Meditaciones Personalizadas y Reiki Delfín. Atiende presencialmente en Narón (A Coruña, Galicia) y online para toda España y Latinoamérica. Especializada en acompañar a mujeres en procesos de transformación personal, gestión emocional y crecimiento espiritual.">
+<meta name="author" content="Luisa Corral">
+<meta name="geo.region" content="ES-GA">
+<meta name="geo.placename" content="Narón, Galicia, España">
+<link rel="alternate" hreflang="es" href="/">
+<link rel="alternate" hreflang="es-419" href="/">
+<link rel="alternate" hreflang="x-default" href="/">
+    <style>:root { --accent-color: #D4AF37; --accent2-color: #E8D7F1; --accent3-color: #B8A4C9; --accent4-color: #F2E6D9; --primary-color: #9B7EBD; --dark-text-color: #2D1B3D; --gray-text-color: #6B5B7A; --button-padding-x: 32px; --button-padding-y: 14px; --font-family-body: Nunito Sans; --light-text-color: #FFFFFF; --dark-border-color: #7A5FA0; --light-border-color: #E5D9F2; --font-family-heading: Outfit; --button-rounded-radius: 28px; --dark-background-color: #3D2A52; --light-background-color: #FAF7FC; --medium-background-color: #F0EAF7; --primary-button-text-color: #FFFFFF; --secondary-button-bg-color: #F5F0FA; --secondary-button-text-color: #9B7EBD; --primary-button-hover-bg-color: #7A5FA0; --primary-button-hover-text-color: #FFFFFF; --secondary-button-hover-bg-color: #D4B5E8; --secondary-button-hover-text-color: #5A3D7A; }</style>
+    <title>Coach Holística Online | Flores de Bach, Reiki y Meditación — Luisa Corral</title>
+<meta name="description" content="Luisa Corral, coach holística en Narón, Galicia. Sesiones online de coaching holístico, Flores de Bach, meditaciones y Reiki Delfín para España y Latinoamérica.">
+<meta name="keywords" content="coach holística, coaching holístico, flores de bach, reiki delfín, meditaciones personalizadas, terapia holística, bienestar emocional, desarrollo personal">
+<meta name="language" content="es">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Luisa Corral">
+<link rel="canonical" href="/">
+<meta property="og:title" content="Coach Holística | Luisa Corral - Sesiones Online">
+<meta property="og:description" content="Coach holística y terapéutica. Sesiones online de coaching holístico, Flores de Bach, meditaciones personalizadas y reiki delfín. España y Latinoamérica.">
+<meta property="og:image" content="/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-f9775a9c-9e0c-4f03-95ec-7351e41d3000-public.webp">
+<link rel="preload" as="image" href="/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-f9775a9c-9e0c-4f03-95ec-7351e41d3000-public.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coach Holística | Luisa Corral">
+<meta name="twitter:description" content="Coach holística y terapéutica. Sesiones online de coaching holístico, Flores de Bach, meditaciones personalizadas y reiki delfín.">
+<meta name="twitter:image" content="/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-f9775a9c-9e0c-4f03-95ec-7351e41d3000-public.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "/#business",
+      "name": "Luisa Corral - Coach Holística",
+      "description": "Coach holística y terapéutica en Narón, Galicia. Servicios de Flores de Bach, Coaching Holístico, Meditaciones Personalizadas y Reiki Delfín. Sesiones presenciales en Narón y online para España y Latinoamérica.",
+      "url": "/",
+      "telephone": "+34616054001",
+      "email": "luisacorralcoach@gmail.com",
+      "image": "/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-f9775a9c-9e0c-4f03-95ec-7351e41d3000-public.webp",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Narón",
+        "addressRegion": "Galicia",
+        "addressCountry": "ES"
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "España" },
+        { "@type": "Country", "name": "México" },
+        { "@type": "Country", "name": "Argentina" },
+        { "@type": "Country", "name": "Colombia" }
+      ],
+      "serviceType": ["Flores de Bach", "Coaching Holístico", "Meditaciones Personalizadas", "Reiki Delfín", "Coaching Angelical"],
+      "priceRange": "€€",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+34616054001",
+        "contactType": "customer service",
+        "availableLanguage": "Spanish"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "/#person",
+      "name": "Luisa Corral",
+      "jobTitle": "Coach Holística y Terapéutica",
+      "description": "Coach holística con más de 8 años de experiencia. Especializada en Flores de Bach, Mindfulness, Coaching Angelical y Reiki Delfín. Acompaña a mujeres en procesos de transformación personal y gestión emocional.",
+      "url": "/sobre-mi",
+      "sameAs": [
+        "https://www.instagram.com/luisacorralcoach/",
+        "https://www.tiktok.com/@luisacorral_coach"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "url": "/",
+      "name": "Luisa Corral - Coach Holística",
+      "inLanguage": "es-ES",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "/blog?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "/#webpage",
+      "name": "Coach Holística Online | Flores de Bach, Reiki y Meditación",
+      "description": "Luisa Corral, coach holística certificada con más de 8 años de experiencia. Sesiones online de Flores de Bach, coaching holístico, meditaciones personalizadas y Reiki Delfín para España y Latinoamérica.",
+      "url": "/",
+      "inLanguage": "es-ES"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+    <link rel="modulepreload" href="/js/home/index.js">
+  </head>
+  <body style="font-family:var(--font-family-body);"><header id="global-header" class="code-section bg-[#FAF7FC] shadow-sm sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20 md:h-40">
+      <!-- Logo -->
+      <a href="/" class="flex-shrink-0 flex items-center justify-center h-full py-2">
+        <img src="/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-b366db84-bd47-474a-5c88-9bc6624d9b00.webp" alt="Luisa Corral - Coach Holística y Terapéutica en Narón, Galicia" data-logo="{&quot;id&quot;:&quot;logo&quot;,&quot;src&quot;:&quot;custom&quot;,&quot;type&quot;:&quot;logo&quot;}" class="h-16 md:h-32 w-auto max-w-none" data-media="{&quot;id&quot;:&quot;upload-luisa_corral_logo_HQ.png&quot;,&quot;src&quot;:&quot;upload&quot;,&quot;type&quot;:&quot;image&quot;}" oncontextmenu="return false;">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center space-x-8">
+        <a href="/sobre-mi" class="text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold transition-colors duration-300">Sobre Mí</a>
+        <!-- Servicios Dropdown -->
+        <div class="relative group">
+          <button class="text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold transition-colors duration-300 flex items-center gap-1 py-2">
+            Servicios
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+          <div class="absolute left-0 mt-0 w-56 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2 z-50 border border-[#E5D9F2]">
+            <a href="/flores-de-bach" class="flex items-center gap-3 px-4 py-3 text-[#2D1B3D] hover:bg-[#FAF7FC] hover:text-[#9B7EBD] transition-colors rounded-t-xl">
+              <i class="fa-solid fa-flower text-[#9B7EBD]"></i>
+              Flores de Bach
+            </a>
+            <a href="/coaching-holistico" class="flex items-center gap-3 px-4 py-3 text-[#2D1B3D] hover:bg-[#FAF7FC] hover:text-[#9B7EBD] transition-colors">
+              <i class="fa-solid fa-heart text-[#9B7EBD]"></i>
+              Coaching Holístico
+            </a>
+            <a href="/meditaciones-personalizadas" class="flex items-center gap-3 px-4 py-3 text-[#2D1B3D] hover:bg-[#FAF7FC] hover:text-[#9B7EBD] transition-colors">
+              <i class="fa-solid fa-spa text-[#9B7EBD]"></i>
+              Meditaciones Personalizadas
+            </a>
+            <a href="/coaching-angelical" class="flex items-center gap-3 px-4 py-3 text-[#2D1B3D] hover:bg-[#FAF7FC] hover:text-[#9B7EBD] transition-colors">
+              <i class="fa-solid fa-feather text-[#9B7EBD]"></i>
+              Coaching Angelical
+            </a>
+            <a href="/reiki-delfin" class="flex items-center gap-3 px-4 py-3 text-[#2D1B3D] hover:bg-[#FAF7FC] hover:text-[#9B7EBD] transition-colors rounded-b-xl">
+              <i class="fa-solid fa-water text-[#9B7EBD]"></i>
+              Reiki Delfín
+            </a>
+          </div>
+        </div>
+
+        <a href="/testimonios" class="text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold transition-colors duration-300">Testimonios</a>
+        <a href="/blog" class="text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold transition-colors duration-300">Blog</a>
+        <a href="/contacto" class="bg-[#9B7EBD] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#7A5FA0] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Agenda tu Sesión</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="lg:hidden p-2 text-[#2D1B3D]" data-landingsite-mobile-menu-toggle="">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Button - Always visible -->
+  <a href="https://wa.me/34616054001" target="_blank" rel="noopener noreferrer nofollow" class="fixed bottom-20 md:bottom-6 right-6 w-14 h-14 md:w-16 md:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-[#20BD5A] transition-all duration-300 z-[2147483647] group" style="z-index: 2147483647 !important; position: fixed !important;">
+    <i class="fa-brands fa-whatsapp text-white text-2xl md:text-3xl"></i>
+    <span class="absolute right-full mr-3 bg-[#2D1B3D] text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+      Escribir por WhatsApp
+    </span>
+  </a>
+
+  <!-- Mobile Navigation -->
+  <div class="lg:hidden hidden bg-[#FAF7FC] border-t border-[#E5D9F2]" data-landingsite-mobile-menu="">
+    <div class="px-4 py-4 space-y-3">
+      <a href="/sobre-mi" class="block text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold py-2">Sobre Mí</a>
+      <!-- Mobile Servicios Links -->
+      <div class="space-y-2">
+        <span class="block text-[#2D1B3D] font-semibold py-2">
+          <i class="fa-solid fa-spa mr-2 text-[#9B7EBD]"></i>Servicios
+        </span>
+        <div class="pl-4 border-l-2 border-[#E5D9F2] ml-2 space-y-2">
+          <a href="/flores-de-bach" class="flex items-center gap-2 text-[#6B5B7A] hover:text-[#9B7EBD] py-1">
+            <i class="fa-solid fa-flower text-sm"></i> Flores de Bach
+          </a>
+          <a href="/coaching-holistico" class="flex items-center gap-2 text-[#6B5B7A] hover:text-[#9B7EBD] py-1">
+            <i class="fa-solid fa-heart text-sm"></i> Coaching Holístico
+          </a>
+          <a href="/meditaciones-personalizadas" class="flex items-center gap-2 text-[#6B5B7A] hover:text-[#9B7EBD] py-1">
+            <i class="fa-solid fa-spa text-sm"></i> Meditaciones
+          </a>
+          <a href="/coaching-angelical" class="flex items-center gap-2 text-[#6B5B7A] hover:text-[#9B7EBD] py-1">
+            <i class="fa-solid fa-feather text-sm"></i> Coaching Angelical
+          </a>
+          <a href="/reiki-delfin" class="flex items-center gap-2 text-[#6B5B7A] hover:text-[#9B7EBD] py-1">
+            <i class="fa-solid fa-water text-sm"></i> Reiki Delfín
+          </a>
+        </div>
+      </div>
+
+      <a href="/testimonios" class="block text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold py-2">Testimonios</a>
+      <a href="/blog" class="block text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold py-2">Blog</a>
+      <a href="/contacto" class="block bg-[#9B7EBD] text-white px-6 py-3 rounded-full font-semibold text-center mt-4">Agenda tu Sesión</a>
+    </div>
+  </div>
+</header>
+<section class="code-section relative min-h-[90vh] flex items-center bg-gradient-to-br from-[#FAF7FC] via-[#F0EAF7] to-[#E8D7F1] overflow-hidden" id="skw44cd">
+  <!-- Sacred Geometry Background -->
+  <div class="absolute inset-0 opacity-10">
+    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <pattern id="sacred-geometry" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+        <circle cx="10" cy="10" r="8" fill="none" stroke="#9B7EBD" stroke-width="0.3"></circle>
+        <circle cx="10" cy="10" r="4" fill="none" stroke="#9B7EBD" stroke-width="0.2"></circle>
+        <line x1="10" y1="0" x2="10" y2="20" stroke="#9B7EBD" stroke-width="0.2"></line>
+        <line x1="0" y1="10" x2="20" y2="10" stroke="#9B7EBD" stroke-width="0.2"></line>
+      </pattern>
+      <rect x="0" y="0" width="100" height="100" fill="url(#sacred-geometry)"></rect>
+    </svg>
+  </div>
+
+  <!-- Decorative Elements -->
+  <div class="absolute top-20 left-10 w-32 h-32 bg-[#D4AF37] rounded-full opacity-10 blur-3xl"></div>
+  <div class="absolute bottom-20 right-10 w-48 h-48 bg-[#9B7EBD] rounded-full opacity-10 blur-3xl"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Text Content -->
+      <div class="text-center lg:text-left">
+        <span class="inline-block px-4 py-2 bg-[#E8D7F1] text-[#7A5FA0] rounded-full text-sm font-semibold mb-6">
+          ✨ Coach Holística en España
+        </span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2D1B3D] mb-6 leading-tight">
+          Coach Holística para
+          <span class="text-[#9B7EBD]">transformar tu vida</span>
+        </h1>
+        <p class="text-lg md:text-xl text-[#6B5B7A] mb-8 max-w-xl mx-auto lg:mx-0">
+          Coach holística y terapéutica. Sesiones de Flores de Bach, coaching
+          holístico, meditaciones personalizadas y reiki delfín. Presencial en
+          Narón (Galicia) y online para España y Latinoamérica.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a href="https://wa.me/34616054001" rel="noopener noreferrer nofollow" class="inline-flex items-center justify-center bg-[#9B7EBD] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#7A5FA0] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <i class="fa-brands fa-whatsapp mr-3 text-xl"></i>
+            Agenda tu sesión
+          </a>
+          <a href="/sobre-mi" class="inline-flex items-center justify-center bg-white text-[#9B7EBD] px-8 py-4 rounded-full font-semibold text-lg border-2 border-[#9B7EBD] hover:bg-[#F5F0FA] transition-all duration-300">
+            Conóceme
+          </a>
+        </div>
+        <!-- Trust Badges -->
+        <div class="mt-10 flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-[#6B5B7A]">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-star text-[#D4AF37]"></i>
+            <span>Más de 8 años de experiencia</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-globe text-[#9B7EBD]"></i>
+            <span>España y Latinoamérica</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="relative hidden lg:block">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+          <img src="/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-f9775a9c-9e0c-4f03-95ec-7351e41d3000.webp" alt="Coach holística guiando sesión de coaching holístico y sanación energética con cuencos tibetanos" data-media="{&quot;id&quot;:&quot;2213465749&quot;,&quot;src&quot;:&quot;iStock&quot;,&quot;type&quot;:&quot;image&quot;}" class="w-full h-[600px] object-cover" oncontextmenu="return false;">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#2D1B3D]/30 to-transparent"></div>
+        </div>
+        <!-- Floating Card -->
+        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-6 max-w-xs">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 bg-[#E8D7F1] rounded-full flex items-center justify-center">
+              <i class="fa-solid fa-heart text-[#9B7EBD]"></i>
+            </div>
+            <div>
+              <p class="font-bold text-[#2D1B3D]">100%</p>
+              <p class="text-xs text-[#6B5B7A]">Enfoque personalizado</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wave Divider -->
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg class="w-full h-16 md:h-24" viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path fill="#FFFFFF" d="M0,50 C360,100 1080,0 1440,50 L1440,100 L0,100 Z"></path>
+    </svg>
+  </div>
+</section>
+<section class="code-section py-20 bg-white" id="s3yd0r">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <!-- Image -->
+      <div class="relative">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+          <img src="/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-6fde892a-5b92-429a-33c0-0d0183399a00.webp" alt="Maestra de Reiki proporcionando sanación energética a su cliente" data-media="{&quot;id&quot;:&quot;2172741415&quot;,&quot;src&quot;:&quot;iStock&quot;,&quot;type&quot;:&quot;image&quot;}" class="w-full h-[500px] object-cover" loading="lazy" oncontextmenu="return false;">
+        </div>
+        <!-- Decorative Frame -->
+        <div class="absolute -top-4 -left-4 w-full h-full border-2 border-[#D4AF37] rounded-3xl -z-10"></div>
+        <!-- Experience Badge -->
+        <div class="absolute -bottom-4 -right-4 bg-[#9B7EBD] text-white rounded-2xl p-6 shadow-xl">
+          <p class="text-4xl font-bold">8+</p>
+          <p class="text-sm">años de<br>experiencia</p>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div>
+        <span class="inline-block px-4 py-2 bg-[#E8D7F1] text-[#7A5FA0] rounded-full text-sm font-semibold mb-4">
+          Sobre Mí
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-6">
+          Soy Luisa Corral,<br>
+          <span class="text-[#9B7EBD]">Coach Holística &amp; Terapéutica</span>
+        </h2>
+        <div class="space-y-4 text-[#6B5B7A] text-lg">
+          <p>
+            Mi misión es acompañarte en tu viaje de autodescubrimiento y
+            transformación personal. Con más de 8 años de experiencia en el
+            mundo del crecimiento espiritual y la sanación holística, he ayudado
+            a cientos de personas a encontrar su camino hacia el equilibrio y el
+            bienestar.
+          </p>
+          <p>
+            Mi enfoque es integral: entiendo que somos seres multidimensionales
+            donde cuerpo, mente, emociones y espíritu están interconectados. Por
+            eso, trabajo con diversas herramientas que me permiten ofrecerte un
+            acompañamiento personalizado según tus necesidades.
+          </p>
+          <p>
+            ¿Estás listo/a para comenzar tu proceso de transformación? Te espero
+            con los brazos abiertos.
+          </p>
+        </div>
+
+        <!-- Specializations -->
+        <div class="mt-8 grid grid-cols-2 gap-4">
+          <div class="flex items-center gap-3 p-3 bg-[#FAF7FC] rounded-xl">
+            <div class="w-10 h-10 bg-[#E8D7F1] rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-flower text-[#9B7EBD]"></i>
+            </div>
+            <span class="text-[#2D1B3D] font-medium">Flores de Bach</span>
+          </div>
+          <div class="flex items-center gap-3 p-3 bg-[#FAF7FC] rounded-xl">
+            <div class="w-10 h-10 bg-[#E8D7F1] rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-hands text-[#9B7EBD]"></i>
+            </div>
+            <span class="text-[#2D1B3D] font-medium">Reiki</span>
+          </div>
+          <div class="flex items-center gap-3 p-3 bg-[#FAF7FC] rounded-xl">
+            <div class="w-10 h-10 bg-[#E8D7F1] rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-spa text-[#9B7EBD]"></i>
+            </div>
+            <span class="text-[#2D1B3D] font-medium">Meditaciones</span>
+          </div>
+          <div class="flex items-center gap-3 p-3 bg-[#FAF7FC] rounded-xl">
+            <div class="w-10 h-10 bg-[#E8D7F1] rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-feather text-[#9B7EBD]"></i>
+            </div>
+            <span class="text-[#2D1B3D] font-medium">Coaching Angelical</span>
+          </div>
+        </div>
+
+        <a href="/sobre-mi" class="inline-flex items-center mt-8 text-[#9B7EBD] font-semibold hover:text-[#7A5FA0] transition-colors">
+          Conoce mi historia completa
+          <i class="fa-solid fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="code-section py-20 bg-gradient-to-br from-[#F0EAF7] via-[#FAF7FC] to-[#E8D7F1]" id="sz4ynbc">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-2 bg-white text-[#7A5FA0] rounded-full text-sm font-semibold mb-4">
+        Descubre
+      </span>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-6">
+        ¿Qué es un <span class="text-[#9B7EBD]">Coach Holístico</span>?
+      </h2>
+      <p class="text-lg text-[#6B5B7A] max-w-3xl mx-auto">
+        Un enfoque integral que aborda tu desarrollo personal considerando todas
+        las dimensiones de tu ser
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+        <div class="w-14 h-14 bg-gradient-to-br from-[#9B7EBD] to-[#7A5FA0] rounded-2xl flex items-center justify-center mb-6">
+          <i class="fa-solid fa-person text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-3">Cuerpo</h3>
+        <p class="text-[#6B5B7A]">
+          El cuerpo físico es el templo donde habitamos. Trabajamos para
+          equilibrar tu energía vital y liberar tensiones almacenadas.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+        <div class="w-14 h-14 bg-gradient-to-br from-[#9B7EBD] to-[#7A5FA0] rounded-2xl flex items-center justify-center mb-6">
+          <i class="fa-solid fa-brain text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-3">Mente</h3>
+        <p class="text-[#6B5B7A]">
+          Transformamos patrones de pensamiento limitantes y creamos nuevas vías
+          neurales que apoyan tu crecimiento.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+        <div class="w-14 h-14 bg-gradient-to-br from-[#9B7EBD] to-[#7A5FA0] rounded-2xl flex items-center justify-center mb-6">
+          <i class="fa-solid fa-heart text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-3">Emociones</h3>
+        <p class="text-[#6B5B7A]">
+          Aprende a gestionar tus emociones de manera saludable y a cultivar la
+          inteligencia emocional para una vida más plena.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+        <div class="w-14 h-14 bg-gradient-to-br from-[#9B7EBD] to-[#7A5FA0] rounded-2xl flex items-center justify-center mb-6">
+          <i class="fa-solid fa-spa text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-3">Espíritu</h3>
+        <p class="text-[#6B5B7A]">
+          Conecta con tu esencia, tu propósito de vida y la sabiduría interior
+          que reside en tu interior.
+        </p>
+      </div>
+    </div>
+
+    <!-- Benefits -->
+    <div class="mt-16 bg-white rounded-3xl p-8 md:p-12 shadow-xl">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-bold text-[#2D1B3D] mb-6">
+            Beneficios del Coaching Holístico
+          </h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-check-circle text-[#9B7EBD] mt-1"></i>
+              <span class="text-[#6B5B7A]">Autoconocimiento profundo y transformación personal</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-check-circle text-[#9B7EBD] mt-1"></i>
+              <span class="text-[#6B5B7A]">Gestión emocional y herramientas para el día a día</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-check-circle text-[#9B7EBD] mt-1"></i>
+              <span class="text-[#6B5B7A]">Práctica de mindfulness y meditación adaptada a ti</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-check-circle text-[#9B7EBD] mt-1"></i>
+              <span class="text-[#6B5B7A]">Equilibrio y bienestar integral en todas las áreas de tu
+                vida</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-check-circle text-[#9B7EBD] mt-1"></i>
+              <span class="text-[#6B5B7A]">Conexión con tu propósito de vida y tu verdadero
+                potencial</span>
+            </li>
+          </ul>
+        </div>
+        <div class="relative">
+          <img src="/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-deb7eaa8-16d2-4e89-e023-fecfec881600.webp" alt="Mujer joven relajada en el suelo rodeada de cuencos tibetanos dorados de sanación" data-media="{&quot;id&quot;:&quot;2248383167&quot;,&quot;src&quot;:&quot;iStock&quot;,&quot;type&quot;:&quot;image&quot;}" class="w-full h-[350px] object-cover rounded-2xl" loading="lazy" oncontextmenu="return false;">
+          <div class="absolute inset-0 ring-1 ring-[#9B7EBD]/20 rounded-2xl"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/blog/que-es-coach-holistico" class="inline-flex items-center text-[#9B7EBD] font-semibold hover:text-[#7A5FA0] transition-colors">
+        Saber más sobre el coaching holístico
+        <i class="fa-solid fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="code-section py-20 bg-white" id="s9tpqti">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-2 bg-[#E8D7F1] text-[#7A5FA0] rounded-full text-sm font-semibold mb-4">
+        Servicios
+      </span>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-6">
+        Mis <span class="text-[#9B7EBD]">Servicios</span>
+      </h2>
+      <p class="text-lg text-[#6B5B7A] max-w-3xl mx-auto">
+        Terapias y servicios diseñados para equilibrar todas las dimensiones de
+        tu ser
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Service 1: Flores de Bach -->
+      <div class="group bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-[#E5D9F2]">
+        <div class="flex items-start justify-between mb-6">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#9B7EBD] to-[#7A5FA0] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i class="fa-solid fa-flower text-white text-2xl"></i>
+          </div>
+          <span class="px-3 py-1 bg-[#D4AF37]/20 text-[#9B7EBD] rounded-full text-sm font-medium">
+            Terapia Floral
+          </span>
+        </div>
+        <h3 class="text-2xl font-bold text-[#2D1B3D] mb-3">Flores de Bach</h3>
+        <p class="text-[#6B5B7A] mb-6">
+          Remedios florales personalizados para restablecer el equilibrio
+          emocional. Las 38 flores del sistema Bach tratan diferentes estados
+          emocionales como miedo, incertidumbre, soledad, hipersensibilidad o
+          falta de interés.
+        </p>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-center gap-2 text-[#6B5B7A] text-sm">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Diagnóstico emocional personalizado</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A] text-sm">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Selección de esencia floral única para ti</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A] text-sm">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Acompañamiento durante el proceso</span>
+          </li>
+        </ul>
+        <a href="/flores-de-bach" class="inline-flex items-center text-[#9B7EBD] font-semibold hover:text-[#7A5FA0] transition-colors group-hover:translate-x-2">
+          Saber más
+          <i class="fa-solid fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+
+      <!-- Service 2: Meditaciones Personalizadas -->
+      <div class="group bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-[#E5D9F2]">
+        <div class="flex items-start justify-between mb-6">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#9B7EBD] to-[#7A5FA0] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i class="fa-solid fa-spa text-white text-2xl"></i>
+          </div>
+          <span class="px-3 py-1 bg-[#D4AF37]/20 text-[#9B7EBD] rounded-full text-sm font-medium">
+            Mindfulness
+          </span>
+        </div>
+        <h3 class="text-2xl font-bold text-[#2D1B3D] mb-3">
+          Meditaciones Personalizadas
+        </h3>
+        <p class="text-[#6B5B7A] mb-6">
+          Sesiones de meditación guiadas adaptadas a tus necesidades
+          específicas. Aprende técnicas de mindfulness para reducir el estrés,
+          aumentar tu concentración y conectar con tu paz interior.
+        </p>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-center gap-2 text-[#6B5B7A] text-sm">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Meditaciones guiadas personalizadas</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A] text-sm">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Técnicas de respiración y relajación</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A] text-sm">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Audio-guías para practicar en casa</span>
+          </li>
+        </ul>
+        <a href="/meditaciones-personalizadas" class="inline-flex items-center text-[#9B7EBD] font-semibold hover:text-[#7A5FA0] transition-colors group-hover:translate-x-2">
+          Saber más
+          <i class="fa-solid fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+
+      <!-- Service 4: Coaching Angelical -->
+      <div class="group bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-[#E5D9F2]">
+        <div class="flex items-start justify-between mb-6">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#9B7EBD] to-[#7A5FA0] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i class="fa-solid fa-feather text-white text-2xl"></i>
+          </div>
+          <span class="px-3 py-1 bg-[#D4AF37]/20 text-[#9B7EBD] rounded-full text-sm font-medium">
+            Guía Espiritual
+          </span>
+        </div>
+        <h3 class="text-2xl font-bold text-[#2D1B3D] mb-3">
+          Coaching Angelical
+        </h3>
+        <p class="text-[#6B5B7A] mb-6">
+          Conexión con la energía de los ángeles y arcángeles para recibir guía
+          divina en tu vida. Sesiones que te ayudan a conectar con tu yo
+          superior y recibir mensajes del cielo.
+        </p>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-center gap-2 text-[#6B5B7A] text-sm">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Comunicación angelical y arcangélica</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A] text-sm">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Mensajes personalizados de tus ángeles</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A] text-sm">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Sanación con energía divina</span>
+          </li>
+        </ul>
+        <a href="/coaching-angelical" class="inline-flex items-center text-[#9B7EBD] font-semibold hover:text-[#7A5FA0] transition-colors group-hover:translate-x-2">
+          Saber más
+          <i class="fa-solid fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+
+      <!-- Service 5: Reiki Delfín -->
+      <div class="group bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-[#E5D9F2]">
+        <div class="flex items-start justify-between mb-6">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#9B7EBD] to-[#7A5FA0] rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i class="fa-solid fa-water text-white text-2xl"></i>
+          </div>
+          <span class="px-3 py-1 bg-[#D4AF37]/20 text-[#9B7EBD] rounded-full text-sm font-medium">
+            Sanación Acuática
+          </span>
+        </div>
+        <h3 class="text-2xl font-bold text-[#2D1B3D] mb-3">Reiki Delfín</h3>
+        <p class="text-[#6B5B7A] mb-6">
+          Una experiencia única de sanación que combina la energía del Reiki con
+          la esencia de los delfines. Sesiones que promueven la liberación
+          emocional y la conexión con la energía del océano.
+        </p>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-center gap-2 text-[#6B5B7A] text-sm">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Sanación energética con energía delfín</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A] text-sm">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Liberación de bloqueos emocionales</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A] text-sm">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Conexión con la alegría y libertad</span>
+          </li>
+        </ul>
+        <a href="/reiki-delfin" class="inline-flex items-center text-[#9B7EBD] font-semibold hover:text-[#7A5FA0] transition-colors group-hover:translate-x-2">
+          Saber más
+          <i class="fa-solid fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/contacto" class="inline-flex items-center bg-[#9B7EBD] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#7A5FA0] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+        <i class="fa-brands fa-whatsapp mr-3 text-xl"></i>
+        Agenda tu sesión
+      </a>
+    </div>
+  </div>
+</section>
+<section class="code-section py-20 bg-gradient-to-br from-[#3D2A52] via-[#4A3565] to-[#2D1B3D] relative overflow-hidden" id="s7aupta">
+  <!-- Decorative Elements -->
+  <div class="absolute top-0 left-0 w-full h-full opacity-10">
+    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <pattern id="stars" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+        <circle cx="1" cy="1" r="0.5" fill="white"></circle>
+      </pattern>
+      <rect x="0" y="0" width="100" height="100" fill="url(#stars)"></rect>
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-2 bg-[#9B7EBD]/30 text-[#E8D7F1] rounded-full text-sm font-semibold mb-4">
+        Proceso
+      </span>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        ¿Cómo <span class="text-[#D4AF37]">Funciona</span>?
+      </h2>
+      <p class="text-lg text-[#B8A4C9] max-w-3xl mx-auto">
+        Un proceso sencillo y transformador en 3 pasos hacia tu bienestar
+        integral
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Step 1 -->
+      <div class="relative text-center">
+        <div class="w-20 h-20 bg-gradient-to-br from-[#D4AF37] to-[#B8962E] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+          <span class="text-3xl font-bold text-[#2D1B3D]">1</span>
+        </div>
+        <div class="bg-[#4A3565]/50 rounded-3xl p-8 backdrop-blur-sm">
+          <div class="w-14 h-14 bg-[#9B7EBD] rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i class="fa-solid fa-phone text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Contacto</h3>
+          <p class="text-[#B8A4C9]">
+            Contáctame a través de WhatsApp o el formulario. Cuéntame brevemente
+            qué te trae aquí y cuál es tu objetivo.
+          </p>
+        </div>
+        <!-- Connector Line (hidden on mobile) -->
+        <div class="hidden md:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-[#D4AF37] to-[#9B7EBD]"></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="relative text-center">
+        <div class="w-20 h-20 bg-gradient-to-br from-[#D4AF37] to-[#B8962E] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+          <span class="text-3xl font-bold text-[#2D1B3D]">2</span>
+        </div>
+        <div class="bg-[#4A3565]/50 rounded-3xl p-8 backdrop-blur-sm">
+          <div class="w-14 h-14 bg-[#9B7EBD] rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i class="fa-solid fa-calendar-check text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Elige tu Sesión</h3>
+          <p class="text-[#B8A4C9]">
+            Juntos determinaremos el mejor servicio para ti y agendaremos tu
+            sesión en el horario que mejor te convenga.
+          </p>
+        </div>
+        <!-- Connector Line (hidden on mobile) -->
+        <div class="hidden md:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-[#D4AF37] to-[#9B7EBD]"></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="relative text-center">
+        <div class="w-20 h-20 bg-gradient-to-br from-[#D4AF37] to-[#B8962E] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+          <span class="text-3xl font-bold text-[#2D1B3D]">3</span>
+        </div>
+        <div class="bg-[#4A3565]/50 rounded-3xl p-8 backdrop-blur-sm">
+          <div class="w-14 h-14 bg-[#9B7EBD] rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i class="fa-solid fa-heart text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Transforma tu Vida</h3>
+          <p class="text-[#B8A4C9]">
+            Experimenta una sesión transformadora que te ayudará a reconectar
+            contigo mismo/a y encontrar tu equilibrio.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="https://wa.me/34616054001" class="inline-flex items-center bg-[#D4AF37] text-[#2D1B3D] px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#B8962E] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+        <i class="fa-brands fa-whatsapp mr-3 text-xl"></i>
+        Comenzar mi transformación
+      </a>
+    </div>
+  </div>
+</section>
+<section class="code-section py-20 bg-[#FAF7FC]" id="sbpdzko">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+      <!-- Contact Info -->
+      <div>
+        <span class="inline-block px-4 py-2 bg-[#E8D7F1] text-[#7A5FA0] rounded-full text-sm font-semibold mb-4">
+          Contacto
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-6">
+          ¿Hablamos<span class="text-[#9B7EBD]">?</span>
+        </h2>
+        <p class="text-lg text-[#6B5B7A] mb-8">
+          ¿Estás listo/a para comenzar tu viaje de transformación? Contáctame
+          ahora y juntos podemos explorar cómo puedo ayudarte a encontrar el
+          equilibrio y la armonía que buscas.
+        </p>
+
+        <!-- Contact Methods -->
+        <div class="space-y-6">
+          <!-- WhatsApp -->
+          <a href="https://wa.me/34616054001" rel="noopener noreferrer nofollow" class="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 group">
+            <div class="w-14 h-14 bg-[#25D366] rounded-2xl flex items-center justify-center">
+              <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-[#2D1B3D]">WhatsApp</p>
+              <p class="text-[#6B5B7A]">+34 616 054 001</p>
+            </div>
+            <i class="fa-solid fa-arrow-right ml-auto text-[#9B7EBD] group-hover:translate-x-1 transition-transform"></i>
+          </a>
+
+          <!-- Phone -->
+          <a href="tel:+34616054001" rel="noopener noreferrer nofollow" class="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 group">
+            <div class="w-14 h-14 bg-[#9B7EBD] rounded-2xl flex items-center justify-center">
+              <i class="fa-solid fa-phone text-white text-xl"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-[#2D1B3D]">Teléfono</p>
+              <p class="text-[#6B5B7A]">+34 616 054 001</p>
+            </div>
+            <i class="fa-solid fa-arrow-right ml-auto text-[#9B7EBD] group-hover:translate-x-1 transition-transform"></i>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:luisacorralcoach@gmail.com" rel="noopener noreferrer nofollow" class="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 group">
+            <div class="w-14 h-14 bg-[#D4AF37] rounded-2xl flex items-center justify-center">
+              <i class="fa-solid fa-envelope text-white text-xl"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-[#2D1B3D]">Email</p>
+              <p class="text-[#6B5B7A]"><a href="mailto:luisacorralcoach@gmail.com" class="hover:text-[#D4AF37] transition-colors">luisacorralcoach@gmail.com</a></p>
+            </div>
+            <i class="fa-solid fa-arrow-right ml-auto text-[#9B7EBD] group-hover:translate-x-1 transition-transform"></i>
+          </a>
+
+          <!-- Location -->
+          <div class="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-md">
+            <div class="w-14 h-14 bg-[#7A5FA0] rounded-2xl flex items-center justify-center">
+              <i class="fa-solid fa-location-dot text-white text-xl"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-[#2D1B3D]">Ubicación</p>
+              <p class="text-[#6B5B7A]">Narón, Galicia, España</p>
+              <p class="text-sm text-[#9B7EBD]">
+                Sesiones online para toda España
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="bg-white rounded-3xl p-8 md:p-10 shadow-xl">
+        <h3 class="text-2xl font-bold text-[#2D1B3D] mb-6">
+          Solicita tu sesión
+        </h3>
+        <form class="space-y-5" action="https://formspree.io/f/mvzyroqk" method="POST"><input type="hidden" name="_subject" value="Nueva solicitud — Luisa Corral Coach">
+          <div>
+            <label class="block text-[#2D1B3D] font-medium mb-2" for="name">Nombre</label>
+            <input type="text" id="name" name="name" required="" class="w-full px-4 py-3 rounded-xl border border-[#E5D9F2] focus:border-[#9B7EBD] focus:ring-2 focus:ring-[#9B7EBD]/20 outline-none transition-all" placeholder="Tu nombre">
+          </div>
+
+          <div>
+            <label class="block text-[#2D1B3D] font-medium mb-2">¿Cómo prefieres que te contacte?</label>
+            <div class="grid grid-cols-3 gap-2">
+              <label class="flex flex-col items-center justify-center gap-1 p-2 sm:p-3 rounded-xl border border-[#E5D9F2] cursor-pointer hover:border-[#9B7EBD] hover:bg-[#FAF7FC] transition-all has-[:checked]:border-[#9B7EBD] has-[:checked]:bg-[#E8D7F1]">
+                <input type="radio" name="contact_preference" value="whatsapp" class="sr-only" checked="">
+                <i class="fa-brands fa-whatsapp text-lg sm:text-xl"></i>
+                <span class="text-xs sm:text-sm font-medium text-center">WhatsApp</span>
+              </label>
+              <label class="flex flex-col items-center justify-center gap-1 p-2 sm:p-3 rounded-xl border border-[#E5D9F2] cursor-pointer hover:border-[#9B7EBD] hover:bg-[#FAF7FC] transition-all has-[:checked]:border-[#9B7EBD] has-[:checked]:bg-[#E8D7F1]">
+                <input type="radio" name="contact_preference" value="phone" class="sr-only">
+                <i class="fa-solid fa-phone text-lg sm:text-xl"></i>
+                <span class="text-xs sm:text-sm font-medium text-center">Llamada</span>
+              </label>
+              <label class="flex flex-col items-center justify-center gap-1 p-2 sm:p-3 rounded-xl border border-[#E5D9F2] cursor-pointer hover:border-[#9B7EBD] hover:bg-[#FAF7FC] transition-all has-[:checked]:border-[#9B7EBD] has-[:checked]:bg-[#E8D7F1]">
+                <input type="radio" name="contact_preference" value="email" class="sr-only">
+                <i class="fa-solid fa-envelope text-lg sm:text-xl"></i>
+                <span class="text-xs sm:text-sm font-medium text-center">Email</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[#2D1B3D] font-medium mb-2" for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-xl border border-[#E5D9F2] focus:border-[#9B7EBD] focus:ring-2 focus:ring-[#9B7EBD]/20 outline-none transition-all" placeholder="+34 000 000 000">
+          </div>
+
+          <div>
+            <label class="block text-[#2D1B3D] font-medium mb-2" for="email">Email</label>
+            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-xl border border-[#E5D9F2] focus:border-[#9B7EBD] focus:ring-2 focus:ring-[#9B7EBD]/20 outline-none transition-all" placeholder="tu@email.com">
+          </div>
+
+          <div>
+            <label class="block text-[#2D1B3D] font-medium mb-2" for="service">Servicio de interés</label>
+            <select id="service" name="service" class="w-full px-4 py-3 rounded-xl border border-[#E5D9F2] focus:border-[#9B7EBD] focus:ring-2 focus:ring-[#9B7EBD]/20 outline-none transition-all bg-white">
+              <option value="">Selecciona un servicio</option>
+              <option value="flores-de-bach">Flores de Bach</option>
+
+              <option value="meditaciones-personalizadas">
+                Meditaciones Personalizadas
+              </option>
+              <option value="coaching-angelical">Coaching Angelical</option>
+              <option value="reiki-delfin">Reiki Delfín</option>
+              <option value="coach-holistico">Coaching Holístico</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[#2D1B3D] font-medium mb-2" for="message">Mensaje (opcional)</label>
+            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-[#E5D9F2] focus:border-[#9B7EBD] focus:ring-2 focus:ring-[#9B7EBD]/20 outline-none transition-all resize-none" placeholder="Cuéntame brevemente qué te trae por aquí..."></textarea>
+          </div>
+
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input type="checkbox" name="politica_proteccion_datos" value="aceptado" required="" class="mt-1 w-5 h-5 rounded border-[#E5D9F2] text-[#9B7EBD] focus:ring-[#9B7EBD]">
+            <span class="text-sm text-[#6B5B7A]">He leído y acepto la
+              <a href="/politica-de-privacidad" class="text-[#9B7EBD] underline hover:text-[#7A5FA0]">Política de Protección de Datos</a></span>
+          </label>
+
+          <button type="submit" class="w-full bg-[#9B7EBD] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#7A5FA0] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            Quiero mi sesión
+          </button>
+
+          <p class="text-center text-sm text-[#6B5B7A]">
+            <i class="fa-solid fa-lock mr-1"></i>
+            Tus datos están protegidos. Te responderé lo antes posible.
+          </p>
+        <input type="hidden" name="_next" value="/contacto?enviado=1"></form>
+      </div>
+    </div>
+  </div>
+</section>
+<footer id="global-footer" class="code-section bg-[#2D1B3D] text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <!-- Logo & Description -->
+      <div class="lg:col-span-1">
+        <a href="/" class="inline-block mb-4 flex items-center justify-center">
+          <img src="/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-b366db84-bd47-474a-5c88-9bc6624d9b00.webp" alt="Luisa Corral - Coach Holística y Terapéutica en Narón, Galicia" data-logo="{&quot;id&quot;:&quot;logo&quot;,&quot;src&quot;:&quot;custom&quot;,&quot;type&quot;:&quot;logo&quot;}" class="h-32 w-auto max-w-none" data-media="{&quot;id&quot;:&quot;upload-luisa_corral_logo_HQ.png&quot;,&quot;src&quot;:&quot;upload&quot;,&quot;type&quot;:&quot;image&quot;}" oncontextmenu="return false;">
+        </a>
+        <p class="text-[#B8A4C9] text-sm mb-6">
+          Coach Holístico y Terapéutico en Narón, Galicia. Te acompaño en tu
+          proceso de transformación personal para encontrar el equilibrio entre
+          cuerpo, mente, emociones y espíritu.
+        </p>
+        <div class="flex gap-4">
+          <a href="https://wa.me/34616054001" rel="noopener noreferrer nofollow" class="w-10 h-10 bg-[#9B7EBD] rounded-full flex items-center justify-center hover:bg-[#7A5FA0] transition-colors">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="mailto:luisacorralcoach@gmail.com" rel="noopener noreferrer nofollow" class="w-10 h-10 bg-[#9B7EBD] rounded-full flex items-center justify-center hover:bg-[#7A5FA0] transition-colors">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="https://www.instagram.com/luisacorralcoach/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-[#9B7EBD] rounded-full flex items-center justify-center hover:bg-[#7A5FA0] transition-colors">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@luisacorral_coach" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-[#9B7EBD] rounded-full flex items-center justify-center hover:bg-[#7A5FA0] transition-colors">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <p class="text-lg font-semibold mb-4 text-[#D4AF37]">Navegación</p>
+        <ul class="space-y-3">
+          <li>
+            <a href="/" class="text-[#B8A4C9] hover:text-white transition-colors">Inicio</a>
+          </li>
+          <li>
+            <a href="/sobre-mi" class="text-[#B8A4C9] hover:text-white transition-colors">Sobre Mí</a>
+          </li>
+          <li></li>
+          <li>
+            <a href="/testimonios" class="text-[#B8A4C9] hover:text-white transition-colors">Testimonios</a>
+          </li>
+          <li>
+            <a href="/blog" class="text-[#B8A4C9] hover:text-white transition-colors">Blog</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <p class="text-lg font-semibold mb-4 text-[#D4AF37]">Servicios</p>
+        <ul class="space-y-3">
+          <li>
+            <a href="/coaching-holistico" class="text-[#B8A4C9] hover:text-white transition-colors">Coaching Holístico</a>
+          </li>
+          <li>
+            <a href="/flores-de-bach" class="text-[#B8A4C9] hover:text-white transition-colors">Flores de Bach</a>
+          </li>
+          <li>
+            <a href="/meditaciones-personalizadas" class="text-[#B8A4C9] hover:text-white transition-colors">Meditaciones Personalizadas</a>
+          </li>
+          <li>
+            <a href="/coaching-angelical" class="text-[#B8A4C9] hover:text-white transition-colors">Coaching Angelical</a>
+          </li>
+          <li>
+            <a href="/reiki-delfin" class="text-[#B8A4C9] hover:text-white transition-colors">Reiki Delfín</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <p class="text-lg font-semibold mb-4 text-[#D4AF37]">Contacto</p>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-2 text-[#B8A4C9]">
+            <i class="fa-brands fa-whatsapp text-[#25D366]"></i>
+            <span>+34 616 054 001</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#B8A4C9]">
+            <i class="fa-solid fa-phone text-[#9B7EBD]"></i>
+            <span>+34 616 054 001</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#B8A4C9]">
+            <i class="fa-solid fa-envelope text-[#D4AF37]"></i>
+            <span><a href="mailto:luisacorralcoach@gmail.com" class="hover:text-[#D4AF37] transition-colors">luisacorralcoach@gmail.com</a></span>
+          </li>
+          <li class="flex items-start gap-2 text-[#B8A4C9]">
+            <i class="fa-solid fa-location-dot text-[#9B7EBD] mt-1"></i>
+            <span>Narón, Galicia, España</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-[#9B7EBD]/30 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-[#B8A4C9] text-sm">
+        © 2026 Luisa Corral - Coach Holística. Todos los derechos reservados.
+      </p>
+      <div class="flex gap-6 text-sm">
+        <a href="/aviso-legal" class="text-[#B8A4C9] hover:text-white transition-colors">Aviso Legal</a>
+        <a href="/politica-de-privacidad" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Privacidad</a>
+        <a href="/politica-de-cookies" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="module">
+  const __landingsite_initPage = async () => {
+    try {
+      const module = await import('/js/home/index.js')
+      if (module && typeof module.init === 'function') {
+        module.init()
+      }
+    } catch (e) {
+      // swallow
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __landingsite_initPage, { once: true })
+  } else {
+    __landingsite_initPage()
+  }
+</script><script type="module">
+  const boot = async () => {
+    try {
+      const { initCookieBanner } = await import('/js/modules/cookie-consent.js')
+      initCookieBanner()
+    } catch (_) {}
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot, { once: true })
+  else boot()
+</script>
+<script defer="" src="/public/fontawesome-kit.js" crossorigin="anonymous"></script>
+</body></html>

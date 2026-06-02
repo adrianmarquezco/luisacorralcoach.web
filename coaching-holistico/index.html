@@ -1,0 +1,1276 @@
+<!DOCTYPE html><html lang="es"><head>
+    <script src="/public/main.umd.js" defer=""></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;family=Nunito+Sans:wght@300;400;500;600;700&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </noscript>
+    <style>*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*,::after,::before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.pointer-events-none{pointer-events:none}.visible{visibility:visible}.invisible{visibility:hidden}.static{position:static}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.-bottom-6{bottom:-1.5rem}.-left-6{left:-1.5rem}.-top-4{top:-1rem}.bottom-0{bottom:0}.bottom-20{bottom:5rem}.left-0{left:0}.left-1\/2{left:50%}.right-0{right:0}.right-6{right:1.5rem}.right-full{right:100%}.top-0{top:0}.z-40{z-index:40}.z-50{z-index:50}.z-\[2147483647\]{z-index:2147483647}.mx-auto{margin-left:auto;margin-right:auto}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:.5rem}.mr-2{margin-right:.5rem}.mr-3{margin-right:.75rem}.mt-0{margin-top:0}.mt-1{margin-top:.25rem}.mt-12{margin-top:3rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-20{height:5rem}.h-32{height:8rem}.h-8{height:2rem}.h-\[450px\]{height:450px}.h-full{height:100%}.w-10{width:2.5rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-56{width:14rem}.w-8{width:2rem}.w-auto{width:auto}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-7xl{max-width:80rem}.max-w-none{max-width:none}.flex-shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-2{--tw-translate-y:-0.5rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-x-0{--tw-translate-x:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-0{--tw-scale-x:0;--tw-scale-y:0;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-12{gap:3rem}.gap-16{gap:4rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-8>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem * var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem * var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.whitespace-nowrap{white-space:nowrap}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-xl{border-radius:.75rem}.rounded-b-xl{border-bottom-right-radius:.75rem;border-bottom-left-radius:.75rem}.rounded-t-xl{border-top-left-radius:.75rem;border-top-right-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-l-2{border-left-width:2px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-\[\#9B7EBD\]{--tw-border-opacity:1;border-color:rgb(155 126 189 / var(--tw-border-opacity))}.border-\[\#9B7EBD\]\/30{border-color:rgb(155 126 189 / .3)}.border-\[\#D4AF37\]{--tw-border-opacity:1;border-color:rgb(212 175 55 / var(--tw-border-opacity))}.border-\[\#E5D9F2\]{--tw-border-opacity:1;border-color:rgb(229 217 242 / var(--tw-border-opacity))}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity))}.bg-\[\#25D366\]{--tw-bg-opacity:1;background-color:rgb(37 211 102 / var(--tw-bg-opacity))}.bg-\[\#2D1B3D\]{--tw-bg-opacity:1;background-color:rgb(45 27 61 / var(--tw-bg-opacity))}.bg-\[\#9B7EBD\]{--tw-bg-opacity:1;background-color:rgb(155 126 189 / var(--tw-bg-opacity))}.bg-\[\#D4AF37\]{--tw-bg-opacity:1;background-color:rgb(212 175 55 / var(--tw-bg-opacity))}.bg-\[\#E8D7F1\]{--tw-bg-opacity:1;background-color:rgb(232 215 241 / var(--tw-bg-opacity))}.bg-\[\#FAF7FC\]{--tw-bg-opacity:1;background-color:rgb(250 247 252 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.from-\[\#FAF7FC\]{--tw-gradient-from:#FAF7FC var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(250 247 252 / 0) var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.to-\[\#F0EAF7\]{--tw-gradient-to:#F0EAF7 var(--tw-gradient-to-position);--tw-gradient-to-position: }.object-cover{-o-object-fit:cover;object-fit:cover}.p-2{padding:.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pl-4{padding-left:1rem}.pt-8{padding-top:2rem}.text-left{text-align:left}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-semibold{font-weight:600}.italic{font-style:italic}.text-\[\#25D366\]{--tw-text-opacity:1;color:rgb(37 211 102 / var(--tw-text-opacity))}.text-\[\#2D1B3D\]{--tw-text-opacity:1;color:rgb(45 27 61 / var(--tw-text-opacity))}.text-\[\#6B5B7A\]{--tw-text-opacity:1;color:rgb(107 91 122 / var(--tw-text-opacity))}.text-\[\#7A5FA0\]{--tw-text-opacity:1;color:rgb(122 95 160 / var(--tw-text-opacity))}.text-\[\#9B7EBD\]{--tw-text-opacity:1;color:rgb(155 126 189 / var(--tw-text-opacity))}.text-\[\#B8A4C9\]{--tw-text-opacity:1;color:rgb(184 164 201 / var(--tw-text-opacity))}.text-\[\#D4AF37\]{--tw-text-opacity:1;color:rgb(212 175 55 / var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.text-white\/80{color:rgb(255 255 255 / .8)}.underline{text-decoration-line:underline}.opacity-0{opacity:0}.opacity-100{opacity:1}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1),0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1),0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1),0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}.duration-200{transition-duration:.2s}.duration-300{transition-duration:.3s}.ease-in-out{transition-timing-function:cubic-bezier(0.4,0,0.2,1)}.hover\:-translate-y-0:hover{--tw-translate-y:-0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:-translate-y-0\.5:hover{--tw-translate-y:-0.125rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-\[\#20BD5A\]:hover{--tw-bg-opacity:1;background-color:rgb(32 189 90 / var(--tw-bg-opacity))}.hover\:bg-\[\#7A5FA0\]:hover{--tw-bg-opacity:1;background-color:rgb(122 95 160 / var(--tw-bg-opacity))}.hover\:bg-\[\#9B7EBD\]:hover{--tw-bg-opacity:1;background-color:rgb(155 126 189 / var(--tw-bg-opacity))}.hover\:bg-\[\#F0EAF7\]:hover{--tw-bg-opacity:1;background-color:rgb(240 234 247 / var(--tw-bg-opacity))}.hover\:bg-\[\#FAF7FC\]:hover{--tw-bg-opacity:1;background-color:rgb(250 247 252 / var(--tw-bg-opacity))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.hover\:text-\[\#2D1B3D\]:hover{--tw-text-opacity:1;color:rgb(45 27 61 / var(--tw-text-opacity))}.hover\:text-\[\#9B7EBD\]:hover{--tw-text-opacity:1;color:rgb(155 126 189 / var(--tw-text-opacity))}.hover\:text-\[\#D4AF37\]:hover{--tw-text-opacity:1;color:rgb(212 175 55 / var(--tw-text-opacity))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:underline:hover{text-decoration-line:underline}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1),0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1),0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.group:hover .group-hover\:visible{visibility:visible}.group:hover .group-hover\:translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:bg-\[\#D4B5E8\]{--tw-bg-opacity:1;background-color:rgb(212 181 232 / var(--tw-bg-opacity))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width:640px){.sm\:flex-row{flex-direction:row}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width:768px){.md\:bottom-6{bottom:1.5rem}.md\:h-16{height:4rem}.md\:h-32{height:8rem}.md\:h-40{height:10rem}.md\:w-16{width:4rem}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}}@media (min-width:1024px){.lg\:col-span-1{grid-column:span 1/span 1}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\:gap-12{gap:3rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}}.opacity-0{opacity:0}.opacity-5{opacity:.05}.opacity-10{opacity:.1}.opacity-15{opacity:.15}.opacity-20{opacity:.2}.opacity-25{opacity:.25}.opacity-30{opacity:.3}.opacity-35{opacity:.35}.opacity-40{opacity:.4}.opacity-45{opacity:.45}.opacity-50{opacity:.5}.opacity-55{opacity:.55}.opacity-60{opacity:.6}.opacity-65{opacity:.65}.opacity-70{opacity:.7}.opacity-75{opacity:.75}.opacity-80{opacity:.8}.opacity-85{opacity:.85}.opacity-90{opacity:.9}.opacity-95{opacity:.95}.opacity-100{opacity:1}</style>
+    <link rel="icon" type="image/png" href="/assets/uploads/b3f76780-ddae-46b6-b492-f8eaf4baab97/7cec306b-129e-4df9-bd7e-4bd3b2f7e77d.webp">
+<link rel="apple-touch-icon" type="image/png" href="/assets/uploads/b3f76780-ddae-46b6-b492-f8eaf4baab97/7cec306b-129e-4df9-bd7e-4bd3b2f7e77d.webp">
+
+<!-- Información estructurada para crawlers de IA -->
+<meta name="ai-description" content="Luisa Corral es coach holística certificada con más de 8 años de experiencia. Ofrece sesiones de Flores de Bach (sistema del Dr. Edward Bach), Coaching Angelical, Meditaciones Personalizadas y Reiki Delfín. Atiende presencialmente en Narón (A Coruña, Galicia) y online para toda España y Latinoamérica. Especializada en acompañar a mujeres en procesos de transformación personal, gestión emocional y crecimiento espiritual.">
+<meta name="author" content="Luisa Corral">
+<meta name="geo.region" content="ES-GA">
+<meta name="geo.placename" content="Narón, Galicia, España">
+<link rel="alternate" hreflang="es" href="/">
+<link rel="alternate" hreflang="es-419" href="/">
+<link rel="alternate" hreflang="x-default" href="/">
+    <style>:root { --accent-color: #D4AF37; --accent2-color: #E8D7F1; --accent3-color: #B8A4C9; --accent4-color: #F2E6D9; --primary-color: #9B7EBD; --dark-text-color: #2D1B3D; --gray-text-color: #6B5B7A; --button-padding-x: 32px; --button-padding-y: 14px; --font-family-body: Nunito Sans; --light-text-color: #FFFFFF; --dark-border-color: #7A5FA0; --light-border-color: #E5D9F2; --font-family-heading: Outfit; --button-rounded-radius: 28px; --dark-background-color: #3D2A52; --light-background-color: #FAF7FC; --medium-background-color: #F0EAF7; --primary-button-text-color: #FFFFFF; --secondary-button-bg-color: #F5F0FA; --secondary-button-text-color: #9B7EBD; --primary-button-hover-bg-color: #7A5FA0; --primary-button-hover-text-color: #FFFFFF; --secondary-button-hover-bg-color: #D4B5E8; --secondary-button-hover-text-color: #5A3D7A; }</style>
+    <title>Coaching Holístico Online España | Sesiones Personalizadas | Luisa Corral</title>
+<meta name="description" content="Coaching holístico online en España con Luisa Corral. Acompañamiento integral para superar bloqueos emocionales, gestionar ansiedad y transformar tu vida. Sesiones desde 50€. Primera sesión gratuita.">
+<meta name="language" content="es">
+<meta property="og:title" content="Coaching Holístico Online España | Luisa Corral">
+<meta property="og:description" content="Coaching holístico online: acompañamiento integral para superar bloqueos, gestionar emociones y transformar tu vida. Sesiones personalizadas 50€/Pack 4 desde 180€.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Coaching Holístico Online España | Luisa Corral">
+<meta name="twitter:description" content="Coaching holístico online con Luisa Corral. Sesiones desde 50€. Primera sesión gratuita.">
+<link rel="canonical" href="/coaching-holistico">
+<meta name="keywords" content="coaching holístico, coaching holístico online España, coaching emocional, superar bloqueos emocionales, coaching para mujeres, gestión de ansiedad, coaching transformacional, coaching personal">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Coaching Holístico",
+  "description": "Acompañamiento integral para superar bloqueos, gestionar emociones y crear la vida que mereces. Trabaja cuerpo, mente, emociones y espíritu para una transformación real.",
+  "url": "/coaching-holistico",
+  "provider": { "@type": "Person", "name": "Luisa Corral" },
+  "areaServed": "España",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Sesiones de Coaching Holístico",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Sesión Única de Coaching Holístico",
+        "description": "60-90 minutos de sesión por videollamada o presencial",
+        "price": "50",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pack 4 Sesiones de Coaching Holístico",
+        "description": "Proceso completo con seguimiento entre sesiones y meditación personalizada",
+        "price": "180",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pack 8 Sesiones de Coaching Holístico",
+        "description": "8 semanas de acompañamiento con soporte por WhatsApp y sesión extra de regalo",
+        "price": "320",
+        "priceCurrency": "EUR"
+      }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "" },
+    { "@type": "ListItem", "position": 2, "name": "Coaching Holístico" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta una sesión de coaching holístico online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La sesión única tiene un precio de 50€ (60-90 minutos). También existen packs de 4 sesiones (180€) y 8 sesiones (320€) que incluyen beneficios adicionales como seguimientos y meditaciones personalizadas. La primera sesión de valoración es gratuita."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué diferencia hay entre un coach y un terapeuta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El coaching holístico trabaja desde el presente hacia el futuro, ayudándote a tomar decisiones y avanzar hacia tus objetivos. La terapia trabaja con el pasado y trata trastornos mentales diagnosticables. El coaching es complementario a la terapia, no un sustituto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El coaching holístico funciona para la ansiedad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El coaching holístico trabaja directamente con las emociones que subyacen a la ansiedad. Utilizamos técnicas de respiración, mindfulness y Flores de Bach para ayudarte a gestionar el estrés y recuperar la calma."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito creer en espiritualidad para que funcione?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No es necesario. El coaching holístico funciona a través de la conversación, la conexión y herramientas prácticas, independientemente de las creencias personales. Muchas personas con escepticismo terminan valorando los beneficios prácticos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuántas sesiones necesito para ver resultados?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Muchas personas sienten cambios después de la primera sesión. Para resultados profundos y sostenibles, se recomienda un mínimo de 4-8 sesiones. El proceso completo se valora en la primera sesión gratuita."
+      }
+    }
+  ]
+}
+</script>
+    
+  </head>
+  <body style="font-family:var(--font-family-body);"><header id="global-header" class="code-section bg-[#FAF7FC] shadow-sm sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20 md:h-40">
+      <!-- Logo -->
+      <a href="/" class="flex-shrink-0 flex items-center justify-center h-full py-2">
+        <img src="/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-b366db84-bd47-474a-5c88-9bc6624d9b00.webp" alt="Luisa Corral - Coach Holística y Terapéutica en Narón, Galicia" data-logo="{&quot;id&quot;:&quot;logo&quot;,&quot;src&quot;:&quot;custom&quot;,&quot;type&quot;:&quot;logo&quot;}" class="h-16 md:h-32 w-auto max-w-none" data-media="{&quot;id&quot;:&quot;upload-luisa_corral_logo_HQ.png&quot;,&quot;src&quot;:&quot;upload&quot;,&quot;type&quot;:&quot;image&quot;}" oncontextmenu="return false;">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center space-x-8">
+        <a href="/sobre-mi" class="text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold transition-colors duration-300">Sobre Mí</a>
+        <!-- Servicios Dropdown -->
+        <div class="relative group">
+          <button class="text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold transition-colors duration-300 flex items-center gap-1 py-2">
+            Servicios
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+          <div class="absolute left-0 mt-0 w-56 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2 z-50 border border-[#E5D9F2]">
+            <a href="/flores-de-bach" class="flex items-center gap-3 px-4 py-3 text-[#2D1B3D] hover:bg-[#FAF7FC] hover:text-[#9B7EBD] transition-colors rounded-t-xl">
+              <i class="fa-solid fa-flower text-[#9B7EBD]"></i>
+              Flores de Bach
+            </a>
+            <a href="/coaching-holistico" class="flex items-center gap-3 px-4 py-3 text-[#2D1B3D] hover:bg-[#FAF7FC] hover:text-[#9B7EBD] transition-colors">
+              <i class="fa-solid fa-heart text-[#9B7EBD]"></i>
+              Coaching Holístico
+            </a>
+            <a href="/meditaciones-personalizadas" class="flex items-center gap-3 px-4 py-3 text-[#2D1B3D] hover:bg-[#FAF7FC] hover:text-[#9B7EBD] transition-colors">
+              <i class="fa-solid fa-spa text-[#9B7EBD]"></i>
+              Meditaciones Personalizadas
+            </a>
+            <a href="/coaching-angelical" class="flex items-center gap-3 px-4 py-3 text-[#2D1B3D] hover:bg-[#FAF7FC] hover:text-[#9B7EBD] transition-colors">
+              <i class="fa-solid fa-feather text-[#9B7EBD]"></i>
+              Coaching Angelical
+            </a>
+            <a href="/reiki-delfin" class="flex items-center gap-3 px-4 py-3 text-[#2D1B3D] hover:bg-[#FAF7FC] hover:text-[#9B7EBD] transition-colors rounded-b-xl">
+              <i class="fa-solid fa-water text-[#9B7EBD]"></i>
+              Reiki Delfín
+            </a>
+          </div>
+        </div>
+
+        <a href="/testimonios" class="text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold transition-colors duration-300">Testimonios</a>
+        <a href="/blog" class="text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold transition-colors duration-300">Blog</a>
+        <a href="/contacto" class="bg-[#9B7EBD] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#7A5FA0] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Agenda tu Sesión</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="lg:hidden p-2 text-[#2D1B3D]" data-landingsite-mobile-menu-toggle="">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Button - Always visible -->
+  <a href="https://wa.me/34616054001" target="_blank" rel="noopener noreferrer nofollow" class="fixed bottom-20 md:bottom-6 right-6 w-14 h-14 md:w-16 md:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-[#20BD5A] transition-all duration-300 z-[2147483647] group" style="z-index: 2147483647 !important; position: fixed !important;">
+    <i class="fa-brands fa-whatsapp text-white text-2xl md:text-3xl"></i>
+    <span class="absolute right-full mr-3 bg-[#2D1B3D] text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+      Escribir por WhatsApp
+    </span>
+  </a>
+
+  <!-- Mobile Navigation -->
+  <div class="lg:hidden hidden bg-[#FAF7FC] border-t border-[#E5D9F2]" data-landingsite-mobile-menu="">
+    <div class="px-4 py-4 space-y-3">
+      <a href="/sobre-mi" class="block text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold py-2">Sobre Mí</a>
+      <!-- Mobile Servicios Links -->
+      <div class="space-y-2">
+        <span class="block text-[#2D1B3D] font-semibold py-2">
+          <i class="fa-solid fa-spa mr-2 text-[#9B7EBD]"></i>Servicios
+        </span>
+        <div class="pl-4 border-l-2 border-[#E5D9F2] ml-2 space-y-2">
+          <a href="/flores-de-bach" class="flex items-center gap-2 text-[#6B5B7A] hover:text-[#9B7EBD] py-1">
+            <i class="fa-solid fa-flower text-sm"></i> Flores de Bach
+          </a>
+          <a href="/coaching-holistico" class="flex items-center gap-2 text-[#6B5B7A] hover:text-[#9B7EBD] py-1">
+            <i class="fa-solid fa-heart text-sm"></i> Coaching Holístico
+          </a>
+          <a href="/meditaciones-personalizadas" class="flex items-center gap-2 text-[#6B5B7A] hover:text-[#9B7EBD] py-1">
+            <i class="fa-solid fa-spa text-sm"></i> Meditaciones
+          </a>
+          <a href="/coaching-angelical" class="flex items-center gap-2 text-[#6B5B7A] hover:text-[#9B7EBD] py-1">
+            <i class="fa-solid fa-feather text-sm"></i> Coaching Angelical
+          </a>
+          <a href="/reiki-delfin" class="flex items-center gap-2 text-[#6B5B7A] hover:text-[#9B7EBD] py-1">
+            <i class="fa-solid fa-water text-sm"></i> Reiki Delfín
+          </a>
+        </div>
+      </div>
+
+      <a href="/testimonios" class="block text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold py-2">Testimonios</a>
+      <a href="/blog" class="block text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold py-2">Blog</a>
+      <a href="/contacto" class="block bg-[#9B7EBD] text-white px-6 py-3 rounded-full font-semibold text-center mt-4">Agenda tu Sesión</a>
+    </div>
+  </div>
+</header>
+<section class="code-section py-20 bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7]" id="sbh42p2">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-block px-4 py-2 bg-[#E8D7F1] text-[#7A5FA0] rounded-full text-sm font-semibold mb-4">
+          Transformación Integral
+        </span>
+        <h1 class="text-4xl md:text-5xl font-bold text-[#2D1B3D] mb-6">
+          Coaching Holístico <span class="text-[#9B7EBD]">Online</span>
+        </h1>
+        <p class="text-lg text-[#6B5B7A] mb-4">
+          Acompañamiento integral para superar bloqueos, gestionar emociones y
+          crear la vida que mereces. Trabajamos cuerpo, mente, emociones y
+          espíritu para una transformación real y sostenible.
+        </p>
+        <p class="text-lg text-[#6B5B7A] mb-8">
+          Sesiones online para toda España. Presencial en Narón, Galicia.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+          <a href="#contacto" class="inline-flex items-center justify-center bg-[#9B7EBD] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#7A5FA0] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <i class="fa-brands fa-whatsapp mr-3 text-xl"></i>
+            Reserva tu sesión
+          </a>
+          <a href="/blog/que-es-coach-holistico" class="inline-flex items-center justify-center px-8 py-4 rounded-full font-semibold text-lg border-2 border-[#9B7EBD] text-[#9B7EBD] hover:bg-[#9B7EBD] hover:text-white transition-all duration-300">
+            ¿Qué es?
+          </a>
+        </div>
+        <div class="flex items-center gap-6 text-[#6B5B7A]">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-check-circle text-[#D4AF37]"></i>
+            <span>Primera sesión gratis</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-check-circle text-[#D4AF37]"></i>
+            <span>+8 años experiencia</span>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+          <img src="/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-deb7eaa8-16d2-4e89-e023-fecfec881600.webp" alt="Mujer joven relajada en el suelo rodeada de cuencos tibetanos dorados" class="w-full h-[450px] object-cover">
+        </div>
+        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-[#D4AF37] rounded-full flex items-center justify-center">
+              <i class="fa-solid fa-heart text-white text-xl"></i>
+            </div>
+            <div>
+              <p class="font-bold text-[#2D1B3D]">100%</p>
+              <p class="text-sm text-[#6B5B7A]">Personalizado</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="code-section py-16 bg-white" id="sqzy9ku">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-4">
+        Sesiones Online de
+        <span class="text-[#9B7EBD]">Coaching Holístico en España</span>
+      </h2>
+      <p class="text-lg text-[#6B5B7A] max-w-3xl mx-auto">
+        ¿Buscas sesiones de coaching holístico online en España? Trabajo con
+        mujeres en toda España por videollamada, ofreciendo un acompañamiento
+        personalizado y adaptado a tus necesidades.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-2xl p-6">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 bg-[#9B7EBD] rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-video text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#2D1B3D]">
+            Coaching por Videollamada
+          </h3>
+        </div>
+        <p class="text-[#6B5B7A] mb-4">
+          Todas mis sesiones de coaching holístico se realizan por videollamada
+          (Zoom, Meet o la plataforma que prefieras). La efectividad es la misma
+          que en presencial porque el trabajo se hace a nivel energético y
+          conversacional.
+        </p>
+        <ul class="space-y-2 text-[#6B5B7A]">
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Sin desplazamientos
+            ni horarios rígidos
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Desde la comodidad
+            de tu hogar
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Ideal para toda
+            España
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-2xl p-6">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 bg-[#9B7EBD] rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-calendar-check text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#2D1B3D]">Horarios Flexibles</h3>
+        </div>
+        <p class="text-[#6B5B7A] mb-4">
+          Me adapto a tu ritmo. Tenemos disponibles franjas de mañana y tarde
+          entre semana. Las sesiones duran entre 60 y 90 minutos y el proceso se
+          adapta a tu disponibilidad.
+        </p>
+        <ul class="space-y-2 text-[#6B5B7A]">
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Mañanas y tardes
+            disponibles
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Fines de semana
+            bajo demanda
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Cambio de fecha si
+            necesitas
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-2xl p-6">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 bg-[#9B7EBD] rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-user text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#2D1B3D]">
+            Coaching Personalizado
+          </h3>
+        </div>
+        <p class="text-[#6B5B7A] mb-4">
+          No hay dos procesos iguales. Cada sesión se diseña específicamente
+          para ti, tu momento vital y tus objetivos. No utilizo fórmulas
+          predefinidas.
+        </p>
+        <ul class="space-y-2 text-[#6B5B7A]">
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> 100% adaptado a ti
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Herramientas
+            personalizadas
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Seguimiento entre
+            sesiones
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-2xl p-6">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 bg-[#9B7EBD] rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-shield-heart text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#2D1B3D]">
+            Entorno Seguro y Confidencial
+          </h3>
+        </div>
+        <p class="text-[#6B5B7A] mb-4">
+          El coaching holístico requiere un espacio de confianza. Todas las
+          sesiones son completamente confidenciales. Puedes hablar con total
+          libertad sobre lo que te preocupa.
+        </p>
+        <ul class="space-y-2 text-[#6B5B7A]">
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Espacio libre de
+            juicios
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Confidencialidad
+            total
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Sin registro de
+            datos sensibles
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+      <p class="text-lg text-[#6B5B7A] mb-4">
+        <strong>Primera sesión de valoración gratuita</strong> — Sin compromiso,
+        conoce cómo trabajo antes de decidir.
+      </p>
+      <a href="#contacto" class="inline-flex items-center justify-center bg-[#9B7EBD] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#7A5FA0] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+        <i class="fa-brands fa-whatsapp mr-3 text-xl"></i>
+        Reserva tu primera sesión gratis
+      </a>
+    </div>
+  </div>
+</section>
+<section class="code-section py-16 bg-[#FAF7FC]" id="sdzjz49">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-4">
+        Beneficios del <span class="text-[#9B7EBD]">Coaching Holístico</span>
+      </h2>
+      <p class="text-lg text-[#6B5B7A] max-w-2xl mx-auto">
+        Un proceso de coaching integral ofrece beneficios que van más allá de lo
+        que puedes imaginar
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <div class="w-14 h-14 bg-[#E8D7F1] rounded-full flex items-center justify-center mb-4">
+          <i class="fa-solid fa-brain text-[#9B7EBD] text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-3">Claridad mental</h3>
+        <p class="text-[#6B5B7A]">
+          Deja atrás la confusión y la indecisión. El coaching te ayuda a ganar
+          claridad sobre lo que realmente quieres y cómo lograrlo.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <div class="w-14 h-14 bg-[#E8D7F1] rounded-full flex items-center justify-center mb-4">
+          <i class="fa-solid fa-heart-pulse text-[#9B7EBD] text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-3">Gestión emocional</h3>
+        <p class="text-[#6B5B7A]">
+          Aprende a identificar, expresar y gestionar tus emociones de forma
+          saludable. Libérate de bloqueos emocionales que te limitan.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <div class="w-14 h-14 bg-[#E8D7F1] rounded-full flex items-center justify-center mb-4">
+          <i class="fa-solid fa-bolt text-[#9B7EBD] text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-3">
+          Reducción del estrés
+        </h3>
+        <p class="text-[#6B5B7A]">
+          Técnicas de respiración, meditación y trabajo energético para reducir
+          ansiedad, estrés y agotamiento.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <div class="w-14 h-14 bg-[#E8D7F1] rounded-full flex items-center justify-center mb-4">
+          <i class="fa-solid fa-seedling text-[#9B7EBD] text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-3">
+          Crecimiento personal
+        </h3>
+        <p class="text-[#6B5B7A]">
+          Descubre patrones limitantes, trabaja creencias que no te sirven y
+          desarrolla todo tu potencial.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <div class="w-14 h-14 bg-[#E8D7F1] rounded-full flex items-center justify-center mb-4">
+          <i class="fa-solid fa-eye text-[#9B7EBD] text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-3">
+          Conexión espiritual
+        </h3>
+        <p class="text-[#6B5B7A]">
+          Conecta con tu intuición, descubre tu propósito de vida y vive en
+          coherencia con tus valores más profundos.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <div class="w-14 h-14 bg-[#E8D7F1] rounded-full flex items-center justify-center mb-4">
+          <i class="fa-solid fa-hand-holding-heart text-[#9B7EBD] text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-3">
+          Relaciones más sanas
+        </h3>
+        <p class="text-[#6B5B7A]">
+          Mejora tu comunicación, establece límites saludables y transforma tus
+          relaciones personales y profesionales.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="code-section py-16 bg-[#FAF7FC]" id="srig48">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-4">
+        ¿Te identificas con alguno de estos<span class="text-[#9B7EBD]">
+          problemas?</span>
+      </h2>
+      <p class="text-lg text-[#6B5B7A] max-w-2xl mx-auto">
+        El coaching holístico puede ayudarte si estás viviendo alguna de estas
+        situaciones. No estás sola — muchas mujeres han pasado por lo mismo y
+        han encontrado su camino.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#9B7EBD]">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-brain text-[#9B7EBD]"></i> Ansiedad y estrés
+          crónico
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Si sientes que la ansiedad te consume, que no puedes relajarte ni
+          disfrutar, que tu mente no para de pensar... el coaching holístico
+          trabaja directamente en la raíz emocional para devolverte la calma.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#9B7EBD]">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-meh-blank text-[#9B7EBD]"></i> Sensación de
+          vacío o estancamiento
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Si sientes que algo no encaja pero no sabes qué es, que estás viviendo
+          una vida que no es tuya, que has perdido la conexión contigo misma...
+          es hora de reclamar tu vida.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#9B7EBD]">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-heart-crack text-[#9B7EBD]"></i> Bloqueos
+          emocionales
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Si hay emociones que no logras expresar, situaciones del pasado que te
+          persiguen, miedos que te limitan... liberamos esos bloqueos para que
+          puedas avanzar libre.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#9B7EBD]">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-scale-unbalanced text-[#9B7EBD]"></i> Dificultad
+          para tomar decisiones
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Si no sabes qué camino tomar, si temes equivocarte, si la indecisión
+          te paraliza... te ayudo a conectar con tu intuición para tomar
+          decisiones desde la claridad.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#9B7EBD]">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-users text-[#9B7EBD]"></i> Problemas en
+          relaciones
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Si tus relaciones te generan más dolor que alegría, si no sabes poner
+          límites, si sientes que no te entienden... transformamos tu
+          comunicación y tus límites.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#9B7EBD]">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-mountain text-[#9B7EBD]"></i> Falta de propósito
+          o dirección
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Si no sabes qué quieres, si sientes que tu vida no tiene sentido, si
+          quieres un cambio pero no sabes por dónde empezar... descubriremos tu
+          propósito juntos.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#9B7EBD]">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-battery-quarter text-[#9B7EBD]"></i> Agotamiento
+          o burnout
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Si estás agotada física y emocionalmente, si das mucho y no recibes,
+          si sientes que no puedes más... reconstruiremos tu equilibrio y tu
+          energía.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#9B7EBD]">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-spa text-[#9B7EBD]"></i> Búsqueda de crecimiento
+          espiritual
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Si quieres ir más allá de lo material, conectar con tu esencia, vivir
+          una vida más auténtica y con conexión espiritual... el coaching
+          holístico integra todos los niveles.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#D4AF37]">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-plus text-[#D4AF37]"></i> Otros problemas
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Si ninguno de los anteriores aplica pero sientes que algo te frena,
+          contáctame. En la primera sesión gratuita valoraremos juntos si el
+          coaching holístico es lo que necesitas.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="code-section py-16 bg-white" id="swx6g2e">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-4">
+        Lo que dicen quienes<span class="text-[#9B7EBD]">
+          ya han trabajado conmigo</span>
+      </h2>
+      <p class="text-lg text-[#6B5B7A] max-w-2xl mx-auto">
+        Resultados reales de mujeres que han transformado su vida con coaching
+        holístico
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-2xl p-6">
+        <div class="flex gap-1 mb-4">
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+        </div>
+        <p class="text-[#6B5B7A] italic mb-4">
+          "Llevo años buscando ayuda y no encontraba nada que resonara conmigo.
+          Con Luisa encontré por fin un espacio donde me sentía entendida. En
+          solo 3 sesiones ya noté cambios profundos."
+        </p>
+        <p class="font-semibold text-[#2D1B3D]">— María, Madrid</p>
+        <p class="text-sm text-[#9B7EBD]">Coaching para gestión de ansiedad</p>
+      </div>
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-2xl p-6">
+        <div class="flex gap-1 mb-4">
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+        </div>
+        <p class="text-[#6B5B7A] italic mb-4">
+          "Pensé que el coaching online no funcionaría, pero estaba equivocada.
+          Las sesiones han sido igual de intensas y transformadoras. He
+          recuperado la claridad y la confianza en mí misma."
+        </p>
+        <p class="font-semibold text-[#2D1B3D]">— Laura, Barcelona</p>
+        <p class="text-sm text-[#9B7EBD]">
+          Pack 4 sesiones - Transición profesional
+        </p>
+      </div>
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-2xl p-6">
+        <div class="flex gap-1 mb-4">
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+        </div>
+        <p class="text-[#6B5B7A] italic mb-4">
+          "Estaba en un momento muy oscuro y no sabía qué hacer. El coaching
+          holístico me ayudó a encontrar el camino. Ahora vivo con más paz y
+          coherencia que nunca. Gracias, Luisa."
+        </p>
+        <p class="font-semibold text-[#2D1B3D]">— Carmen, Valencia</p>
+        <p class="text-sm text-[#9B7EBD]">Pack 8 sesiones - Crisis vital</p>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+      <a href="/testimonios" class="text-[#9B7EBD] font-semibold hover:underline">
+        Ver todos los testimonios <i class="fa-solid fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="code-section py-16 bg-white" id="scl98c8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-6">
+          ¿Para quién es el
+          <span class="text-[#9B7EBD]">Coaching Holístico</span>?
+        </h2>
+        <p class="text-lg text-[#6B5B7A] mb-6">
+          El coaching holístico no es para todo el mundo, y lo entiendo
+          perfectamente. Si estás aquí, probablemente te resuene alguno de estos
+          perfiles:
+        </p>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-4">
+            <div class="w-8 h-8 bg-[#9B7EBD] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <i class="fa-solid fa-check text-white text-sm"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-[#2D1B3D]">
+                Mujeres en momentos de cambio
+              </h3>
+              <p class="text-[#6B5B7A]">
+                Estás en una transición — profesional, personal, de relación — y
+                sientes que algo no encaja pero no sabes qué hacer.
+              </p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-8 h-8 bg-[#9B7EBD] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <i class="fa-solid fa-check text-white text-sm"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-[#2D1B3D]">
+                Personas con ansiedad o estrés crónico
+              </h3>
+              <p class="text-[#6B5B7A]">
+                Has probado otras cosas pero sigues sintiéndote atrapada en un
+                ciclo de preocupación, agotamiento o burnout.
+              </p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-8 h-8 bg-[#9B7EBD] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <i class="fa-solid fa-check text-white text-sm"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-[#2D1B3D]">
+                Buscadoras de crecimiento espiritual
+              </h3>
+              <p class="text-[#6B5B7A]">
+                Quieres ir más allá de lo material, conectar con tu esencia y
+                vivir una vida más auténtica y con propósito.
+              </p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-8 h-8 bg-[#9B7EBD] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <i class="fa-solid fa-check text-white text-sm"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-[#2D1B3D]">
+                Personas que buscan alternativas
+              </h3>
+              <p class="text-[#6B5B7A]">
+                No te sientes cómoda con la terapia tradicional y buscas un
+                enfoque más integral y holístico.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-3xl p-8">
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-6 flex items-center gap-3">
+          <i class="fa-solid fa-lightbulb text-[#D4AF37]"></i>
+          ¿No estás segura?
+        </h3>
+        <p class="text-[#6B5B7A] mb-4">
+          La primera sesión de valoración es gratuita. En ella podemos hablar
+          sobre tu situación y ver si el coaching holístico es lo que necesitas.
+        </p>
+        <p class="text-[#6B5B7A] mb-6">
+          No hay ningún compromiso. Si después de hablar decides que no es para
+          ti, no pasa nada. Pero quizás — quizás puede ser el inicio de algo
+          transformador.
+        </p>
+        <a href="#contacto" class="inline-flex items-center justify-center bg-[#9B7EBD] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#7A5FA0] transition-colors">
+          <i class="fa-brands fa-whatsapp mr-2"></i>
+          Reserva tu sesión gratuita
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="code-section py-16 bg-[#FAF7FC]" id="shvtly">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-4">
+        ¿Cómo <span class="text-[#9B7EBD]">funciona?</span>
+      </h2>
+      <p class="text-lg text-[#6B5B7A] max-w-2xl mx-auto">
+        Un proceso claro y personalizado para acompañarte en tu transformación
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-3xl p-8 shadow-lg text-center">
+        <div class="w-16 h-16 bg-[#9B7EBD] rounded-full flex items-center justify-center mx-auto mb-6">
+          <span class="text-2xl font-bold text-white">1</span>
+        </div>
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-3">
+          Primera sesión gratuita
+        </h3>
+        <p class="text-[#6B5B7A]">
+          Valoramos tu situación actual, definimos objetivos y determinamos
+          juntos el mejor enfoque para tu proceso.
+        </p>
+      </div>
+      <div class="bg-white rounded-3xl p-8 shadow-lg text-center">
+        <div class="w-16 h-16 bg-[#9B7EBD] rounded-full flex items-center justify-center mx-auto mb-6">
+          <span class="text-2xl font-bold text-white">2</span>
+        </div>
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-3">
+          Sesiones personalizadas
+        </h3>
+        <p class="text-[#6B5B7A]">
+          Cada sesión se adapta a tu momento actual. Utilizamos coaching, Flores
+          de Bach, meditación y otras herramientas.
+        </p>
+      </div>
+      <div class="bg-white rounded-3xl p-8 shadow-lg text-center">
+        <div class="w-16 h-16 bg-[#9B7EBD] rounded-full flex items-center justify-center mx-auto mb-6">
+          <span class="text-2xl font-bold text-white">3</span>
+        </div>
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-3">
+          Resultados sostenibles
+        </h3>
+        <p class="text-[#6B5B7A]">
+          Acompañamiento continuo hasta alcanzar tus objetivos. Te dotamos de
+          herramientas para la autonomía.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="code-section py-16 bg-white" id="precios">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-4">
+        Inversión en tu <span class="text-[#9B7EBD]">Transformación</span>
+      </h2>
+      <p class="text-lg text-[#6B5B7A] max-w-2xl mx-auto">
+        Elige el paquete que mejor se adapte a tus necesidades. La primera
+        sesión de valoración es gratuita.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-3xl p-8 shadow-lg border border-[#E5D9F2]">
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-2">Sesión Única</h3>
+        <p class="text-sm text-[#6B5B7A] mb-4">
+          Para probar o resolver un tema puntual
+        </p>
+        <div class="mb-6">
+          <span class="text-4xl font-bold text-[#9B7EBD]">50€</span>
+          <span class="text-[#6B5B7A]">/sesión</span>
+        </div>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-2 text-[#6B5B7A]">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>60-90 minutos</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A]">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Videollamada o presencial</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A]">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Resumen post-sesión</span>
+          </li>
+        </ul>
+        <a href="#contacto" class="block text-center bg-white text-[#9B7EBD] py-3 rounded-full font-semibold border-2 border-[#9B7EBD] hover:bg-[#9B7EBD] hover:text-white transition-colors">
+          Reservar
+        </a>
+      </div>
+      <div class="bg-[#9B7EBD] rounded-3xl p-8 shadow-xl relative">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D4AF37] text-white px-4 py-1 rounded-full text-sm font-semibold">
+          Más popular
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Pack 4 Sesiones</h3>
+        <p class="text-sm text-white/80 mb-4">
+          Proceso completo de transformación
+        </p>
+        <div class="mb-6">
+          <span class="text-4xl font-bold text-white">180€</span>
+          <span class="text-white/80">/pack</span>
+        </div>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-2 text-white">
+            <i class="fa-solid fa-check text-[#D4AF37]"></i>
+            <span>4 sesiones (60-90 min c/u)</span>
+          </li>
+          <li class="flex items-center gap-2 text-white">
+            <i class="fa-solid fa-check text-[#D4AF37]"></i>
+            <span>Seguimiento entre sesiones</span>
+          </li>
+          <li class="flex items-center gap-2 text-white">
+            <i class="fa-solid fa-check text-[#D4AF37]"></i>
+            <span>Meditación personalizada</span>
+          </li>
+          <li class="flex items-center gap-2 text-white">
+            <i class="fa-solid fa-check text-[#D4AF37]"></i>
+            <span>Flores de Bach incluidas</span>
+          </li>
+        </ul>
+        <a href="#contacto" class="block text-center bg-white text-[#9B7EBD] py-3 rounded-full font-semibold hover:bg-[#F0EAF7] transition-colors">
+          Reservar Pack
+        </a>
+      </div>
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-3xl p-8 shadow-lg border border-[#E5D9F2]">
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-2">Pack 8 Sesiones</h3>
+        <p class="text-sm text-[#6B5B7A] mb-4">Transformación profunda</p>
+        <div class="mb-6">
+          <span class="text-4xl font-bold text-[#9B7EBD]">320€</span>
+          <span class="text-[#6B5B7A]">/pack</span>
+        </div>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-2 text-[#6B5B7A]">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>8 semanas de acompañamiento</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A]">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Soporte por WhatsApp</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A]">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Sesión extra de regalo</span>
+          </li>
+        </ul>
+        <a href="#contacto" class="block text-center bg-white text-[#9B7EBD] py-3 rounded-full font-semibold border-2 border-[#9B7EBD] hover:bg-[#9B7EBD] hover:text-white transition-colors">
+          Reservar Pack
+        </a>
+      </div>
+    </div>
+    <p class="text-center text-[#6B5B7A] mt-8">
+      <i class="fa-solid fa-shield-halved text-[#9B7EBD] mr-2"></i>
+      Pago seguro. Posibilidad de fraccionar el pago de los packs.
+    </p>
+  </div>
+</section>
+<section class="code-section py-16 bg-white" id="s14m8ka">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-4">
+        Preguntas <span class="text-[#9B7EBD]">Frecuentes</span>
+      </h2>
+    </div>
+    <div class="space-y-4" data-landingsite-faq="">
+      <div class="border border-[#E5D9F2] rounded-2xl overflow-hidden" data-landingsite-faq-item="">
+        <button class="w-full flex items-center justify-between p-6 text-left bg-[#FAF7FC] hover:bg-[#F0EAF7] transition-colors" data-landingsite-faq-question="">
+          <span class="font-semibold text-[#2D1B3D]">¿Cuánto cuesta una sesión de coaching holístico online?</span>
+          <i class="fa-solid fa-chevron-down text-[#9B7EBD] transition-transform"></i>
+        </button>
+        <div class="p-6 bg-white hidden" data-landingsite-faq-answer="">
+          <p class="text-[#6B5B7A]">
+            La sesión única tiene un precio de 50€ (60-90 minutos). También
+            existen packs de 4 sesiones (180€) y 8 sesiones (320€) que incluyen
+            beneficios adicionales como seguimientos y meditaciones
+            personalizadas. La primera sesión de valoración es gratuita.
+          </p>
+        </div>
+      </div>
+      <div class="border border-[#E5D9F2] rounded-2xl overflow-hidden" data-landingsite-faq-item="">
+        <button class="w-full flex items-center justify-between p-6 text-left bg-[#FAF7FC] hover:bg-[#F0EAF7] transition-colors" data-landingsite-faq-question="">
+          <span class="font-semibold text-[#2D1B3D]">¿Qué diferencia hay entre un coach y un terapeuta?</span>
+          <i class="fa-solid fa-chevron-down text-[#9B7EBD] transition-transform"></i>
+        </button>
+        <div class="p-6 bg-white hidden" data-landingsite-faq-answer="">
+          <p class="text-[#6B5B7A]">
+            El coaching holístico trabaja desde el presente hacia el futuro,
+            ayudándote a tomar decisiones y avanzar hacia tus objetivos. La
+            terapia trabaja con el pasado y trata trastornos mentales
+            diagnosticables. El coaching es complementario a la terapia, no un
+            sustituto. Si necesitas tratamiento para un problema mental
+            específico, se recomienda terapia profesional.
+          </p>
+        </div>
+      </div>
+      <div class="border border-[#E5D9F2] rounded-2xl overflow-hidden" data-landingsite-faq-item="">
+        <button class="w-full flex items-center justify-between p-6 text-left bg-[#FAF7FC] hover:bg-[#F0EAF7] transition-colors" data-landingsite-faq-question="">
+          <span class="font-semibold text-[#2D1B3D]">¿El coaching holístico funciona para la ansiedad?</span>
+          <i class="fa-solid fa-chevron-down text-[#9B7EBD] transition-transform"></i>
+        </button>
+        <div class="p-6 bg-white hidden" data-landingsite-faq-answer="">
+          <p class="text-[#6B5B7A]">
+            Sí. El coaching holístico trabaja directamente con las emociones que
+            subyacen a la ansiedad. Utilizamos técnicas de respiración,
+            mindfulness y Flores de Bach para ayudarte a gestionar el estrés y
+            recuperar la calma. Muchas personas experimentan alivio después de
+            las primeras sesiones.
+          </p>
+        </div>
+      </div>
+      <div class="border border-[#E5D9F2] rounded-2xl overflow-hidden" data-landingsite-faq-item="">
+        <button class="w-full flex items-center justify-between p-6 text-left bg-[#FAF7FC] hover:bg-[#F0EAF7] transition-colors" data-landingsite-faq-question="">
+          <span class="font-semibold text-[#2D1B3D]">¿Necesito creer en espiritualidad para que funcione?</span>
+          <i class="fa-solid fa-chevron-down text-[#9B7EBD] transition-transform"></i>
+        </button>
+        <div class="p-6 bg-white hidden" data-landingsite-faq-answer="">
+          <p class="text-[#6B5B7A]">
+            No es necesario. El coaching holístico funciona a través de la
+            conversación, la conexión y herramientas prácticas,
+            independientemente de las creencias personales. Muchas personas
+            acercándose con escepticismo terminan valorando los beneficios
+            prácticos que experimentan.
+          </p>
+        </div>
+      </div>
+      <div class="border border-[#E5D9F2] rounded-2xl overflow-hidden" data-landingsite-faq-item="">
+        <button class="w-full flex items-center justify-between p-6 text-left bg-[#FAF7FC] hover:bg-[#F0EAF7] transition-colors" data-landingsite-faq-question="">
+          <span class="font-semibold text-[#2D1B3D]">¿Cuántas sesiones necesito para ver resultados?</span>
+          <i class="fa-solid fa-chevron-down text-[#9B7EBD] transition-transform"></i>
+        </button>
+        <div class="p-6 bg-white hidden" data-landingsite-faq-answer="">
+          <p class="text-[#6B5B7A]">
+            Muchas personas sienten cambios después de la primera sesión. Para
+            resultados profundos y sostenibles, se recomienda un mínimo de 4-8
+            sesiones. El proceso completo se valora en la primera sesión
+            gratuita.
+          </p>
+        </div>
+      </div>
+      <div class="border border-[#E5D9F2] rounded-2xl overflow-hidden" data-landingsite-faq-item="">
+        <button class="w-full flex items-center justify-between p-6 text-left bg-[#FAF7FC] hover:bg-[#F0EAF7] transition-colors" data-landingsite-faq-question="">
+          <span class="font-semibold text-[#2D1B3D]">¿Las sesiones son online o presenciales?</span>
+          <i class="fa-solid fa-chevron-down text-[#9B7EBD] transition-transform"></i>
+        </button>
+        <div class="p-6 bg-white hidden" data-landingsite-faq-answer="">
+          <p class="text-[#6B5B7A]">
+            Ofrezco ambas opciones. Las sesiones online se realizan por
+            videollamada y tienen la misma efectividad que las presenciales.
+            Esta modalidad me permite acompañar a personas en toda España y
+            Latinoamérica. Las sesiones presenciales son en Narón, Galicia.
+          </p>
+        </div>
+      </div>
+      <div class="border border-[#E5D9F2] rounded-2xl overflow-hidden" data-landingsite-faq-item="">
+        <button class="w-full flex items-center justify-between p-6 text-left bg-[#FAF7FC] hover:bg-[#F0EAF7] transition-colors" data-landingsite-faq-question="">
+          <span class="font-semibold text-[#2D1B3D]">¿Tienes garantía de satisfacción?</span>
+          <i class="fa-solid fa-chevron-down text-[#9B7EBD] transition-transform"></i>
+        </button>
+        <div class="p-6 bg-white hidden" data-landingsite-faq-answer="">
+          <p class="text-[#6B5B7A]">
+            Sí. La primera sesión de valoración de 30 minutos es completamente
+            gratuita y sin compromiso. Si después de la primera sesión de
+            trabajo (50€) no sientes que es para ti, hablaremos para encontrar
+            la mejor solución. Mi objetivo es que sientas valor desde el primer
+            momento.
+          </p>
+        </div>
+      </div>
+      <div class="border border-[#E5D9F2] rounded-2xl overflow-hidden" data-landingsite-faq-item="">
+        <button class="w-full flex items-center justify-between p-6 text-left bg-[#FAF7FC] hover:bg-[#F0EAF7] transition-colors" data-landingsite-faq-question="">
+          <span class="font-semibold text-[#2D1B3D]">¿En cuánto tiempo notaré resultados?</span>
+          <i class="fa-solid fa-chevron-down text-[#9B7EBD] transition-transform"></i>
+        </button>
+        <div class="p-6 bg-white hidden" data-landingsite-faq-answer="">
+          <p class="text-[#6B5B7A]">
+            Cada persona es diferente. Muchas personas notan una sensación de
+            alivio y claridad después de la primera sesión. Para cambios más
+            profundos y duraderos, generalmente se necesitan entre 4 y 8
+            sesiones. En la primera sesión gratuita valoramos juntos tu
+            situación y te orientamos sobre el proceso esperado.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-16 bg-white code-section" id="si5f5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-4">
+        Otros servicios que te pueden <span class="text-[#9B7EBD]">ayudar</span>
+      </h2>
+      <p class="text-lg text-[#6B5B7A] max-w-2xl mx-auto">
+        Combina diferentes enfoques para una transformación más completa
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <a href="/flores-de-bach" class="group bg-[#FAF7FC] rounded-2xl p-6 hover:bg-[#F0EAF7] transition-all duration-300 hover:shadow-lg">
+        <div class="w-14 h-14 bg-[#E8D7F1] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#D4B5E8] transition-colors">
+          <i class="fa-solid fa-flower text-[#9B7EBD] text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-[#2D1B3D] text-lg mb-2">Flores de Bach</h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Equilibra tus emociones con las 38 esencias florales del Dr. Bach
+        </p>
+        <span class="inline-flex items-center gap-2 text-[#9B7EBD] text-sm font-semibold mt-4">
+          Descubrir <i class="fa-solid fa-arrow-right text-xs"></i>
+        </span>
+      </a>
+      <a href="/meditaciones-personalizadas" class="group bg-[#FAF7FC] rounded-2xl p-6 hover:bg-[#F0EAF7] transition-all duration-300 hover:shadow-lg">
+        <div class="w-14 h-14 bg-[#E8D7F1] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#D4B5E8] transition-colors">
+          <i class="fa-solid fa-spa text-[#9B7EBD] text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-[#2D1B3D] text-lg mb-2">
+          Meditaciones Personalizadas
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Sesiones de mindfulness adaptadas a tus necesidades específicas
+        </p>
+        <span class="inline-flex items-center gap-2 text-[#9B7EBD] text-sm font-semibold mt-4">
+          Descubrir <i class="fa-solid fa-arrow-right text-xs"></i>
+        </span>
+      </a>
+      <a href="/coaching-angelical" class="group bg-[#FAF7FC] rounded-2xl p-6 hover:bg-[#F0EAF7] transition-all duration-300 hover:shadow-lg">
+        <div class="w-14 h-14 bg-[#E8D7F1] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#D4B5E8] transition-colors">
+          <i class="fa-solid fa-feather text-[#9B7EBD] text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-[#2D1B3D] text-lg mb-2">
+          Coaching Angelical
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Conecta con la guía de ángeles y arcángeles para tu camino
+        </p>
+        <span class="inline-flex items-center gap-2 text-[#9B7EBD] text-sm font-semibold mt-4">
+          Descubrir <i class="fa-solid fa-arrow-right text-xs"></i>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="code-section py-16 bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7]" id="s48zwxo">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <span class="inline-block px-4 py-2 bg-[#E8D7F1] text-[#7A5FA0] rounded-full text-sm font-semibold mb-4">
+      ¿Hablamos?
+    </span>
+    <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-4">
+      ¿Listo para <span class="text-[#9B7EBD]">comenzar?</span>
+    </h2>
+    <p class="text-lg text-[#6B5B7A] mb-8 max-w-2xl mx-auto">
+      La primera sesión de valoración es gratuita. Sin compromiso. Cuéntame tu
+      situación y juntos encontraremos el mejor camino para ti.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+      <a href="https://wa.me/34616054001" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#9B7EBD] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#7A5FA0] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+        <i class="fa-brands fa-whatsapp mr-3 text-xl"></i>
+        Escríbeme por WhatsApp
+      </a>
+      <a href="mailto:luisacorralcoach@gmail.com" class="inline-flex items-center justify-center px-8 py-4 rounded-full font-semibold text-lg border-2 border-[#9B7EBD] text-[#9B7EBD] hover:bg-[#9B7EBD] hover:text-white transition-all duration-300">
+        <i class="fa-regular fa-envelope mr-3 text-xl"></i>
+        Envíame un email
+      </a>
+    </div>
+    <p class="text-[#6B5B7A] flex items-center justify-center gap-2">
+      <i class="fa-solid fa-location-dot text-[#9B7EBD]"></i>
+      Online para toda España · Presencial en Narón, Galicia
+    </p>
+  </div>
+</section>
+<footer id="global-footer" class="code-section bg-[#2D1B3D] text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <!-- Logo & Description -->
+      <div class="lg:col-span-1">
+        <a href="/" class="inline-block mb-4 flex items-center justify-center">
+          <img src="/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-b366db84-bd47-474a-5c88-9bc6624d9b00.webp" alt="Luisa Corral - Coach Holística y Terapéutica en Narón, Galicia" data-logo="{&quot;id&quot;:&quot;logo&quot;,&quot;src&quot;:&quot;custom&quot;,&quot;type&quot;:&quot;logo&quot;}" class="h-32 w-auto max-w-none" data-media="{&quot;id&quot;:&quot;upload-luisa_corral_logo_HQ.png&quot;,&quot;src&quot;:&quot;upload&quot;,&quot;type&quot;:&quot;image&quot;}" oncontextmenu="return false;">
+        </a>
+        <p class="text-[#B8A4C9] text-sm mb-6">
+          Coach Holístico y Terapéutico en Narón, Galicia. Te acompaño en tu
+          proceso de transformación personal para encontrar el equilibrio entre
+          cuerpo, mente, emociones y espíritu.
+        </p>
+        <div class="flex gap-4">
+          <a href="https://wa.me/34616054001" rel="noopener noreferrer nofollow" class="w-10 h-10 bg-[#9B7EBD] rounded-full flex items-center justify-center hover:bg-[#7A5FA0] transition-colors">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="mailto:luisacorralcoach@gmail.com" rel="noopener noreferrer nofollow" class="w-10 h-10 bg-[#9B7EBD] rounded-full flex items-center justify-center hover:bg-[#7A5FA0] transition-colors">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="https://www.instagram.com/luisacorralcoach/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-[#9B7EBD] rounded-full flex items-center justify-center hover:bg-[#7A5FA0] transition-colors">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@luisacorral_coach" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-[#9B7EBD] rounded-full flex items-center justify-center hover:bg-[#7A5FA0] transition-colors">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <p class="text-lg font-semibold mb-4 text-[#D4AF37]">Navegación</p>
+        <ul class="space-y-3">
+          <li>
+            <a href="/" class="text-[#B8A4C9] hover:text-white transition-colors">Inicio</a>
+          </li>
+          <li>
+            <a href="/sobre-mi" class="text-[#B8A4C9] hover:text-white transition-colors">Sobre Mí</a>
+          </li>
+          <li></li>
+          <li>
+            <a href="/testimonios" class="text-[#B8A4C9] hover:text-white transition-colors">Testimonios</a>
+          </li>
+          <li>
+            <a href="/blog" class="text-[#B8A4C9] hover:text-white transition-colors">Blog</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <p class="text-lg font-semibold mb-4 text-[#D4AF37]">Servicios</p>
+        <ul class="space-y-3">
+          <li>
+            <a href="/coaching-holistico" class="text-[#B8A4C9] hover:text-white transition-colors">Coaching Holístico</a>
+          </li>
+          <li>
+            <a href="/flores-de-bach" class="text-[#B8A4C9] hover:text-white transition-colors">Flores de Bach</a>
+          </li>
+          <li>
+            <a href="/meditaciones-personalizadas" class="text-[#B8A4C9] hover:text-white transition-colors">Meditaciones Personalizadas</a>
+          </li>
+          <li>
+            <a href="/coaching-angelical" class="text-[#B8A4C9] hover:text-white transition-colors">Coaching Angelical</a>
+          </li>
+          <li>
+            <a href="/reiki-delfin" class="text-[#B8A4C9] hover:text-white transition-colors">Reiki Delfín</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <p class="text-lg font-semibold mb-4 text-[#D4AF37]">Contacto</p>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-2 text-[#B8A4C9]">
+            <i class="fa-brands fa-whatsapp text-[#25D366]"></i>
+            <span>+34 616 054 001</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#B8A4C9]">
+            <i class="fa-solid fa-phone text-[#9B7EBD]"></i>
+            <span>+34 616 054 001</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#B8A4C9]">
+            <i class="fa-solid fa-envelope text-[#D4AF37]"></i>
+            <span><a href="mailto:luisacorralcoach@gmail.com" class="hover:text-[#D4AF37] transition-colors">luisacorralcoach@gmail.com</a></span>
+          </li>
+          <li class="flex items-start gap-2 text-[#B8A4C9]">
+            <i class="fa-solid fa-location-dot text-[#9B7EBD] mt-1"></i>
+            <span>Narón, Galicia, España</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-[#9B7EBD]/30 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-[#B8A4C9] text-sm">
+        © 2026 Luisa Corral - Coach Holística. Todos los derechos reservados.
+      </p>
+      <div class="flex gap-6 text-sm">
+        <a href="/aviso-legal" class="text-[#B8A4C9] hover:text-white transition-colors">Aviso Legal</a>
+        <a href="/politica-de-privacidad" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Privacidad</a>
+        <a href="/politica-de-cookies" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="module">
+  const boot = async () => {
+    try {
+      const { initCookieBanner } = await import('/js/modules/cookie-consent.js')
+      initCookieBanner()
+    } catch (_) {}
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot, { once: true })
+  else boot()
+</script>
+<script defer="" src="/public/fontawesome-kit.js" crossorigin="anonymous"></script>
+</body></html>

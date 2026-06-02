@@ -1,0 +1,13 @@
+{
+  "name": "luisacorralcoach-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "migrate": "node scripts/migrate.mjs",
+    "finalize": "node scripts/finalize.mjs",
+    "build": "node scripts/migrate.mjs && node scripts/finalize.mjs"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0"
+  }
+}

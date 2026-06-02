@@ -1,0 +1,1193 @@
+<!DOCTYPE html><html lang="es"><head>
+    <script src="/public/main.umd.js" defer=""></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;family=Nunito+Sans:wght@300;400;500;600;700&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </noscript>
+    <style>*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*,::after,::before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.pointer-events-none{pointer-events:none}.visible{visibility:visible}.invisible{visibility:hidden}.static{position:static}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.-bottom-6{bottom:-1.5rem}.-left-6{left:-1.5rem}.-top-4{top:-1rem}.bottom-0{bottom:0}.bottom-20{bottom:5rem}.left-0{left:0}.left-1\/2{left:50%}.right-0{right:0}.right-6{right:1.5rem}.right-full{right:100%}.top-0{top:0}.z-40{z-index:40}.z-50{z-index:50}.z-\[2147483647\]{z-index:2147483647}.mx-auto{margin-left:auto;margin-right:auto}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:.5rem}.mr-2{margin-right:.5rem}.mr-3{margin-right:.75rem}.mt-0{margin-top:0}.mt-1{margin-top:.25rem}.mt-12{margin-top:3rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-20{height:5rem}.h-32{height:8rem}.h-\[450px\]{height:450px}.h-full{height:100%}.w-10{width:2.5rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-56{width:14rem}.w-auto{width:auto}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-none{max-width:none}.flex-shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-2{--tw-translate-y:-0.5rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-x-0{--tw-translate-x:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-0{--tw-scale-x:0;--tw-scale-y:0;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-12{gap:3rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-8>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem * var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem * var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.whitespace-nowrap{white-space:nowrap}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-xl{border-radius:.75rem}.rounded-b-xl{border-bottom-right-radius:.75rem;border-bottom-left-radius:.75rem}.rounded-t-xl{border-top-left-radius:.75rem;border-top-right-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-l-2{border-left-width:2px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-\[\#9B7EBD\]{--tw-border-opacity:1;border-color:rgb(155 126 189 / var(--tw-border-opacity))}.border-\[\#9B7EBD\]\/30{border-color:rgb(155 126 189 / .3)}.border-\[\#E5D9F2\]{--tw-border-opacity:1;border-color:rgb(229 217 242 / var(--tw-border-opacity))}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity))}.bg-\[\#25D366\]{--tw-bg-opacity:1;background-color:rgb(37 211 102 / var(--tw-bg-opacity))}.bg-\[\#2D1B3D\]{--tw-bg-opacity:1;background-color:rgb(45 27 61 / var(--tw-bg-opacity))}.bg-\[\#9B7EBD\]{--tw-bg-opacity:1;background-color:rgb(155 126 189 / var(--tw-bg-opacity))}.bg-\[\#9B7EBD\]\/10{background-color:rgb(155 126 189 / .1)}.bg-\[\#D4AF37\]{--tw-bg-opacity:1;background-color:rgb(212 175 55 / var(--tw-bg-opacity))}.bg-\[\#E8D7F1\]{--tw-bg-opacity:1;background-color:rgb(232 215 241 / var(--tw-bg-opacity))}.bg-\[\#F0EAF7\]{--tw-bg-opacity:1;background-color:rgb(240 234 247 / var(--tw-bg-opacity))}.bg-\[\#FAF7FC\]{--tw-bg-opacity:1;background-color:rgb(250 247 252 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.from-\[\#9B7EBD\]{--tw-gradient-from:#9B7EBD var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(155 126 189 / 0) var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#9B7EBD\]\/10{--tw-gradient-from:rgb(155 126 189 / 0.1) var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(155 126 189 / 0) var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-\[\#FAF7FC\]{--tw-gradient-from:#FAF7FC var(--tw-gradient-from-position);--tw-gradient-from-position: ;--tw-gradient-to:rgb(250 247 252 / 0) var(--tw-gradient-from-position);--tw-gradient-to-position: ;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.to-\[\#7A5FA0\]{--tw-gradient-to:#7A5FA0 var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-\[\#7A5FA0\]\/10{--tw-gradient-to:rgb(122 95 160 / 0.1) var(--tw-gradient-to-position);--tw-gradient-to-position: }.to-\[\#F0EAF7\]{--tw-gradient-to:#F0EAF7 var(--tw-gradient-to-position);--tw-gradient-to-position: }.object-cover{-o-object-fit:cover;object-fit:cover}.p-2{padding:.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pl-4{padding-left:1rem}.pl-6{padding-left:1.5rem}.pt-8{padding-top:2rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-semibold{font-weight:600}.italic{font-style:italic}.text-\[\#25D366\]{--tw-text-opacity:1;color:rgb(37 211 102 / var(--tw-text-opacity))}.text-\[\#2D1B3D\]{--tw-text-opacity:1;color:rgb(45 27 61 / var(--tw-text-opacity))}.text-\[\#6B5B7A\]{--tw-text-opacity:1;color:rgb(107 91 122 / var(--tw-text-opacity))}.text-\[\#7A5FA0\]{--tw-text-opacity:1;color:rgb(122 95 160 / var(--tw-text-opacity))}.text-\[\#9B7EBD\]{--tw-text-opacity:1;color:rgb(155 126 189 / var(--tw-text-opacity))}.text-\[\#B8A4C9\]{--tw-text-opacity:1;color:rgb(184 164 201 / var(--tw-text-opacity))}.text-\[\#D4AF37\]{--tw-text-opacity:1;color:rgb(212 175 55 / var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.text-white\/80{color:rgb(255 255 255 / .8)}.underline{text-decoration-line:underline}.opacity-0{opacity:0}.opacity-100{opacity:1}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1),0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1),0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1),0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms}.duration-200{transition-duration:.2s}.duration-300{transition-duration:.3s}.ease-in-out{transition-timing-function:cubic-bezier(0.4,0,0.2,1)}.hover\:-translate-y-0:hover{--tw-translate-y:-0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:-translate-y-0\.5:hover{--tw-translate-y:-0.125rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-\[\#20BD5A\]:hover{--tw-bg-opacity:1;background-color:rgb(32 189 90 / var(--tw-bg-opacity))}.hover\:bg-\[\#7A5FA0\]:hover{--tw-bg-opacity:1;background-color:rgb(122 95 160 / var(--tw-bg-opacity))}.hover\:bg-\[\#9B7EBD\]:hover{--tw-bg-opacity:1;background-color:rgb(155 126 189 / var(--tw-bg-opacity))}.hover\:bg-\[\#F0EAF7\]:hover{--tw-bg-opacity:1;background-color:rgb(240 234 247 / var(--tw-bg-opacity))}.hover\:bg-\[\#FAF7FC\]:hover{--tw-bg-opacity:1;background-color:rgb(250 247 252 / var(--tw-bg-opacity))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.hover\:text-\[\#2D1B3D\]:hover{--tw-text-opacity:1;color:rgb(45 27 61 / var(--tw-text-opacity))}.hover\:text-\[\#9B7EBD\]:hover{--tw-text-opacity:1;color:rgb(155 126 189 / var(--tw-text-opacity))}.hover\:text-\[\#D4AF37\]:hover{--tw-text-opacity:1;color:rgb(212 175 55 / var(--tw-text-opacity))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:underline:hover{text-decoration-line:underline}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1),0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1),0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.group:hover .group-hover\:visible{visibility:visible}.group:hover .group-hover\:translate-y-0{--tw-translate-y:0px;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:bg-\[\#D4B5E8\]{--tw-bg-opacity:1;background-color:rgb(212 181 232 / var(--tw-bg-opacity))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width:640px){.sm\:flex-row{flex-direction:row}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width:768px){.md\:bottom-6{bottom:1.5rem}.md\:h-16{height:4rem}.md\:h-32{height:8rem}.md\:h-40{height:10rem}.md\:w-16{width:4rem}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}}@media (min-width:1024px){.lg\:col-span-1{grid-column:span 1/span 1}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\:gap-12{gap:3rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}}.opacity-0{opacity:0}.opacity-5{opacity:.05}.opacity-10{opacity:.1}.opacity-15{opacity:.15}.opacity-20{opacity:.2}.opacity-25{opacity:.25}.opacity-30{opacity:.3}.opacity-35{opacity:.35}.opacity-40{opacity:.4}.opacity-45{opacity:.45}.opacity-50{opacity:.5}.opacity-55{opacity:.55}.opacity-60{opacity:.6}.opacity-65{opacity:.65}.opacity-70{opacity:.7}.opacity-75{opacity:.75}.opacity-80{opacity:.8}.opacity-85{opacity:.85}.opacity-90{opacity:.9}.opacity-95{opacity:.95}.opacity-100{opacity:1}</style>
+    <link rel="icon" type="image/png" href="/assets/uploads/b3f76780-ddae-46b6-b492-f8eaf4baab97/7cec306b-129e-4df9-bd7e-4bd3b2f7e77d.webp">
+<link rel="apple-touch-icon" type="image/png" href="/assets/uploads/b3f76780-ddae-46b6-b492-f8eaf4baab97/7cec306b-129e-4df9-bd7e-4bd3b2f7e77d.webp">
+
+<!-- Información estructurada para crawlers de IA -->
+<meta name="ai-description" content="Luisa Corral es coach holística certificada con más de 8 años de experiencia. Ofrece sesiones de Flores de Bach (sistema del Dr. Edward Bach), Coaching Angelical, Meditaciones Personalizadas y Reiki Delfín. Atiende presencialmente en Narón (A Coruña, Galicia) y online para toda España y Latinoamérica. Especializada en acompañar a mujeres en procesos de transformación personal, gestión emocional y crecimiento espiritual.">
+<meta name="author" content="Luisa Corral">
+<meta name="geo.region" content="ES-GA">
+<meta name="geo.placename" content="Narón, Galicia, España">
+<link rel="alternate" hreflang="es" href="/">
+<link rel="alternate" hreflang="es-419" href="/">
+<link rel="alternate" hreflang="x-default" href="/">
+    <style>:root { --accent-color: #D4AF37; --accent2-color: #E8D7F1; --accent3-color: #B8A4C9; --accent4-color: #F2E6D9; --primary-color: #9B7EBD; --dark-text-color: #2D1B3D; --gray-text-color: #6B5B7A; --button-padding-x: 32px; --button-padding-y: 14px; --font-family-body: Nunito Sans; --light-text-color: #FFFFFF; --dark-border-color: #7A5FA0; --light-border-color: #E5D9F2; --font-family-heading: Outfit; --button-rounded-radius: 28px; --dark-background-color: #3D2A52; --light-background-color: #FAF7FC; --medium-background-color: #F0EAF7; --primary-button-text-color: #FFFFFF; --secondary-button-bg-color: #F5F0FA; --secondary-button-text-color: #9B7EBD; --primary-button-hover-bg-color: #7A5FA0; --primary-button-hover-text-color: #FFFFFF; --secondary-button-hover-bg-color: #D4B5E8; --secondary-button-hover-text-color: #5A3D7A; }</style>
+    <title>Flores de Bach Online | Sesiones con Luisa Corral</title>
+<meta name="description" content="Terapia floral personalizada con Flores de Bach online. 38 esencias para ansiedad, estrés, miedos y bloqueos emocionales. Fórmula enviada a tu domicilio.">
+<meta name="keywords" content="Flores de Bach, terapia floral, flores de Bach España, tratamiento emociones, ansiedad estrés, remedy florar Bach, sanación emocional Galicia, coach holístico Narón">
+<meta name="language" content="es">
+<meta property="og:title" content="Flores de Bach - Terapia Floral para Equilibrio Emocional">
+<meta property="og:image" content="https://www.luisacorralcoach.com/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-7b43f64e-a404-472d-bb2a-31e31d6f7500-public.webp">
+<link rel="preload" as="image" href="/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-7b43f64e-a404-472d-bb2a-31e31d6f7500-public.webp">
+<meta property="og:url" content="/flores-de-bach">
+<link rel="canonical" href="/flores-de-bach">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "" },
+    { "@type": "ListItem", "position": 2, "name": "Flores de Bach" }
+  ]
+}
+</script>
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Flores de Bach - Terapia Floral para Equilibrio Emocional">
+<meta name="twitter:description" content="Terapia con Flores de Bach en Narón, Galicia. Remedios naturales para estrés, ansiedad, miedos y bloqueos emocionales.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Terapia de Flores de Bach",
+  "description": "Remedios florales personalizados para restablecer el equilibrio emocional. El sistema del Dr. Edward Bach con 38 esencias trata estados emocionales como miedo, ansiedad, incertidumbre o soledad. Sesiones en Narón y online.",
+  "url": "/flores-de-bach",
+  "provider": { "@type": "Person", "name": "Luisa Corral" },
+  "areaServed": "España",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Consulta Inicial Flores de Bach",
+      "description": "Entrevista de 60 minutos, diagnóstico emocional y selección de esencias",
+      "price": "50",
+      "priceCurrency": "EUR"
+    },
+    {
+      "@type": "Offer",
+      "name": "Tratamiento Completo Flores de Bach",
+      "description": "Consulta de 90 minutos, fórmula personalizada y seguimiento de 3 semanas",
+      "price": "85",
+      "priceCurrency": "EUR"
+    },
+    {
+      "@type": "Offer",
+      "name": "Sesión de Seguimiento",
+      "description": "Revisión de 30 minutos y ajuste de fórmula",
+      "price": "40",
+      "priceCurrency": "EUR"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Las flores de Bach sirven para la ansiedad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El sistema de Bach incluye esencias específicas para distintos tipos de ansiedad: Mimulus para miedos concretos, Aspen para angustia sin causa definida y Rock Rose para estados de pánico o terror. La fórmula se personaliza según el estado emocional de cada persona."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se pueden tomar flores de Bach durante un tratamiento médico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Las flores de Bach no interactúan con medicamentos porque actúan en el plano emocional y vibracional, no farmacológico. Son compatibles con cualquier tratamiento médico, psicológico o psiquiátrico."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo funciona una sesión de flores de Bach online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La sesión se realiza por videollamada. Durante 60-90 minutos Luisa realiza el diagnóstico emocional mediante entrevista, selecciona las esencias adecuadas y prepara la fórmula personalizada que se envía por correo a tu domicilio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo tardan en hacer efecto las flores de Bach?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los primeros efectos suelen notarse entre la primera y la tercera semana. Un tratamiento completo dura habitualmente entre 4 y 8 semanas, aunque varía según cada persona y su proceso emocional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Las flores de Bach funcionan para niños?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El sistema de Bach es completamente seguro para niños de cualquier edad, embarazadas y mascotas, ya que no tiene efectos secundarios ni contraindicaciones."
+      }
+    }
+  ]
+}
+</script>
+    <link rel="modulepreload" href="/js/flores-de-bach/index.js">
+  </head>
+  <body style="font-family:var(--font-family-body);"><header id="global-header" class="code-section bg-[#FAF7FC] shadow-sm sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20 md:h-40">
+      <!-- Logo -->
+      <a href="/" class="flex-shrink-0 flex items-center justify-center h-full py-2">
+        <img src="/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-b366db84-bd47-474a-5c88-9bc6624d9b00.webp" alt="Luisa Corral - Coach Holística y Terapéutica en Narón, Galicia" data-logo="{&quot;id&quot;:&quot;logo&quot;,&quot;src&quot;:&quot;custom&quot;,&quot;type&quot;:&quot;logo&quot;}" class="h-16 md:h-32 w-auto max-w-none" data-media="{&quot;id&quot;:&quot;upload-luisa_corral_logo_HQ.png&quot;,&quot;src&quot;:&quot;upload&quot;,&quot;type&quot;:&quot;image&quot;}" oncontextmenu="return false;">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center space-x-8">
+        <a href="/sobre-mi" class="text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold transition-colors duration-300">Sobre Mí</a>
+        <!-- Servicios Dropdown -->
+        <div class="relative group">
+          <button class="text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold transition-colors duration-300 flex items-center gap-1 py-2">
+            Servicios
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+          <div class="absolute left-0 mt-0 w-56 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2 z-50 border border-[#E5D9F2]">
+            <a href="/flores-de-bach" class="flex items-center gap-3 px-4 py-3 text-[#2D1B3D] hover:bg-[#FAF7FC] hover:text-[#9B7EBD] transition-colors rounded-t-xl">
+              <i class="fa-solid fa-flower text-[#9B7EBD]"></i>
+              Flores de Bach
+            </a>
+            <a href="/coaching-holistico" class="flex items-center gap-3 px-4 py-3 text-[#2D1B3D] hover:bg-[#FAF7FC] hover:text-[#9B7EBD] transition-colors">
+              <i class="fa-solid fa-heart text-[#9B7EBD]"></i>
+              Coaching Holístico
+            </a>
+            <a href="/meditaciones-personalizadas" class="flex items-center gap-3 px-4 py-3 text-[#2D1B3D] hover:bg-[#FAF7FC] hover:text-[#9B7EBD] transition-colors">
+              <i class="fa-solid fa-spa text-[#9B7EBD]"></i>
+              Meditaciones Personalizadas
+            </a>
+            <a href="/coaching-angelical" class="flex items-center gap-3 px-4 py-3 text-[#2D1B3D] hover:bg-[#FAF7FC] hover:text-[#9B7EBD] transition-colors">
+              <i class="fa-solid fa-feather text-[#9B7EBD]"></i>
+              Coaching Angelical
+            </a>
+            <a href="/reiki-delfin" class="flex items-center gap-3 px-4 py-3 text-[#2D1B3D] hover:bg-[#FAF7FC] hover:text-[#9B7EBD] transition-colors rounded-b-xl">
+              <i class="fa-solid fa-water text-[#9B7EBD]"></i>
+              Reiki Delfín
+            </a>
+          </div>
+        </div>
+
+        <a href="/testimonios" class="text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold transition-colors duration-300">Testimonios</a>
+        <a href="/blog" class="text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold transition-colors duration-300">Blog</a>
+        <a href="/contacto" class="bg-[#9B7EBD] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#7A5FA0] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Agenda tu Sesión</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="lg:hidden p-2 text-[#2D1B3D]" data-landingsite-mobile-menu-toggle="">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Button - Always visible -->
+  <a href="https://wa.me/34616054001" target="_blank" rel="noopener noreferrer nofollow" class="fixed bottom-20 md:bottom-6 right-6 w-14 h-14 md:w-16 md:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-[#20BD5A] transition-all duration-300 z-[2147483647] group" style="z-index: 2147483647 !important; position: fixed !important;">
+    <i class="fa-brands fa-whatsapp text-white text-2xl md:text-3xl"></i>
+    <span class="absolute right-full mr-3 bg-[#2D1B3D] text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+      Escribir por WhatsApp
+    </span>
+  </a>
+
+  <!-- Mobile Navigation -->
+  <div class="lg:hidden hidden bg-[#FAF7FC] border-t border-[#E5D9F2]" data-landingsite-mobile-menu="">
+    <div class="px-4 py-4 space-y-3">
+      <a href="/sobre-mi" class="block text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold py-2">Sobre Mí</a>
+      <!-- Mobile Servicios Links -->
+      <div class="space-y-2">
+        <span class="block text-[#2D1B3D] font-semibold py-2">
+          <i class="fa-solid fa-spa mr-2 text-[#9B7EBD]"></i>Servicios
+        </span>
+        <div class="pl-4 border-l-2 border-[#E5D9F2] ml-2 space-y-2">
+          <a href="/flores-de-bach" class="flex items-center gap-2 text-[#6B5B7A] hover:text-[#9B7EBD] py-1">
+            <i class="fa-solid fa-flower text-sm"></i> Flores de Bach
+          </a>
+          <a href="/coaching-holistico" class="flex items-center gap-2 text-[#6B5B7A] hover:text-[#9B7EBD] py-1">
+            <i class="fa-solid fa-heart text-sm"></i> Coaching Holístico
+          </a>
+          <a href="/meditaciones-personalizadas" class="flex items-center gap-2 text-[#6B5B7A] hover:text-[#9B7EBD] py-1">
+            <i class="fa-solid fa-spa text-sm"></i> Meditaciones
+          </a>
+          <a href="/coaching-angelical" class="flex items-center gap-2 text-[#6B5B7A] hover:text-[#9B7EBD] py-1">
+            <i class="fa-solid fa-feather text-sm"></i> Coaching Angelical
+          </a>
+          <a href="/reiki-delfin" class="flex items-center gap-2 text-[#6B5B7A] hover:text-[#9B7EBD] py-1">
+            <i class="fa-solid fa-water text-sm"></i> Reiki Delfín
+          </a>
+        </div>
+      </div>
+
+      <a href="/testimonios" class="block text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold py-2">Testimonios</a>
+      <a href="/blog" class="block text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold py-2">Blog</a>
+      <a href="/contacto" class="block bg-[#9B7EBD] text-white px-6 py-3 rounded-full font-semibold text-center mt-4">Agenda tu Sesión</a>
+    </div>
+  </div>
+</header>
+<section class="code-section py-20 bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7]" id="svoy7hn">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-block px-4 py-2 bg-[#E8D7F1] text-[#7A5FA0] rounded-full text-sm font-semibold mb-4">
+          Terapia Floral
+        </span>
+        <h1 class="text-4xl md:text-5xl font-bold text-[#2D1B3D] mb-6">
+          Flores de Bach:
+          <span class="text-[#9B7EBD]">terapia floral personalizada</span>
+        </h1>
+        <p class="text-lg text-[#6B5B7A] mb-8">
+          Remedios florales naturales para restablecer el equilibrio emocional.
+          Las 38 flores del sistema Bach tratan diferentes estados mentales como
+          miedo, incertidumbre, soledad, hipersensibilidad o falta de interés
+          por el presente.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#contacto" class="inline-flex items-center justify-center bg-[#9B7EBD] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#7A5FA0] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <i class="fa-brands fa-whatsapp mr-3 text-xl"></i>
+            Consúltanos
+          </a>
+          <a href="#beneficios" class="inline-flex items-center justify-center px-8 py-4 rounded-full font-semibold text-lg border-2 border-[#9B7EBD] text-[#9B7EBD] hover:bg-[#9B7EBD] hover:text-white transition-all duration-300">
+            Ver beneficios
+          </a>
+        </div>
+        <div class="mt-8 flex items-center gap-6 text-[#6B5B7A]">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-leaf text-[#9B7EBD]"></i>
+            <span>100% natural</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-heart text-[#9B7EBD]"></i>
+            <span>Sin efectos secundarios</span>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+          <img src="/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-7b43f64e-a404-472d-bb2a-31e31d6f7500.webp" alt="Botella de flores de Bach sobre notas manuscritas" data-media="{&quot;id&quot;:&quot;2157347206&quot;,&quot;src&quot;:&quot;iStock&quot;,&quot;type&quot;:&quot;image&quot;}" class="w-full h-[450px] object-cover" oncontextmenu="return false;">
+        </div>
+        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-[#D4AF37] rounded-full flex items-center justify-center">
+              <i class="fa-solid fa-flower text-white text-xl"></i>
+            </div>
+            <div>
+              <p class="font-bold text-[#2D1B3D]">38 Flores</p>
+              <p class="text-sm text-[#6B5B7A]">Sistema completo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="code-section py-16 bg-white" id="que-es">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-4">
+        ¿Qué son las<span class="text-[#9B7EBD]"> Flores de Bach?</span>
+      </h2>
+      <p class="text-lg text-[#6B5B7A] max-w-3xl mx-auto">
+        El sistema de flores de Bach fue desarrollado por el Dr. Edward Bach en
+        los años 30. Consiste en 38 esencias florales que trabajan directamente
+        con las emociones para restaurar el equilibrio y el bienestar.
+      </p>
+      <p class="text-lg text-[#6B5B7A] max-w-3xl mx-auto">
+        Luisa Corral ofrece este servicio online para toda España — incluyendo
+        Madrid, Barcelona, Valencia, Sevilla, Bilbao y Galicia — y para
+        Latinoamérica.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-3xl p-8 border border-[#E5D9F2]">
+        <div class="w-14 h-14 bg-[#9B7EBD] rounded-2xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-leaf text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-3">100% Natural</h3>
+        <p class="text-[#6B5B7A]">
+          Preparadas a partir de flores silvestres de Inglaterra, completamente
+          naturales y seguras para todas las edades.
+        </p>
+      </div>
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-3xl p-8 border border-[#E5D9F2]">
+        <div class="w-14 h-14 bg-[#9B7EBD] rounded-2xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-brain text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-3">Enfoque Emocional</h3>
+        <p class="text-[#6B5B7A]">
+          Trabajan en el plano emocional, no tratan enfermedades físicas
+          directamente, sino equilibrando las emociones.
+        </p>
+      </div>
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-3xl p-8 border border-[#E5D9F2]">
+        <div class="w-14 h-14 bg-[#9B7EBD] rounded-2xl flex items-center justify-center mb-4">
+          <i class="fa-solid fa-heart text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-3">
+          Sin Efectos Secundarios
+        </h3>
+        <p class="text-[#6B5B7A]">
+          No interactúan con medicamentos ni producen efectos adversos.
+          Apropiadas para niños, embarazadas y mascotas.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="code-section py-16 bg-white" id="sl9udca">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-4">
+        Terapia Floral Online de
+        <span class="text-[#9B7EBD]">Flores de Bach en España</span>
+      </h2>
+      <p class="text-lg text-[#6B5B7A] max-w-3xl mx-auto">
+        ¿Buscas tratamiento con Flores de Bach online en España? recibe tu
+        fórmula personalizada de 38 esencias florales del Dr. Edward Bach en tu
+        domicilio. Envío a toda España.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-2xl p-6">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 bg-[#9B7EBD] rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-video text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#2D1B3D]">
+            Consulta Online por Videollamada
+          </h3>
+        </div>
+        <p class="text-[#6B5B7A] mb-4">
+          La sesión de terapia floral se realiza por videollamada desde
+          cualquier punto de España. Duración: 60-90 minutos. Tras la consulta,
+          recibes tu fórmula personalizada.
+        </p>
+        <ul class="space-y-2 text-[#6B5B7A]">
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Sin desplazamientos
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Fórmula enviada a
+            tu domicilio
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Seguimiento de 3
+            semanas
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-2xl p-6">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 bg-[#9B7EBD] rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-clock text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#2D1B3D]">
+            Horarios y Flexibilidad
+          </h3>
+        </div>
+        <p class="text-[#6B5B7A] mb-4">
+          Mañanas y tardes disponibles de Lunes a Viernes. También disponible
+          los Sábados bajo demanda. Agenda según tu disponibilidad sin prisas.
+        </p>
+        <ul class="space-y-2 text-[#6B5B7A]">
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Mañanas y tardes
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Cambio de fecha si
+            lo necesitas
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>WhatsApp para dudas
+            entre sesiones
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-2xl p-6">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 bg-[#9B7EBD] rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-heart text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#2D1B3D]">Personalizado 100%</h3>
+        </div>
+        <p class="text-[#6B5B7A] mb-4">
+          Cada fórmula se mezcla específicamente para ti según tu estado
+          emocional actual. Se seleccionan entre 4 y 7 esencias de las 38
+          disponibles del sistema Bach.
+        </p>
+        <ul class="space-y-2 text-[#6B5B7A]">
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Selección
+            individualizada
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Cambio de fórmula
+            según evolucionas
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Sin efectos
+            secundarios
+          </li>
+        </ul>
+      </div>
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-2xl p-6">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 bg-[#9B7EBD] rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-leaf text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#2D1B3D]">
+            38 Esencias Naturales del Dr. Bach
+          </h3>
+        </div>
+        <p class="text-[#6B5B7A] mb-4">
+          El sistema original del Dr. Edward Bach incluye 38 esencias florales
+          para tratar diferentes estados emocionales: miedos, incertidumbre,
+          falta de interés, soledad, hipersensibilidad, abatimiento y
+          desesperación.
+        </p>
+        <ul class="space-y-2 text-[#6B5B7A]">
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> 100% natural y
+            seguro
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Compatible con
+            medicamentos
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i> Apto para niños y
+            embarazadas
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+      <p class="text-lg text-[#6B5B7A] mb-4">
+        <strong>Primera consulta de valoración gratuita</strong> — Sin
+        compromiso, conoce cómo trabajo antes de decidir.
+      </p>
+      <a href="https://wa.me/34616054001?text=Hola%20Luisa,%20me%20interesa%20la%20terapia%20con%20Flores%20de%20Bach.%20¿Puedo%20reservar%20una%20consulta?" class="inline-flex items-center justify-center bg-[#9B7EBD] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#7A5FA0] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+        <i class="fa-brands fa-whatsapp mr-3 text-xl"></i>
+        Reserva tu primera consulta gratis
+      </a>
+    </div>
+  </div>
+</section>
+<section class="code-section py-16 bg-[#FAF7FC]" id="sagep7">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-4">
+        Estados emocionales que tratan las<span class="text-[#9B7EBD]">
+          Flores de Bach</span>
+      </h2>
+      <p class="text-lg text-[#6B5B7A] max-w-2xl mx-auto">
+        El sistema del Dr. Edward Bach trabaja con 7 grupos emocionales. Cada
+        grupo contiene esencias específicas para restablecer tu equilibrio
+        emocional de forma natural.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#9B7EBD]">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-ghost text-[#9B7EBD]"></i> Miedos y terrores
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Miedo sin causa conocida, terror, miedo a perder el control, a la
+          oscuridad, a las enfermedades. Flores como Rock Rose, Mimulus, Aspen y
+          Cherry Plum.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#9B7EBD]">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-question text-[#9B7EBD]"></i> Incertidumbre
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Inseguridad en uno mismo, duda constante, desaliento, desesperanza.
+          Flores como Cerato, Scleranthus, Gentian, Gorse, Hornbeam y Wild Oat.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#9B7EBD]">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-bed text-[#9B7EBD]"></i> Falta de interés
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Nostalgia, indiferencia, aburrimiento, apatía. Flores como Clematis,
+          Honeysuckle, Wild Rose, Olive, White Chestnut, Mustard y Chestnut Bud.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#9B7EBD]">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-user text-[#9B7EBD]"></i> Soledad
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Aislamiento, preocupación por los demás, impaciencia. Flores como
+          Water Violet, Impatiens y Heather.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#9B7EBD]">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-comment-slash text-[#9B7EBD]"></i>
+          Hipersensibilidad
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Influencia de otros, desconfianza, vergüenza, culpa. Flores como
+          Agrimony, Centaury, Walnut y Holly.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#9B7EBD]">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-cloud-rain text-[#9B7EBD]"></i> Abatimiento y
+          desesperación
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Estar desanimado, pérdida de confianza, soledad profunda,
+          desesperación. Flores como Crab Apple, Elm, Larch, Pine, Star of
+          Bethlehem, Sweet Chestnut, Willow y Oak.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border-l-4 border-[#9B7EBD]">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3 flex items-center gap-2">
+          <i class="fa-solid fa-hand-holding-heart text-[#9B7EBD]"></i> Para los
+          que luchan
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Sensación de culpa, autocrítica, sentimiento de deber, agotamiento. Flores
+          como Vervain, Vine, Beech y Chicory.
+        </p>
+      </div>
+    </div>
+    <div class="mt-8 bg-[#9B7EBD]/10 rounded-2xl p-6 max-w-3xl mx-auto">
+      <p class="text-[#6B5B7A] text-center">
+        <i class="fa-solid fa-lightbulb text-[#D4AF37] mr-2"></i>
+        <strong>No sabes qué fórmula necesitas?</strong> En la primera consulta
+        valoramos tu situación emocional y seleccionamos las esencias tepat
+        untuk ti.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="code-section py-16 bg-white" id="sy6xqwi">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-4">
+        Lo que dicen quienes<span class="text-[#9B7EBD]">
+          ya han probado las Flores de Bach</span>
+      </h2>
+      <p class="text-lg text-[#6B5B7A] max-w-2xl mx-auto">
+        Resultados reales de personas que han transformado su equilibrio
+        emocional
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-2xl p-6">
+        <div class="flex gap-1 mb-4">
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+        </div>
+        <p class="text-[#6B5B7A] italic mb-4">
+          "Llevaba meses con ansiedad y no quería tomar medicación. Las Flores
+          de Bach me ayudaron a gestionar mis emociones de forma suave y
+          natural. Ahora me siento mucho más tranquila."
+        </p>
+        <p class="font-semibold text-[#2D1B3D]">—Ana, Sevilla</p>
+        <p class="text-sm text-[#9B7EBD]">Tratamiento para ansiedad</p>
+      </div>
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-2xl p-6">
+        <div class="flex gap-1 mb-4">
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+        </div>
+        <p class="text-[#6B5B7A] italic mb-4">
+          "La fórmula que me preparó Luisa me llegó a los 2 días a casa. Fácil,
+          cómodo y efectivo. Las flores me ayudaron a superar el bloqueo que
+          tenía para tomar decisiones."
+        </p>
+        <p class="font-semibold text-[#2D1B3D]">—Patricia, Bilbao</p>
+        <p class="text-sm text-[#9B7EBD]">Tratamiento para incertidumbre</p>
+      </div>
+      <div class="bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-2xl p-6">
+        <div class="flex gap-1 mb-4">
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+          <i class="fa-solid fa-star text-[#D4AF37]"></i>
+        </div>
+        <p class="text-[#6B5B7A] italic mb-4">
+          "Le di Flores de Bach a mi hija de 8 años para la vuelta al cole y
+          funcionó. Son súper seguras y naturales. Totalmente recomendada para
+          niños."
+        </p>
+        <p class="font-semibold text-[#2D1B3D]">—Marta, Málaga</p>
+        <p class="text-sm text-[#9B7EBD]">Flores de Bach para niños</p>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+      <a href="/testimonios" class="text-[#9B7EBD] font-semibold hover:underline">
+        Ver todos los testimonios <i class="fa-solid fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="code-section py-16 bg-[#FAF7FC]" id="beneficios">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-4">
+        ¿Para qué sirven las<span class="text-[#9B7EBD]"> Flores de Bach?</span>
+      </h2>
+      <p class="text-lg text-[#6B5B7A] max-w-3xl mx-auto">
+        Las 38 flores se dividen en 7 grupos emocionales. Cada una trata un
+        estado mental específico.
+      </p>
+    </div>
+
+    <!-- Añadir sección informativa más detallada -->
+    <div class="max-w-4xl mx-auto mb-12">
+      <div class="bg-white rounded-3xl p-8 shadow-lg">
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-4">
+          ¿Cómo funcionan las flores de Bach?
+        </h3>
+        <p class="text-[#6B5B7A] mb-4">
+          El sistema de flores de Bach, desarrollado por el Dr. Edward Bach en
+          los años 30, se basa en un principio fundamental: la enfermedad es el
+          resultado de un desequilibrio emocional. Cuando nuestras emociones
+          están en armonía, nuestro cuerpo y mente pueden funcionar
+          correctamente.
+        </p>
+        <p class="text-[#6B5B7A] mb-4">
+          Las esencias florales trabajan a nivel vibracional, no bioquímico. No
+          actúan como medicamentos que suprimen síntomas, sino que ayudan a
+          transformar las emociones que están en la raíz del desequilibrio. Cada
+          flor tiene una cualidad emocional específica que puede contrarrestar
+          un estado negativo.
+        </p>
+        <p class="text-[#6B5B7A]">
+          Por ejemplo, si sientes ansiedad (Mimulus), la flor correspondiente
+          trabaja no eliminando la ansiedad, sino ayudándote a encontrar la
+          valentía y la paz interior para enfrentarla. Es un proceso sutil pero
+          profundo que permite una transformación real desde la raíz.
+        </p>
+      </div>
+    </div>
+
+    <!-- Añadir sección de problemas comunes -->
+    <div class="max-w-4xl mx-auto mb-12">
+      <div class="bg-gradient-to-br from-[#9B7EBD]/10 to-[#7A5FA0]/10 rounded-3xl p-8">
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-6">
+          Problemas emocionales que pueden abordar las flores de Bach
+        </h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-check-circle text-[#9B7EBD] mt-1"></i>
+            <span class="text-[#6B5B7A]">Ansiedad, estrés y preocupación constante</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-check-circle text-[#9B7EBD] mt-1"></i>
+            <span class="text-[#6B5B7A]">Insomnio y dificultades para conciliar el sueño</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-check-circle text-[#9B7EBD] mt-1"></i>
+            <span class="text-[#6B5B7A]">Falta de confianza y baja autoestima</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-check-circle text-[#9B7EBD] mt-1"></i>
+            <span class="text-[#6B5B7A]">Duelos, pérdidas y procesos de cambio</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-check-circle text-[#9B7EBD] mt-1"></i>
+            <span class="text-[#6B5B7A]">Rabia, frustración e irritabilidad</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-check-circle text-[#9B7EBD] mt-1"></i>
+            <span class="text-[#6B5B7A]">Miedo, fobias y pánico</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-check-circle text-[#9B7EBD] mt-1"></i>
+            <span class="text-[#6B5B7A]">Aislamiento y dificultad para conectar</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-check-circle text-[#9B7EBD] mt-1"></i>
+            <span class="text-[#6B5B7A]">Agotamiento físico y emocional (burnout)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3">Miedo</h3>
+        <p class="text-[#6B5B7A] text-sm mb-3">
+          Rock Rose, Mimulus, Cherry Plum, Aspen, Red Chestnut
+        </p>
+        <p class="text-[#6B5B7A] text-sm">
+          Para terrores nocturnos, fobias, pánico, ansiedad y miedos conocidos o
+          desconocidos.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3">Incertidumbre</h3>
+        <p class="text-[#6B5B7A] text-sm mb-3">
+          Cerato, Scleranthus, Gentian, Gorse, Wild Oat
+        </p>
+        <p class="text-[#6B5B7A] text-sm">
+          Para dudas, indecisión, falta de confianza y desesperanza.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3">Falta de interés</h3>
+        <p class="text-[#6B5B7A] text-sm mb-3">
+          Clematis, Honeysuckle, Wild Rose, Olive, White Chestnut
+        </p>
+        <p class="text-[#6B5B7A] text-sm">
+          Para apatía, monotonía, nostalgia, agotamiento y preocupaciones
+          obsesivas.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3">Soledad</h3>
+        <p class="text-[#6B5B7A] text-sm mb-3">
+          Water Violet, Impatiens, Heather
+        </p>
+        <p class="text-[#6B5B7A] text-sm">
+          Para soledad, impaciencia, necesidad de compañía y reserva.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3">Hipersensibilidad</h3>
+        <p class="text-[#6B5B7A] text-sm mb-3">
+          Agrimony, Centaury, Walnut, Holly
+        </p>
+        <p class="text-[#6B5B7A] text-sm">
+          Para sensibilidad excesiva, culpa, dificultad para decir no y envidia.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3">Desaliento</h3>
+        <p class="text-[#6B5B7A] text-sm mb-3">
+          Larch, Pine, Elm, Sweet Chestnut, Star of Bethlehem
+        </p>
+        <p class="text-[#6B5B7A] text-sm">
+          Para culpa, vergüenza, abrumado, angustia y shock.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3">
+          Preocupación excesiva
+        </h3>
+        <p class="text-[#6B5B7A] text-sm mb-3">
+          Chicory, Vervain, Vine, Beech, Rock Water
+        </p>
+        <p class="text-[#6B5B7A] text-sm">
+          Para control, rigidez, criticismo, sobreprotección y perfeccionismo.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="code-section py-16 bg-gradient-to-br from-[#9B7EBD] to-[#7A5FA0]" id="precios">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Tratamiento Personalizado
+      </h2>
+      <p class="text-lg text-white/80 max-w-2xl mx-auto">
+        El diagnóstico de flores de Bach es individual y personalizado. Cada
+        persona recibe una fórmula única según su situación emocional.
+      </p>
+    </div>
+    <div class="grid lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white rounded-3xl p-8 shadow-xl">
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-2">
+          Sesión de Exploración
+        </h3>
+        <p class="text-3xl font-bold text-[#9B7EBD] mb-4">10€</p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-2 text-[#6B5B7A]">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Sesión de 30 minutos</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A]">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Aclaración de dudas</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A]">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Se descuenta si continuas</span>
+          </li>
+        </ul>
+        <a href="#contacto" class="block text-center bg-[#9B7EBD] text-white py-3 rounded-full font-semibold hover:bg-[#7A5FA0] transition-colors">
+          Reservar
+        </a>
+      </div>
+      <div class="bg-white rounded-3xl p-8 shadow-xl">
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-2">Sesión Individual</h3>
+        <p class="text-3xl font-bold text-[#9B7EBD] mb-4">60€</p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-2 text-[#6B5B7A]">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Consulta de 90 minutos</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A]">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Fórmula floral personalizada</span>
+          </li>
+        </ul>
+        <a href="#contacto" class="block text-center bg-[#9B7EBD] text-white py-3 rounded-full font-semibold hover:bg-[#7A5FA0] transition-colors">
+          Reservar
+        </a>
+      </div>
+      <div class="bg-white rounded-3xl p-8 shadow-xl">
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-2">Seguimiento</h3>
+        <p class="text-3xl font-bold text-[#9B7EBD] mb-4">40€</p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-2 text-[#6B5B7A]">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Revisión de 30 minutos</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A]">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Ajustes si es necesario</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A]">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Por WhatsApp</span>
+          </li>
+        </ul>
+        <a href="#contacto" class="block text-center bg-[#9B7EBD] text-white py-3 rounded-full font-semibold hover:bg-[#7A5FA0] transition-colors">
+          Reservar
+        </a>
+      </div>
+      <div class="bg-white rounded-3xl p-8 shadow-xl transform scale-105 relative">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#D4AF37] text-white px-4 py-1 rounded-full text-sm font-semibold">
+          Más popular
+        </div>
+        <h3 class="text-xl font-bold text-[#2D1B3D] mb-2">
+          Tratamiento Completo
+        </h3>
+        <p class="text-3xl font-bold text-[#9B7EBD] mb-4">155€</p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-2 text-[#6B5B7A]">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Consulta de 90 minutos</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A]">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Fórmula floral personalizada</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#6B5B7A]">
+            <i class="fa-solid fa-check text-[#9B7EBD]"></i>
+            <span>Seguimiento con 3 revisiones incluidas</span>
+          </li>
+        </ul>
+        <a href="#contacto" class="block text-center bg-[#9B7EBD] text-white py-3 rounded-full font-semibold hover:bg-[#7A5FA0] transition-colors">
+          Reservar
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="code-section py-16 bg-[#F0EAF7]" id="faq-flores">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-4">
+        Preguntas frecuentes sobre las<span class="text-[#9B7EBD]">
+          Flores de Bach</span>
+      </h2>
+    </div>
+    <div class="space-y-6" data-landingsite-faq="">
+      <div class="bg-white rounded-2xl p-6 shadow-md" data-landingsite-faq-item="">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3" data-landingsite-faq-question="">
+          <i class="fa-regular fa-chevron-down text-[#9B7EBD] mr-2 transition-transform"></i>
+          ¿Las flores de Bach sirven para la ansiedad?
+        </h3>
+        <p class="text-[#6B5B7A] pl-6 hidden" data-landingsite-faq-answer="">
+          Sí. El sistema de Bach incluye esencias específicas para distintos
+          tipos de ansiedad: Mimulus para miedos concretos, Aspen para angustia
+          sin causa definida y Rock Rose para estados de pánico o terror. La
+          fórmula se personaliza según el estado emocional de cada persona.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-md" data-landingsite-faq-item="">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3" data-landingsite-faq-question="">
+          <i class="fa-regular fa-chevron-down text-[#9B7EBD] mr-2 transition-transform"></i>
+          ¿Se pueden tomar flores de Bach durante un tratamiento médico?
+        </h3>
+        <p class="text-[#6B5B7A] pl-6 hidden" data-landingsite-faq-answer="">
+          Sí. Las flores de Bach no interactúan con medicamentos porque actúan
+          en el plano emocional y vibracional, no farmacológico. Son compatibles
+          con cualquier tratamiento médico, psicológico o psiquiátrico.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-md" data-landingsite-faq-item="">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3" data-landingsite-faq-question="">
+          <i class="fa-regular fa-chevron-down text-[#9B7EBD] mr-2 transition-transform"></i>
+          ¿Cómo funciona una sesión de flores de Bach online?
+        </h3>
+        <p class="text-[#6B5B7A] pl-6 hidden" data-landingsite-faq-answer="">
+          La sesión se realiza por videollamada. Durante 60-90 minutos Luisa
+          realiza el diagnóstico emocional mediante entrevista, selecciona las
+          esencias adecuadas y prepara la fórmula personalizada que se envía por
+          correo a tu domicilio.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-md" data-landingsite-faq-item="">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3" data-landingsite-faq-question="">
+          <i class="fa-regular fa-chevron-down text-[#9B7EBD] mr-2 transition-transform"></i>
+          ¿Cuánto tiempo tardan en hacer efecto las flores de Bach?
+        </h3>
+        <p class="text-[#6B5B7A] pl-6 hidden" data-landingsite-faq-answer="">
+          Los primeros efectos suelen notarse entre la primera y la tercera
+          semana. Un tratamiento completo dura habitualmente entre 4 y 8
+          semanas, aunque varía según cada persona y su proceso emocional.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-md" data-landingsite-faq-item="">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3" data-landingsite-faq-question="">
+          <i class="fa-regular fa-chevron-down text-[#9B7EBD] mr-2 transition-transform"></i>
+          ¿Las flores de Bach funcionan para niños?
+        </h3>
+        <p class="text-[#6B5B7A] pl-6 hidden" data-landingsite-faq-answer="">
+          Sí. El sistema de Bach es completamente seguro para niños de cualquier
+          edad, embarazadas y mascotas, ya que no tiene efectos secundarios ni
+          contraindicaciones.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-md" data-landingsite-faq-item="">
+        <h3 class="text-lg font-bold text-[#2D1B3D] mb-3" data-landingsite-faq-question="">
+          <i class="fa-regular fa-chevron-down text-[#9B7EBD] mr-2 transition-transform"></i>
+          ¿Tienes garantía de satisfacción?
+        </h3>
+        <p class="text-[#6B5B7A] pl-6 hidden" data-landingsite-faq-answer="">
+          Sí. La consulta inicial de valoración es gratuita y sin compromiso. Si
+          después del tratamiento no sientes que las flores te han ayudado,
+          hablaremos para ajustar la fórmula o encontrar alternativas. Mi
+          objetivo es que sientas una mejora real en tu bienestar emocional.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-16 bg-white code-section" id="soenu0l">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-4">
+        Otros servicios que te pueden <span class="text-[#9B7EBD]">ayudar</span>
+      </h2>
+      <p class="text-lg text-[#6B5B7A] max-w-2xl mx-auto">
+        Combina diferentes enfoques para una transformación más completa
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <a href="/coaching-holistico" class="group bg-[#FAF7FC] rounded-2xl p-6 hover:bg-[#F0EAF7] transition-all duration-300 hover:shadow-lg">
+        <div class="w-14 h-14 bg-[#E8D7F1] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#D4B5E8] transition-colors">
+          <i class="fa-solid fa-heart text-[#9B7EBD] text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-[#2D1B3D] text-lg mb-2">
+          Coaching Holístico
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Acompañamiento integral para superar bloqueos emocionales
+        </p>
+        <span class="inline-flex items-center gap-2 text-[#9B7EBD] text-sm font-semibold mt-4">
+          Descubrir <i class="fa-solid fa-arrow-right text-xs"></i>
+        </span>
+      </a>
+      <a href="/meditaciones-personalizadas" class="group bg-[#FAF7FC] rounded-2xl p-6 hover:bg-[#F0EAF7] transition-all duration-300 hover:shadow-lg">
+        <div class="w-14 h-14 bg-[#E8D7F1] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#D4B5E8] transition-colors">
+          <i class="fa-solid fa-spa text-[#9B7EBD] text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-[#2D1B3D] text-lg mb-2">
+          Meditaciones Personalizadas
+        </h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Sesiones de mindfulness adaptadas a tus necesidades específicas
+        </p>
+        <span class="inline-flex items-center gap-2 text-[#9B7EBD] text-sm font-semibold mt-4">
+          Descubrir <i class="fa-solid fa-arrow-right text-xs"></i>
+        </span>
+      </a>
+      <a href="/reiki-delfin" class="group bg-[#FAF7FC] rounded-2xl p-6 hover:bg-[#F0EAF7] transition-all duration-300 hover:shadow-lg">
+        <div class="w-14 h-14 bg-[#E8D7F1] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#D4B5E8] transition-colors">
+          <i class="fa-solid fa-water text-[#9B7EBD] text-2xl"></i>
+        </div>
+        <h3 class="font-bold text-[#2D1B3D] text-lg mb-2">Reiki Delfín</h3>
+        <p class="text-[#6B5B7A] text-sm">
+          Sanación energética con la frecuencia de los delfines
+        </p>
+        <span class="inline-flex items-center gap-2 text-[#9B7EBD] text-sm font-semibold mt-4">
+          Descubrir <i class="fa-solid fa-arrow-right text-xs"></i>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="code-section py-20 bg-[#FAF7FC]" id="contacto">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <span class="inline-block px-4 py-2 bg-[#E8D7F1] text-[#7A5FA0] rounded-full text-sm font-semibold mb-4">
+      ¿Tienes dudas?
+    </span>
+    <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-6">
+      ¿Quieres equilibrar tus<span class="text-[#9B7EBD]">emociones?</span>
+    </h2>
+    <p class="text-lg text-[#6B5B7A] mb-8 max-w-2xl mx-auto">
+      Las flores de Bach pueden ayudarte a encontrar el equilibrio emocional que
+      buscas. Contáctame y te contaré cómo funciona este tratamiento.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://wa.me/34616054001" rel="noopener noreferrer nofollow" class="inline-flex items-center justify-center bg-[#25D366] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#20BD5A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+        <i class="fa-brands fa-whatsapp mr-3 text-xl"></i>
+        Escribir por WhatsApp
+      </a>
+      <a href="mailto:luisacorralcoach@gmail.com" rel="noopener noreferrer nofollow" class="inline-flex items-center justify-center px-8 py-4 rounded-full font-semibold text-lg border-2 border-[#9B7EBD] text-[#9B7EBD] hover:bg-[#9B7EBD] hover:text-white transition-all duration-300">
+        <i class="fa-solid fa-envelope mr-3 text-xl"></i>
+        Enviar email
+      </a>
+    </div>
+    <p class="mt-6 text-[#6B5B7A]">
+      <i class="fa-solid fa-location-dot mr-2"></i>
+      Narón, Galicia · Sesiones online para toda España
+    </p>
+  </div>
+</section>
+<footer id="global-footer" class="code-section bg-[#2D1B3D] text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <!-- Logo & Description -->
+      <div class="lg:col-span-1">
+        <a href="/" class="inline-block mb-4 flex items-center justify-center">
+          <img src="/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-b366db84-bd47-474a-5c88-9bc6624d9b00.webp" alt="Luisa Corral - Coach Holística y Terapéutica en Narón, Galicia" data-logo="{&quot;id&quot;:&quot;logo&quot;,&quot;src&quot;:&quot;custom&quot;,&quot;type&quot;:&quot;logo&quot;}" class="h-32 w-auto max-w-none" data-media="{&quot;id&quot;:&quot;upload-luisa_corral_logo_HQ.png&quot;,&quot;src&quot;:&quot;upload&quot;,&quot;type&quot;:&quot;image&quot;}" oncontextmenu="return false;">
+        </a>
+        <p class="text-[#B8A4C9] text-sm mb-6">
+          Coach Holístico y Terapéutico en Narón, Galicia. Te acompaño en tu
+          proceso de transformación personal para encontrar el equilibrio entre
+          cuerpo, mente, emociones y espíritu.
+        </p>
+        <div class="flex gap-4">
+          <a href="https://wa.me/34616054001" rel="noopener noreferrer nofollow" class="w-10 h-10 bg-[#9B7EBD] rounded-full flex items-center justify-center hover:bg-[#7A5FA0] transition-colors">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="mailto:luisacorralcoach@gmail.com" rel="noopener noreferrer nofollow" class="w-10 h-10 bg-[#9B7EBD] rounded-full flex items-center justify-center hover:bg-[#7A5FA0] transition-colors">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="https://www.instagram.com/luisacorralcoach/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-[#9B7EBD] rounded-full flex items-center justify-center hover:bg-[#7A5FA0] transition-colors">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@luisacorral_coach" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-[#9B7EBD] rounded-full flex items-center justify-center hover:bg-[#7A5FA0] transition-colors">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <p class="text-lg font-semibold mb-4 text-[#D4AF37]">Navegación</p>
+        <ul class="space-y-3">
+          <li>
+            <a href="/" class="text-[#B8A4C9] hover:text-white transition-colors">Inicio</a>
+          </li>
+          <li>
+            <a href="/sobre-mi" class="text-[#B8A4C9] hover:text-white transition-colors">Sobre Mí</a>
+          </li>
+          <li></li>
+          <li>
+            <a href="/testimonios" class="text-[#B8A4C9] hover:text-white transition-colors">Testimonios</a>
+          </li>
+          <li>
+            <a href="/blog" class="text-[#B8A4C9] hover:text-white transition-colors">Blog</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <p class="text-lg font-semibold mb-4 text-[#D4AF37]">Servicios</p>
+        <ul class="space-y-3">
+          <li>
+            <a href="/coaching-holistico" class="text-[#B8A4C9] hover:text-white transition-colors">Coaching Holístico</a>
+          </li>
+          <li>
+            <a href="/flores-de-bach" class="text-[#B8A4C9] hover:text-white transition-colors">Flores de Bach</a>
+          </li>
+          <li>
+            <a href="/meditaciones-personalizadas" class="text-[#B8A4C9] hover:text-white transition-colors">Meditaciones Personalizadas</a>
+          </li>
+          <li>
+            <a href="/coaching-angelical" class="text-[#B8A4C9] hover:text-white transition-colors">Coaching Angelical</a>
+          </li>
+          <li>
+            <a href="/reiki-delfin" class="text-[#B8A4C9] hover:text-white transition-colors">Reiki Delfín</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <p class="text-lg font-semibold mb-4 text-[#D4AF37]">Contacto</p>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-2 text-[#B8A4C9]">
+            <i class="fa-brands fa-whatsapp text-[#25D366]"></i>
+            <span>+34 616 054 001</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#B8A4C9]">
+            <i class="fa-solid fa-phone text-[#9B7EBD]"></i>
+            <span>+34 616 054 001</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#B8A4C9]">
+            <i class="fa-solid fa-envelope text-[#D4AF37]"></i>
+            <span><a href="mailto:luisacorralcoach@gmail.com" class="hover:text-[#D4AF37] transition-colors">luisacorralcoach@gmail.com</a></span>
+          </li>
+          <li class="flex items-start gap-2 text-[#B8A4C9]">
+            <i class="fa-solid fa-location-dot text-[#9B7EBD] mt-1"></i>
+            <span>Narón, Galicia, España</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-[#9B7EBD]/30 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-[#B8A4C9] text-sm">
+        © 2026 Luisa Corral - Coach Holística. Todos los derechos reservados.
+      </p>
+      <div class="flex gap-6 text-sm">
+        <a href="/aviso-legal" class="text-[#B8A4C9] hover:text-white transition-colors">Aviso Legal</a>
+        <a href="/politica-de-privacidad" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Privacidad</a>
+        <a href="/politica-de-cookies" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="module">
+  const __landingsite_initPage = async () => {
+    try {
+      const module = await import('/js/flores-de-bach/index.js')
+      if (module && typeof module.init === 'function') {
+        module.init()
+      }
+    } catch (e) {
+      // swallow
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __landingsite_initPage, { once: true })
+  } else {
+    __landingsite_initPage()
+  }
+</script><script type="module">
+  const boot = async () => {
+    try {
+      const { initCookieBanner } = await import('/js/modules/cookie-consent.js')
+      initCookieBanner()
+    } catch (_) {}
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot, { once: true })
+  else boot()
+</script>
+<script defer="" src="/public/fontawesome-kit.js" crossorigin="anonymous"></script>
+</body></html>
