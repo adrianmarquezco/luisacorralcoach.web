@@ -1,3 +1,91 @@
+;(function loadLayoutFixes() {
+  if (document.querySelector('link[data-layout-fixes]')) return
+  const link = document.createElement('link')
+  link.rel = 'stylesheet'
+  link.href = '/public/layout-fixes.css'
+  link.setAttribute('data-layout-fixes', '1')
+  ;(document.head || document.documentElement).appendChild(link)
+})()
+
+function createBreadcrumbEl(items, light) {
+  const nav = document.createElement('nav')
+  nav.className = light ? 'site-breadcrumb site-breadcrumb--light mb-6' : 'site-breadcrumb mb-8'
+  nav.setAttribute('aria-label', 'Breadcrumb')
+
+  const ol = document.createElement('ol')
+  items.forEach((item, i) => {
+    if (i > 0) {
+      const sep = document.createElement('li')
+      sep.setAttribute('aria-hidden', 'true')
+      sep.textContent = '/'
+      ol.appendChild(sep)
+    }
+    const li = document.createElement('li')
+    if (item.href) {
+      const a = document.createElement('a')
+      a.href = item.href
+      a.textContent = item.label
+      li.appendChild(a)
+    } else {
+      li.setAttribute('aria-current', 'page')
+      li.textContent = item.label
+    }
+    ol.appendChild(li)
+  })
+  nav.appendChild(ol)
+  return nav
+}
+
+function initBreadcrumbs() {
+  if (document.querySelector('[aria-label="Breadcrumb"]')) return
+
+  const path = window.location.pathname.replace(/\/index\.html$/, '').replace(/\/$/, '') || ''
+  if (!path || path === '/') return
+
+  const segments = path.split('/').filter(Boolean)
+  let items = null
+  let light = false
+
+  if (segments[0] === 'blog' && segments.length === 2) {
+    const title =
+      document.querySelector('section h1')?.textContent?.trim() ||
+      document.title.split('|')[0]?.trim() ||
+      'Artículo'
+    items = [
+      { href: '/', label: 'Inicio' },
+      { href: '/blog', label: 'Blog' },
+      { label: title },
+    ]
+    const first = document.getElementById('global-header')?.nextElementSibling
+    light = Boolean(
+      first &&
+        (first.className.includes('from-[#9B7EBD]') ||
+          first.className.includes('to-[#7A5FA0]'))
+    )
+  } else if (path === '/blog') {
+    items = [{ href: '/', label: 'Inicio' }, { label: 'Blog' }]
+  } else if (path === '/testimonios') {
+    items = [{ href: '/', label: 'Inicio' }, { label: 'Testimonios' }]
+  } else if (path === '/enfoques') {
+    return
+  } else if (segments[0] === 'enfoques' && segments.length === 2) {
+    return
+  }
+
+  if (!items) return
+
+  const header = document.getElementById('global-header')
+  const firstSection = header?.nextElementSibling
+  if (!firstSection) return
+
+  const nav = createBreadcrumbEl(items, light)
+  const container =
+    firstSection.querySelector(
+      ':scope > .max-w-7xl, :scope > .max-w-4xl, :scope > .max-w-3xl, :scope > .max-w-2xl'
+    ) || firstSection
+  container.insertBefore(nav, container.firstChild)
+}
+
 function initContactPreferenceRadios() {
   const radios = Array.from(
     document.querySelectorAll('input[type="radio"][name="contact_preference"]')
@@ -223,6 +311,7 @@ function initSocialAriaLabels() {
 }
 
 function run() {
+  initBreadcrumbs()
   initHeaderLogo()
   initEnfoquesNav()
   initEnfoquesFooter()
