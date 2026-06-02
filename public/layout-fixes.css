@@ -22,6 +22,38 @@
 .h-\[500px\] { height: 500px; }
 .object-cover { object-fit: cover; }
 
+.rounded-2xl { border-radius: 1rem; }
+
+.hover\:shadow-lg:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Tarjetas de servicio (enfoques) — mismo estilo que coaching-holistico */
+a.enfoque-service-card,
+.enfoque-service-card {
+  display: block;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 0.75rem;
+  border: 1px solid #e5d9f2;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+a.enfoque-service-card:hover,
+.enfoque-service-card:hover {
+  border-color: #9b7ebd;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* FAQ acordeón */
+[data-landingsite-faq-item].is-open [data-landingsite-faq-question] i.fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+[data-landingsite-faq-question] i.fa-chevron-down {
+  transition: transform 0.2s ease;
+}
+
 @media (min-width: 1024px) {
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));

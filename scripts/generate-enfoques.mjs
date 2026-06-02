@@ -82,11 +82,16 @@ function headHtml(meta) {
   return patchHeader(h)
 }
 
-function ctaBlock() {
+function ctaBlock(e = {}) {
+  const heading =
+    e.ctaHeading || 'Da el primer paso <span class="text-[#9B7EBD]">hoy</span>'
+  const text =
+    e.ctaText ||
+    'Sesiones online para toda España y Latinoamérica. Presencial en Narón (A Coruña). Primera conversación sin compromiso.'
   return `<section class="code-section py-20 bg-[#FAF7FC]">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-6">Da el primer paso <span class="text-[#9B7EBD]">hoy</span></h2>
-    <p class="text-lg text-[#6B5B7A] mb-8 max-w-2xl mx-auto">Sesiones online para toda España y Latinoamérica. Presencial en Narón (A Coruña). Primera conversación sin compromiso.</p>
+    <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-6">${heading}</h2>
+    <p class="text-lg text-[#6B5B7A] mb-8 max-w-2xl mx-auto">${text}</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a href="https://wa.me/34616054001" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center justify-center bg-[#25D366] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#20BD5A] transition-all duration-300 shadow-lg">
         <i class="fa-brands fa-whatsapp mr-3 text-xl"></i>WhatsApp
@@ -99,21 +104,22 @@ function ctaBlock() {
 </section>`
 }
 
-function faqSection(faqs) {
-  const items = faqs
+function faqSection(e) {
+  const items = e.faqs
     .map(
-      (f, i) => `<div class="bg-white rounded-2xl border border-[#E5D9F2] overflow-hidden" data-landingsite-faq-item>
-      <button type="button" class="w-full text-left px-6 py-4 flex justify-between items-center gap-4 font-semibold text-[#2D1B3D]" data-landingsite-faq-question>
-        ${f.q}
-        <i class="fa-solid fa-chevron-down text-[#9B7EBD]"></i>
+      (f) => `<div class="border border-[#E5D9F2] rounded-2xl overflow-hidden" data-landingsite-faq-item>
+      <button type="button" class="w-full flex items-center justify-between gap-4 p-6 text-left bg-[#FAF7FC] hover:bg-[#F0EAF7] transition-colors font-semibold text-[#2D1B3D]" data-landingsite-faq-question>
+        <span>${f.q}</span>
+        <i class="fa-solid fa-chevron-down text-[#9B7EBD] flex-shrink-0"></i>
       </button>
-      <div class="hidden px-6 pb-4 text-[#6B5B7A]" data-landingsite-faq-answer><p>${f.a}</p></div>
+      <div class="hidden p-6 bg-white text-[#6B5B7A]" data-landingsite-faq-answer><p>${f.a}</p></div>
     </div>`
     )
     .join('\n')
   return `<section class="code-section py-16 bg-white">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-[#2D1B3D] mb-8 text-center">Preguntas <span class="text-[#9B7EBD]">frecuentes</span></h2>
+    <h2 class="text-3xl font-bold text-[#2D1B3D] mb-4 text-center">${e.faqHeading}</h2>
+    <p class="text-center text-[#6B5B7A] mb-8 max-w-2xl mx-auto">${e.faqIntro}</p>
     <div class="space-y-4">${items}</div>
   </div>
 </section>`
@@ -124,7 +130,7 @@ function enfoqueBody(e) {
   const bullets = e.sessionBullets.map((t) => `<li class="flex items-start gap-3 text-[#6B5B7A]"><i class="fa-solid fa-spa text-[#9B7EBD] mt-1"></i><span>${t}</span></li>`).join('')
   const services = e.services
     .map(
-      (s) => `<a href="${s.url}" class="block p-6 bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7] rounded-2xl border border-[#E5D9F2] hover:shadow-lg transition-all">
+      (s) => `<a href="${s.url}" class="enfoque-service-card">
       <p class="font-bold text-[#2D1B3D] mb-2">${s.name}</p>
       <p class="text-sm text-[#6B5B7A] mb-3">${s.desc}</p>
       <span class="text-[#9B7EBD] font-semibold text-sm">Ver servicio <i class="fa-solid fa-arrow-right ml-1"></i></span>
@@ -184,26 +190,34 @@ function enfoqueBody(e) {
 </section>
 <section class="code-section py-16 bg-[#FAF7FC]">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-[#2D1B3D] mb-4 text-center">Qué servicio encaja <span class="text-[#9B7EBD]">contigo</span></h2>
-    <p class="text-center text-[#6B5B7A] mb-10 max-w-2xl mx-auto">Cada proceso es único. Estas son las vías más habituales para este enfoque; en la primera sesión definimos juntas el camino.</p>
+    <h2 class="text-3xl font-bold text-[#2D1B3D] mb-4 text-center">${e.servicesHeading}</h2>
+    <p class="text-center text-[#6B5B7A] mb-10 max-w-2xl mx-auto">${e.servicesIntro}</p>
     <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">${services}</div>
     <p class="text-center mt-8"><a href="/enfoques" class="text-[#9B7EBD] font-semibold hover:underline">Ver todos los enfoques</a> · <a href="/coaching-holistico" class="text-[#9B7EBD] font-semibold hover:underline">Coaching holístico</a></p>
   </div>
 </section>
-${faqSection(e.faqs)}
-${ctaBlock()}`
+${faqSection(e)}
+${ctaBlock(e)}`
 }
 
 const ENFOQUES = [
   {
     slug: 'gestion-estres-emociones',
     breadcrumb: 'Gestión del estrés y emociones',
-    title: 'Gestión del Estrés y las Emociones | Coach Holística Online | Luisa Corral',
+    title: 'Ansiedad y Estrés: Coach Holística Online | Sesión desde 50€ | Luisa Corral',
     description:
       'Gestión del estrés, ansiedad y emociones con coach holística Luisa Corral. Sesiones online y en Narón. Flores de Bach y coaching integral. Reserva tu sesión.',
     keywords:
       'gestión del estrés, gestión emocional, ansiedad, burnout, coach holística ansiedad, flores de bach estrés, coaching emocional online',
-    ogTitle: 'Gestión del Estrés y las Emociones | Luisa Corral',
+    ogTitle: 'Ansiedad y Estrés | Coach Holística Luisa Corral',
+    servicesHeading: 'Cómo trabajamos la <span class="text-[#9B7EBD]">ansiedad y el estrés</span>',
+    servicesIntro:
+      'Para nerviosismo, agobio o burnout combino coaching holístico y, si encaja, Flores de Bach. En la primera sesión vemos qué necesitas tú.',
+    faqHeading: 'Dudas sobre <span class="text-[#9B7EBD]">ansiedad y estrés</span>',
+    faqIntro: 'Respuestas directas antes de reservar tu sesión.',
+    ctaHeading: 'Recupera la calma <span class="text-[#9B7EBD]">con acompañamiento</span>',
+    ctaText:
+      'Sesiones online (España y Latinoamérica) o presencial en Narón. Primera conversación sin compromiso.',
     ogDescription:
       'Acompañamiento holístico para gestionar estrés, ansiedad y emociones. Online y presencial en Galicia.',
     ogImage: `${BASE}/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-deb7eaa8-16d2-4e89-e023-fecfec881600.webp`,
@@ -258,12 +272,19 @@ const ENFOQUES = [
   {
     slug: 'encontrar-proposito',
     breadcrumb: 'Encontrar propósito',
-    title: 'Encontrar tu Propósito y Valores | Coaching Holístico | Luisa Corral',
+    title: '¿Sin Dirección en la Vida? Encuentra tu Propósito | Coaching | Luisa Corral',
     description:
       'Encuentra tu propósito de vida y alinea tus decisiones con tus valores. Coaching holístico con Luisa Corral. Online y Narón. Sesiones desde 50€.',
     keywords:
       'encontrar propósito de vida, propósito vital, coaching de propósito, valores personales, coach holística propósito, desarrollo personal mujeres',
-    ogTitle: 'Encontrar tu Propósito | Coaching Holístico',
+    ogTitle: 'Encuentra tu Propósito de Vida | Luisa Corral',
+    servicesHeading: 'Servicios para <span class="text-[#9B7EBD]">claridad y propósito</span>',
+    servicesIntro:
+      'Si estás en un cambio vital o sientes vacío, el coaching holístico es el eje; el coaching angelical puede acompañar si buscas conectar con tu intuición.',
+    faqHeading: 'Preguntas sobre <span class="text-[#9B7EBD]">propósito vital</span>',
+    faqIntro: 'Lo que suelen preguntarme antes de empezar.',
+    ctaHeading: 'Diseña una vida con <span class="text-[#9B7EBD]">sentido</span>',
+    ctaText: 'Online o en Narón (A Coruña). Cuéntame tu situación y vemos si encajamos.',
     ogDescription: 'Define objetivos vitales alineados con tu autenticidad. Acompañamiento holístico online.',
     ogImage: `${BASE}/assets/provider/istock/2234453222.webp`,
     h1: 'Encontrar tu',
@@ -317,12 +338,19 @@ const ENFOQUES = [
   {
     slug: 'equilibrio-vital',
     breadcrumb: 'Equilibrio vital',
-    title: 'Equilibrio Vital y Bienestar | Coach Holística | Luisa Corral',
+    title: 'Agotada y Sin Tiempo para Ti? Recupera tu Equilibrio | Luisa Corral',
     description:
       'Recupera equilibrio vital: hábitos, descanso y gestión del tiempo. Coaching y meditaciones personalizadas. Online y Narón. Luisa Corral.',
     keywords:
       'equilibrio vital, equilibrio vida trabajo, hábitos saludables, agotamiento mujer, coach bienestar, meditación estrés',
-    ogTitle: 'Equilibrio Vital | Luisa Corral Coach',
+    ogTitle: 'Recupera tu Equilibrio Vital | Coach Luisa Corral',
+    servicesHeading: 'Herramientas para tu <span class="text-[#9B7EBD]">equilibrio diario</span>',
+    servicesIntro:
+      'Hábitos sostenibles con coaching; meditaciones personalizadas si necesitas desconectar en casa entre sesiones.',
+    faqHeading: 'Dudas sobre <span class="text-[#9B7EBD]">equilibrio y hábitos</span>',
+    faqIntro: 'Sin promesas irreales: cambios pequeños que encajan en tu vida.',
+    ctaHeading: 'Vuelve a tener espacio <span class="text-[#9B7EBD]">para ti</span>',
+    ctaText: 'Sesiones desde 50€. Online para toda España o presencial en Narón.',
     ogDescription: 'Estrategias prácticas para hábitos, descanso y tiempo para ti.',
     ogImage: `${BASE}/assets/provider/istock/2245001493.webp`,
     h1: 'Equilibrio vital',
@@ -376,12 +404,19 @@ const ENFOQUES = [
   {
     slug: 'autoconocimiento-mindfulness',
     breadcrumb: 'Autoconocimiento y mindfulness',
-    title: 'Autoconocimiento y Mindfulness | Coach Holística | Luisa Corral',
+    title: 'Mindfulness Realista para tu Día a Día | Coach Holística | Luisa Corral',
     description:
       'Autoconocimiento, mindfulness y técnicas de calma mental. Sesiones con Luisa Corral, coach holística. Online y presencial. Reserva ahora.',
     keywords:
       'autoconocimiento, mindfulness, atención plena, calmar la mente, técnicas respiración, coach mindfulness online',
-    ogTitle: 'Autoconocimiento y Mindfulness | Luisa Corral',
+    ogTitle: 'Mindfulness y Autoconocimiento | Luisa Corral',
+    servicesHeading: 'Qué encaja si buscas <span class="text-[#9B7EBD]">calma mental</span>',
+    servicesIntro:
+      'Meditaciones a medida para practicar en casa; coaching holístico si quieres integrar mindfulness con trabajo emocional.',
+    faqHeading: 'Preguntas sobre <span class="text-[#9B7EBD]">mindfulness</span>',
+    faqIntro: 'Empiezas desde cero, sin posturas raras ni jerga vacía.',
+    ctaHeading: 'Para la mente que <span class="text-[#9B7EBD]">no para</span>',
+    ctaText: 'Primera sesión online o en Narón. Te explico cómo sería tu proceso.',
     ogDescription: 'Herramientas de atención plena y conexión contigo misma.',
     ogImage: `${BASE}/assets/provider/istock/2271081070.webp`,
     h1: 'Autoconocimiento',
@@ -435,12 +470,19 @@ const ENFOQUES = [
   {
     slug: 'desbloqueo-energetico-emocional',
     breadcrumb: 'Desbloqueo energético y emocional',
-    title: 'Desbloqueo Emocional y Energético | Reiki y Coaching | Luisa Corral',
+    title: '¿Sientes Bloqueos por Dentro? Reiki y Coaching | Luisa Corral',
     description:
       'Desbloqueo emocional y energético con coaching holístico, Reiki Delfín y coaching angelical. Luisa Corral, Narón y online. Reserva tu sesión.',
     keywords:
       'desbloqueo emocional, desbloqueo energético, sanación energética, reiki online, coaching angelical, liberar bloqueos emocionales',
     ogTitle: 'Desbloqueo Emocional y Energético | Luisa Corral',
+    servicesHeading: 'Vías de <span class="text-[#9B7EBD]">liberación y sanación</span>',
+    servicesIntro:
+      'Reiki Delfín para trabajo energético; coaching angelical si buscas guía interior. Lo combinamos según tu caso.',
+    faqHeading: 'Dudas sobre <span class="text-[#9B7EBD]">bloqueos y energía</span>',
+    faqIntro: 'No hace falta “creer” a ciegas: muchas empiezan con curiosidad.',
+    ctaHeading: 'Libera lo que ya <span class="text-[#9B7EBD]">no te sirve</span>',
+    ctaText: 'Espacio seguro en Narón o por videollamada. Escríbeme y lo vemos juntas.',
     ogDescription: 'Libera bloqueos con acompañamiento holístico y sanación energética.',
     ogImage: `${BASE}/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-516eeb50-9d67-4bb3-f3fc-c127dd0dc100-publicContain.webp`,
     h1: 'Desbloqueo emocional',

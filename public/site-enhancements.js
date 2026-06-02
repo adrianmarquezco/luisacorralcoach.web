@@ -7,6 +7,14 @@
   ;(document.head || document.documentElement).appendChild(link)
 })()
 
+const SERVICE_BREADCRUMBS = {
+  'flores-de-bach': 'Flores de Bach',
+  'coaching-holistico': 'Coaching holístico',
+  'meditaciones-personalizadas': 'Meditaciones personalizadas',
+  'coaching-angelical': 'Coaching angelical',
+  'reiki-delfin': 'Reiki Delfín',
+}
+
 function createBreadcrumbEl(items, light) {
   const nav = document.createElement('nav')
   nav.className = light ? 'site-breadcrumb site-breadcrumb--light mb-6' : 'site-breadcrumb mb-8'
@@ -70,6 +78,11 @@ function initBreadcrumbs() {
     return
   } else if (segments[0] === 'enfoques' && segments.length === 2) {
     return
+  } else if (segments.length === 1 && SERVICE_BREADCRUMBS[segments[0]]) {
+    items = [
+      { href: '/', label: 'Inicio' },
+      { label: SERVICE_BREADCRUMBS[segments[0]] },
+    ]
   }
 
   if (!items) return
@@ -182,8 +195,10 @@ function initFaqAccessibility() {
     if (!btn.dataset.faqBound) {
       btn.dataset.faqBound = '1'
       btn.addEventListener('click', () => {
-        const open = !panel.classList.contains('hidden')
-        btn.setAttribute('aria-expanded', open ? 'false' : 'true')
+        const willOpen = panel.classList.contains('hidden')
+        panel.classList.toggle('hidden')
+        btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false')
+        item.classList.toggle('is-open', willOpen)
       })
     }
   })
