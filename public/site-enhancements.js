@@ -76,11 +76,55 @@ async function initCookieBannerOnce() {
   } catch (_) {}
 }
 
+function initFaqAccessibility() {
+  document.querySelectorAll('[data-landingsite-faq-item]').forEach((item, index) => {
+    const btn = item.querySelector('[data-landingsite-faq-question]')
+    const panel = item.querySelector('[data-landingsite-faq-answer]')
+    if (!btn || !panel) return
+
+    const qId = `faq-q-${index}`
+    const aId = `faq-a-${index}`
+    btn.setAttribute('id', qId)
+    btn.setAttribute('aria-controls', aId)
+    btn.setAttribute('aria-expanded', panel.classList.contains('hidden') ? 'false' : 'true')
+    panel.setAttribute('id', aId)
+    panel.setAttribute('role', 'region')
+    panel.setAttribute('aria-labelledby', qId)
+
+    if (!btn.dataset.faqBound) {
+      btn.dataset.faqBound = '1'
+      btn.addEventListener('click', () => {
+        const open = !panel.classList.contains('hidden')
+        btn.setAttribute('aria-expanded', open ? 'false' : 'true')
+      })
+    }
+  })
+}
+
+function initSocialAriaLabels() {
+  const labels = [
+    ['instagram.com', 'Instagram de Luisa Corral'],
+    ['tiktok.com', 'TikTok de Luisa Corral'],
+    ['wa.me', 'Contactar por WhatsApp'],
+  ]
+  document.querySelectorAll('a[href]').forEach((a) => {
+    const href = a.getAttribute('href') || ''
+    for (const [host, label] of labels) {
+      if (href.includes(host) && !a.getAttribute('aria-label')) {
+        a.setAttribute('aria-label', label)
+        break
+      }
+    }
+  })
+}
+
 function run() {
   initContactPreferenceRadios()
   initExternalLinksNewTab()
   initFormSuccessBanner()
   initCookieBannerOnce()
+  initFaqAccessibility()
+  initSocialAriaLabels()
 }
 
 if (document.readyState === 'loading') {

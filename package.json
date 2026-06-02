@@ -7,7 +7,8 @@
     "finalize": "node scripts/finalize.mjs",
     "build": "node scripts/migrate.mjs && node scripts/finalize.mjs",
     "optimize:images": "node scripts/optimize-images.mjs",
-    "fix:audit": "node scripts/fix-audit-errors.mjs"
+    "fix:audit": "node scripts/fix-audit-errors.mjs",
+    "fix:seo": "node scripts/apply-seo-fixes.mjs"
   },
   "devDependencies": {
     "cheerio": "^1.0.0",
