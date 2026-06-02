@@ -163,12 +163,6 @@ function fixShareLinks(html, url) {
 }
 
 function fixCssExternal(html) {
-  if (html.includes('/public/site.css')) return html
-  // Replace the huge Tailwind-style <style> block (the one starting with reset)
-  html = html.replace(
-    /<style>\*,::after,::before[\s\S]*?<\/style>\s*/m,
-    '<link rel="stylesheet" href="/public/site.css">\n'
-  )
   return html
 }
 
