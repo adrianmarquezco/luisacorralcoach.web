@@ -10,7 +10,11 @@
 
 .flex-wrap { flex-wrap: wrap; }
 .justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
 .items-stretch { align-items: stretch; }
+.w-full { width: 100%; }
+.p-6 { padding: 1.5rem; }
+.flex-shrink-0 { flex-shrink: 0; }
 
 .gap-12 { gap: 3rem; }
 
@@ -45,12 +49,50 @@ a.enfoque-service-card:hover,
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
-/* FAQ acordeón */
+/* FAQ acordeón — igual que coaching-holistico y servicios */
+[data-landingsite-faq-item] {
+  border: 1px solid #e5d9f2;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+[data-landingsite-faq-question] {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  box-sizing: border-box;
+  background-color: #faf7fc;
+  font-weight: 600;
+  color: #2d1b3d;
+  border: none;
+  cursor: pointer;
+}
+
+[data-landingsite-faq-question]:hover {
+  background-color: #f0eaf7;
+}
+
+[data-landingsite-faq-answer] {
+  padding: 1.5rem;
+  background-color: #fff;
+  color: #6b5b7a;
+}
+
+[data-landingsite-faq-answer].hidden {
+  display: none;
+}
+
 [data-landingsite-faq-item].is-open [data-landingsite-faq-question] i.fa-chevron-down {
   transform: rotate(180deg);
 }
 
 [data-landingsite-faq-question] i.fa-chevron-down {
+  flex-shrink: 0;
+  color: #9b7ebd;
   transition: transform 0.2s ease;
 }
 

@@ -204,35 +204,70 @@ function initFaqAccessibility() {
   })
 }
 
+const ENFOQUES_MENU_LINKS = [
+  { href: '/enfoques', label: 'Todos los enfoques', icon: 'fa-compass' },
+  { href: '/enfoques/gestion-estres-emociones', label: 'Estrés y emociones', icon: 'fa-heart' },
+  { href: '/enfoques/encontrar-proposito', label: 'Propósito vital', icon: 'fa-compass' },
+  { href: '/enfoques/equilibrio-vital', label: 'Equilibrio vital', icon: 'fa-spa' },
+  { href: '/enfoques/autoconocimiento-mindfulness', label: 'Mindfulness', icon: 'fa-leaf' },
+  {
+    href: '/enfoques/desbloqueo-energetico-emocional',
+    label: 'Desbloqueo energético',
+    icon: 'fa-water',
+  },
+]
+
 function initEnfoquesNav() {
   const header = document.getElementById('global-header')
-  if (!header) return
+  if (!header || header.querySelector('[data-enfoques-nav]')) return
 
   const desktopNav = header.querySelector('nav.hidden.lg\\:flex')
-  if (desktopNav && !desktopNav.querySelector('a[href="/enfoques"]')) {
-    const testimonios = desktopNav.querySelector('a[href="/testimonios"]')
-    if (testimonios) {
-      const link = document.createElement('a')
-      link.href = '/enfoques'
-      link.className =
-        'text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold transition-colors duration-300'
-      link.textContent = 'Enfoques'
-      desktopNav.insertBefore(link, testimonios)
-    }
+  const testimoniosDesktop = desktopNav?.querySelector('a[href="/testimonios"]')
+  if (desktopNav && testimoniosDesktop) {
+    desktopNav.querySelectorAll(':scope > a[href="/enfoques"]').forEach((el) => el.remove())
+
+    const dropdown = document.createElement('div')
+    dropdown.className = 'relative group'
+    dropdown.setAttribute('data-enfoques-nav', '')
+    const links = ENFOQUES_MENU_LINKS.map((item, i) => {
+      const round =
+        i === 0
+          ? ' rounded-t-xl'
+          : i === ENFOQUES_MENU_LINKS.length - 1
+            ? ' rounded-b-xl'
+            : ''
+      return (
+        `<a href="${item.href}" class="flex items-center gap-3 px-4 py-3 text-[#2D1B3D] hover:bg-[#FAF7FC] hover:text-[#9B7EBD] transition-colors${round}">` +
+        `<i class="fa-solid ${item.icon} text-[#9B7EBD]"></i> ${item.label}</a>`
+      )
+    }).join('')
+    dropdown.innerHTML =
+      '<button type="button" aria-haspopup="true" aria-expanded="false" class="text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold transition-colors duration-300 flex items-center gap-1 py-2">' +
+      'Enfoques <i class="fa-solid fa-chevron-down text-xs"></i></button>' +
+      '<div class="absolute left-0 mt-0 w-64 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2 z-50 border border-[#E5D9F2]">' +
+      links +
+      '</div>'
+    desktopNav.insertBefore(dropdown, testimoniosDesktop)
   }
 
-  desktopNav?.querySelectorAll('a[href="/enfoques"].block').forEach((el) => el.remove())
-
   const mobileMenu = header.querySelector('[data-landingsite-mobile-menu]')
-  if (mobileMenu && !mobileMenu.querySelector('a[href="/enfoques"]')) {
-    const testimonios = mobileMenu.querySelector('a[href="/testimonios"]')
-    if (testimonios) {
-      const link = document.createElement('a')
-      link.href = '/enfoques'
-      link.className = 'block text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold py-2'
-      link.textContent = 'Enfoques'
-      mobileMenu.insertBefore(link, testimonios)
-    }
+  const testimoniosMobile = mobileMenu?.querySelector('a[href="/testimonios"]')
+  if (mobileMenu && testimoniosMobile && !mobileMenu.querySelector('[data-enfoques-mobile]')) {
+    mobileMenu.querySelectorAll(':scope > a[href="/enfoques"]').forEach((el) => el.remove())
+
+    const block = document.createElement('div')
+    block.setAttribute('data-enfoques-mobile', '')
+    block.className = 'space-y-2'
+    const sublinks = ENFOQUES_MENU_LINKS.map(
+      (item) =>
+        `<a href="${item.href}" class="flex items-center gap-2 text-[#6B5B7A] hover:text-[#9B7EBD] py-1">` +
+        `<i class="fa-solid ${item.icon} text-sm"></i> ${item.label}</a>`
+    ).join('')
+    block.innerHTML =
+      '<span class="block text-[#2D1B3D] font-semibold py-2">' +
+      '<i class="fa-solid fa-compass mr-2 text-[#9B7EBD]"></i>Enfoques</span>' +
+      `<div class="pl-4 border-l-2 border-[#E5D9F2] ml-2 space-y-2">${sublinks}</div>`
+    mobileMenu.insertBefore(block, testimoniosMobile)
   }
 }
 
