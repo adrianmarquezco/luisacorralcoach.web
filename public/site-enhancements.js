@@ -183,6 +183,8 @@ function initFaqAccessibility() {
     const panel = item.querySelector('[data-landingsite-faq-answer]')
     if (!btn || !panel) return
 
+    if (!btn.getAttribute('type')) btn.setAttribute('type', 'button')
+
     const qId = `faq-q-${index}`
     const aId = `faq-a-${index}`
     btn.setAttribute('id', qId)
@@ -192,15 +194,18 @@ function initFaqAccessibility() {
     panel.setAttribute('role', 'region')
     panel.setAttribute('aria-labelledby', qId)
 
-    if (!btn.dataset.faqBound) {
-      btn.dataset.faqBound = '1'
-      btn.addEventListener('click', () => {
-        const willOpen = panel.classList.contains('hidden')
-        panel.classList.toggle('hidden')
-        btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false')
-        item.classList.toggle('is-open', willOpen)
-      })
-    }
+    if (item.closest('[data-landingsite-faq]') || btn.dataset.faqBound) return
+
+    btn.dataset.faqBound = '1'
+    btn.addEventListener('click', (e) => {
+      e.preventDefault()
+      const opening = panel.classList.contains('hidden')
+      panel.classList.toggle('hidden', !opening)
+      panel.style.display = opening ? 'block' : 'none'
+      btn.setAttribute('aria-expanded', opening ? 'true' : 'false')
+      item.classList.toggle('is-open', opening)
+      btn.querySelector('i.fa-chevron-down')?.classList.toggle('rotate-180', opening)
+    })
   })
 }
 
@@ -244,7 +249,7 @@ function initEnfoquesNav() {
     dropdown.innerHTML =
       '<button type="button" aria-haspopup="true" aria-expanded="false" class="text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold transition-colors duration-300 flex items-center gap-1 py-2">' +
       'Enfoques <i class="fa-solid fa-chevron-down text-xs"></i></button>' +
-      '<div class="absolute left-0 mt-0 w-64 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2 z-50 border border-[#E5D9F2]">' +
+      '<div class="enfoques-nav-dropdown absolute left-0 mt-0 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 -translate-y-2 z-50 border border-[#E5D9F2]">' +
       links +
       '</div>'
     desktopNav.insertBefore(dropdown, testimoniosDesktop)
@@ -273,11 +278,32 @@ function initEnfoquesNav() {
 
 function initEnfoquesFooter() {
   const footer = document.getElementById('global-footer')
-  if (!footer || footer.querySelector('[data-enfoques-footer]')) return
+  if (!footer) return
 
-  const servicesCol = Array.from(footer.querySelectorAll('div')).find((d) => {
-    const title = d.querySelector('p.text-lg')
+  const navUl = Array.from(footer.querySelectorAll('ul')).find((ul) =>
+    ul.querySelector('a[href="/sobre-mi"]')
+  )
+  if (navUl && !navUl.querySelector('a[href="/enfoques"]')) {
+    const li = document.createElement('li')
+    li.innerHTML =
+      '<a href="/enfoques" class="text-[#B8A4C9] hover:text-white transition-colors">Enfoques</a>'
+    const sobreMiLi = navUl.querySelector('a[href="/sobre-mi"]')?.closest('li')
+    if (sobreMiLi?.nextElementSibling) navUl.insertBefore(li, sobreMiLi.nextElementSibling)
+    else navUl.appendChild(li)
+  }
+
+  if (footer.querySelector('[data-enfoques-footer]')) return
+
+  const columns = Array.from(
+    footer.querySelectorAll('.max-w-7xl > .grid > div, .max-w-7xl > div > .grid > div')
+  )
+  const servicesCol = columns.find((d) => {
+    const title = d.querySelector('p.text-lg, p.font-semibold')
     return title && title.textContent.trim() === 'Servicios'
+  })
+  const contactCol = columns.find((d) => {
+    const title = d.querySelector('p.text-lg, p.font-semibold')
+    return title && title.textContent.trim() === 'Contacto'
   })
   if (!servicesCol?.parentElement) return
 
@@ -293,7 +319,12 @@ function initEnfoquesFooter() {
     '<li><a href="/enfoques/autoconocimiento-mindfulness" class="text-[#B8A4C9] hover:text-white transition-colors">Mindfulness</a></li>' +
     '<li><a href="/enfoques/desbloqueo-energetico-emocional" class="text-[#B8A4C9] hover:text-white transition-colors">Desbloqueo energético</a></li>' +
     '</ul>'
-  servicesCol.parentElement.appendChild(col)
+
+  const grid = servicesCol.parentElement
+  if (contactCol) grid.insertBefore(col, contactCol)
+  else grid.appendChild(col)
+
+  grid.classList.add('footer-with-enfoques')
 }
 
 function initHeaderLogo() {

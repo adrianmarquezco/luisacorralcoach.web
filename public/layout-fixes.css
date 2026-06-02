@@ -96,6 +96,25 @@ a.enfoque-service-card:hover,
   transition: transform 0.2s ease;
 }
 
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.enfoques-nav-dropdown {
+  min-width: 17.5rem;
+  width: max-content;
+}
+
+.enfoques-nav-dropdown a {
+  white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+  #global-footer .footer-with-enfoques {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
 @media (min-width: 1024px) {
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
