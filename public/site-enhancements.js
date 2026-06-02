@@ -36,12 +36,55 @@ function initExternalLinksNewTab() {
   })
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    initContactPreferenceRadios()
-    initExternalLinksNewTab()
-  })
-} else {
+function initFormSuccessBanner() {
+  const params = new URLSearchParams(window.location.search)
+  const enviado = params.get('enviado')
+  if (!enviado) return
+
+  const messages = {
+    '1': '¡Gracias! He recibido tu mensaje y te responderé lo antes posible.',
+    newsletter:
+      '¡Gracias por suscribirte! Pronto recibirás contenido en tu correo.',
+  }
+  const text = messages[enviado] || messages['1']
+  if (!text) return
+
+  const banner = document.createElement('div')
+  banner.setAttribute('role', 'status')
+  banner.className =
+    'fixed top-24 left-1/2 -translate-x-1/2 z-[9999] max-w-lg w-[calc(100%-2rem)] bg-[#2D1B3D] text-white px-6 py-4 rounded-2xl shadow-xl text-center text-sm md:text-base'
+  banner.innerHTML =
+    '<p>' +
+    text +
+    '</p><button type="button" class="mt-3 text-[#D4AF37] underline text-sm" aria-label="Cerrar aviso">Cerrar</button>'
+  banner.querySelector('button').addEventListener('click', () => banner.remove())
+  document.body.appendChild(banner)
+
+  if (window.history.replaceState) {
+    const url = new URL(window.location.href)
+    url.searchParams.delete('enviado')
+    window.history.replaceState({}, '', url.pathname + url.search + url.hash)
+  }
+}
+
+async function initCookieBannerOnce() {
+  if (window.__cookieBannerLoaded) return
+  window.__cookieBannerLoaded = true
+  try {
+    const { initCookieBanner } = await import('/js/modules/cookie-consent.js')
+    initCookieBanner()
+  } catch (_) {}
+}
+
+function run() {
   initContactPreferenceRadios()
   initExternalLinksNewTab()
+  initFormSuccessBanner()
+  initCookieBannerOnce()
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', run)
+} else {
+  run()
 }

@@ -5,9 +5,12 @@
   "scripts": {
     "migrate": "node scripts/migrate.mjs",
     "finalize": "node scripts/finalize.mjs",
-    "build": "node scripts/migrate.mjs && node scripts/finalize.mjs"
+    "build": "node scripts/migrate.mjs && node scripts/finalize.mjs",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "fix:audit": "node scripts/fix-audit-errors.mjs"
   },
   "devDependencies": {
-    "cheerio": "^1.0.0"
+    "cheerio": "^1.0.0",
+    "sharp": "^0.33.5"
   }
 }

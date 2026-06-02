@@ -1,15 +1,14 @@
 // Cookie Consent Banner - Shared Module
 export function initCookieBanner() {
-  // IMPORTANT: Check consent BEFORE anything else
+  if (window.__cookieBannerInitialized) return
+  window.__cookieBannerInitialized = true
+
   var existingConsent = localStorage.getItem('cookieConsent')
   if (existingConsent) {
-    // User already accepted or rejected - don't show banner at all
     return
   }
 
-  // Create banner HTML
   function createBanner() {
-    // Remove existing banner if any
     var existing = document.getElementById('cookie-banner')
     if (existing) {
       existing.remove()
@@ -33,7 +32,6 @@ export function initCookieBanner() {
     return banner
   }
 
-  // Save consent
   function setConsent(accepted) {
     localStorage.setItem('cookieConsent', accepted ? 'accepted' : 'rejected')
     var banner = document.getElementById('cookie-banner')
@@ -42,11 +40,9 @@ export function initCookieBanner() {
     }
   }
 
-  // Initialize - banner is created only if no consent exists (checked above)
   function init() {
-    var banner = createBanner()
+    createBanner()
 
-    // Set up event handlers immediately
     var acceptBtn = document.getElementById('cookie-accept')
     var rejectBtn = document.getElementById('cookie-reject')
 
@@ -63,7 +59,6 @@ export function initCookieBanner() {
     }
   }
 
-  // Run when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init)
   } else {
