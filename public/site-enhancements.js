@@ -101,6 +101,95 @@ function initFaqAccessibility() {
   })
 }
 
+function initEnfoquesNav() {
+  const header = document.getElementById('global-header')
+  if (!header) return
+
+  const desktopNav = header.querySelector('nav.hidden.lg\\:flex')
+  if (desktopNav && !desktopNav.querySelector('a[href="/enfoques"]')) {
+    const testimonios = desktopNav.querySelector('a[href="/testimonios"]')
+    if (testimonios) {
+      const link = document.createElement('a')
+      link.href = '/enfoques'
+      link.className =
+        'text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold transition-colors duration-300'
+      link.textContent = 'Enfoques'
+      desktopNav.insertBefore(link, testimonios)
+    }
+  }
+
+  desktopNav?.querySelectorAll('a[href="/enfoques"].block').forEach((el) => el.remove())
+
+  const mobileMenu = header.querySelector('[data-landingsite-mobile-menu]')
+  if (mobileMenu && !mobileMenu.querySelector('a[href="/enfoques"]')) {
+    const testimonios = mobileMenu.querySelector('a[href="/testimonios"]')
+    if (testimonios) {
+      const link = document.createElement('a')
+      link.href = '/enfoques'
+      link.className = 'block text-[#2D1B3D] hover:text-[#9B7EBD] font-semibold py-2'
+      link.textContent = 'Enfoques'
+      mobileMenu.insertBefore(link, testimonios)
+    }
+  }
+}
+
+function initEnfoquesFooter() {
+  const footer = document.getElementById('global-footer')
+  if (!footer || footer.querySelector('[data-enfoques-footer]')) return
+
+  const servicesCol = Array.from(footer.querySelectorAll('div')).find((d) => {
+    const title = d.querySelector('p.text-lg')
+    return title && title.textContent.trim() === 'Servicios'
+  })
+  if (!servicesCol?.parentElement) return
+
+  const col = document.createElement('div')
+  col.setAttribute('data-enfoques-footer', '')
+  col.innerHTML =
+    '<p class="text-lg font-semibold mb-4 text-[#D4AF37]">Enfoques</p>' +
+    '<ul class="space-y-3">' +
+    '<li><a href="/enfoques" class="text-[#B8A4C9] hover:text-white transition-colors">Todos los enfoques</a></li>' +
+    '<li><a href="/enfoques/gestion-estres-emociones" class="text-[#B8A4C9] hover:text-white transition-colors">Estrés y emociones</a></li>' +
+    '<li><a href="/enfoques/encontrar-proposito" class="text-[#B8A4C9] hover:text-white transition-colors">Propósito vital</a></li>' +
+    '<li><a href="/enfoques/equilibrio-vital" class="text-[#B8A4C9] hover:text-white transition-colors">Equilibrio vital</a></li>' +
+    '<li><a href="/enfoques/autoconocimiento-mindfulness" class="text-[#B8A4C9] hover:text-white transition-colors">Mindfulness</a></li>' +
+    '<li><a href="/enfoques/desbloqueo-energetico-emocional" class="text-[#B8A4C9] hover:text-white transition-colors">Desbloqueo energético</a></li>' +
+    '</ul>'
+  servicesCol.parentElement.appendChild(col)
+}
+
+function initHeaderLogo() {
+  const header = document.getElementById('global-header')
+  if (!header) return
+
+  const mq = window.matchMedia('(min-width: 768px)')
+  const apply = () => {
+    const desktop = mq.matches
+    const logoHeight = desktop ? '5.5rem' : '3.5rem'
+    const container = header.querySelector(':scope > .max-w-7xl')
+    const row = container?.querySelector(':scope > .flex.justify-between.items-center')
+
+    if (container) {
+      container.style.paddingTop = desktop ? '1rem' : '0.75rem'
+      container.style.paddingBottom = desktop ? '0.5rem' : '0.25rem'
+    }
+    if (row) {
+      row.style.minHeight = desktop ? '7.5rem' : '5rem'
+      row.style.alignItems = 'center'
+    }
+
+    header.querySelectorAll('img[data-logo]').forEach((img) => {
+      img.style.height = logoHeight
+      img.style.width = 'auto'
+      img.style.maxWidth = 'none'
+      img.style.objectFit = 'contain'
+    })
+  }
+
+  apply()
+  mq.addEventListener('change', apply)
+}
+
 function initDeveloperCredit() {
   const footer = document.getElementById('global-footer')
   if (!footer || footer.querySelector('[data-developer-credit]')) return
@@ -134,6 +223,9 @@ function initSocialAriaLabels() {
 }
 
 function run() {
+  initHeaderLogo()
+  initEnfoquesNav()
+  initEnfoquesFooter()
   initContactPreferenceRadios()
   initExternalLinksNewTab()
   initFormSuccessBanner()
