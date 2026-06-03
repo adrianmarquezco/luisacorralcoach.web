@@ -9,7 +9,10 @@
     "optimize:images": "node scripts/optimize-images.mjs",
     "fix:audit": "node scripts/fix-audit-errors.mjs",
     "fix:seo": "node scripts/apply-seo-fixes.mjs",
-    "generate:enfoques": "node scripts/generate-enfoques.mjs"
+    "generate:enfoques": "node scripts/generate-enfoques.mjs",
+    "inject:footer-enfoques": "node scripts/inject-footer-enfoques.mjs",
+    "fix:seo-batch": "node scripts/apply-seo-improvements.mjs",
+    "fix:seo-pending": "node scripts/apply-seo-pending.mjs"
   },
   "devDependencies": {
     "cheerio": "^1.0.0",

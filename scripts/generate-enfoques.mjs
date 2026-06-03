@@ -1,10 +1,16 @@
 import fs from 'fs'
 import path from 'path'
+import {
+  BASE,
+  BUSINESS_ID,
+  BUSINESS_PROVIDER,
+  directAnswerBlock,
+  LOCAL_LINE,
+} from './seo-shared.mjs'
 
 const ROOT = path.resolve(
   'C:/Users/USUARIO/Documents/Proyectos/Adrián Márquez/Web Adrián Márquez/luisacorralcoach-web'
 )
-const BASE = 'https://www.luisacorralcoach.com'
 const TEMPLATE = fs.readFileSync(path.join(ROOT, 'testimonios/index.html'), 'utf8')
 
 const [, headPart, , footerPart] = TEMPLATE.split(/<\/header>|<footer id="global-header"/)
@@ -47,6 +53,16 @@ function headHtml(meta) {
     /<meta name="twitter:description" content="[^"]*">/,
     `<meta name="twitter:description" content="${meta.ogDescription}">`
   )
+  h = h.replace(
+    /<meta name="twitter:card" content="summary">/,
+    '<meta name="twitter:card" content="summary_large_image">'
+  )
+  if (!h.includes('twitter:card')) {
+    h = h.replace(
+      /<meta name="twitter:title"/,
+      '<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title"'
+    )
+  }
   h = h.replace(
     /<meta property="og:url" content="[^"]*">/,
     `<meta property="og:url" content="${meta.canonical}">`
@@ -159,11 +175,12 @@ function enfoqueBody(e) {
         <span class="inline-block px-4 py-2 bg-[#E8D7F1] text-[#7A5FA0] rounded-full text-sm font-semibold mb-4">Enfoque transaccional</span>
         <h1 class="text-4xl md:text-5xl font-bold text-[#2D1B3D] mb-6 leading-tight">${e.h1} <span class="text-[#9B7EBD]">${e.h1Accent}</span></h1>
         <p class="text-lg text-[#6B5B7A] mb-6">${e.heroLead}</p>
+        ${e.directAnswer ? directAnswerBlock(e.directAnswer) : ''}
         <div class="flex flex-col sm:flex-row gap-4 mb-6">
           <a href="/contacto" class="inline-flex items-center justify-center bg-[#9B7EBD] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#7A5FA0] transition-all shadow-md">Agenda tu sesión</a>
           <a href="https://wa.me/34616054001" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center justify-center bg-[#25D366] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#20BD5A] transition-all">WhatsApp</a>
         </div>
-        <p class="text-sm text-[#6B5B7A]">Online · Narón, Galicia · Desde 50€/sesión</p>
+        <p class="text-sm text-[#6B5B7A]">Narón (Ferrolterra, A Coruña) · Online España · Desde 50€/sesión</p>
       </div>
       <div class="relative">
         <img src="${e.image}" alt="${e.imageAlt}" class="w-full h-[400px] object-cover rounded-3xl shadow-xl" width="1200" height="800" loading="eager" fetchpriority="high" decoding="async">
@@ -202,7 +219,9 @@ const ENFOQUES = [
   {
     slug: 'gestion-estres-emociones',
     breadcrumb: 'Gestión del estrés y emociones',
-    title: 'Ansiedad y Estrés Online | Coach Holística Galicia · Reserva 50€',
+    title: 'Ansiedad y Estrés Online | Coach Galicia · 50€',
+    directAnswer:
+      'Luisa Corral acompaña ansiedad, agobio y burnout con coaching holístico y Flores de Bach en Narón (A Coruña) y online. Primera sesión desde 50€; reserva por web o WhatsApp.',
     description:
       '¿Ansiedad, agobio o burnout? Coach holística Luisa Corral en Narón (Galicia) y online en España. Flores de Bach y coaching emocional. Reserva tu sesión desde 50€.',
     keywords:
@@ -272,7 +291,9 @@ const ENFOQUES = [
   {
     slug: 'encontrar-proposito',
     breadcrumb: 'Encontrar propósito',
-    title: 'Encontrar Propósito de Vida | Coaching Holístico Online · Reserva',
+    title: 'Propósito de Vida | Coaching Online · Reserva',
+    directAnswer:
+      'Si sientes vacío o falta de rumbo, el coaching holístico con Luisa Corral clarifica valores y próximos pasos. Sesiones en Narón (Ferrolterra) y videollamada para España.',
     description:
       '¿Vacío o falta de rumbo? Coaching holístico para clarificar valores y propósito vital con Luisa Corral. Online y Narón (Galicia). Sesión desde 50€. Reserva hoy.',
     keywords:
@@ -341,7 +362,9 @@ const ENFOQUES = [
   {
     slug: 'equilibrio-vital',
     breadcrumb: 'Equilibrio vital',
-    title: 'Equilibrio Vital y Burnout | Coach Mujeres Online · Narón Galicia',
+    title: 'Equilibrio Vital Online | Coach Galicia · Reserva',
+    directAnswer:
+      'Recupera hábitos, descanso y energía con coaching holístico y meditaciones personalizadas. Luisa Corral en Narón (Ferrolterra, A Coruña) y online para mujeres en España.',
     description:
       'Recupera equilibrio vital: hábitos, descanso y energía sin culpa. Coaching y meditaciones personalizadas con Luisa Corral. Online y Narón. Reserva desde 50€.',
     keywords:
@@ -410,7 +433,9 @@ const ENFOQUES = [
   {
     slug: 'autoconocimiento-mindfulness',
     breadcrumb: 'Autoconocimiento y mindfulness',
-    title: 'Mindfulness Online | Autoconocimiento y Calma Mental · Reserva',
+    title: 'Mindfulness Online | Calma Mental · Reserva',
+    directAnswer:
+      'Mindfulness práctico y autoconocimiento para calmar la mente, con meditaciones a medida si lo necesitas. Sesiones con Luisa Corral en Narón y por videollamada.',
     description:
       'Mindfulness práctico y autoconocimiento para calmar la mente. Meditaciones personalizadas y coaching con Luisa Corral. Online y Narón. Sesión desde 50€.',
     keywords:
@@ -479,7 +504,9 @@ const ENFOQUES = [
   {
     slug: 'desbloqueo-energetico-emocional',
     breadcrumb: 'Desbloqueo energético y emocional',
-    title: 'Desbloqueo Emocional y Reiki Online | Sanación Energética · Reserva',
+    title: 'Desbloqueo Emocional | Reiki Online · Reserva',
+    directAnswer:
+      'Libera bloqueos emocionales y energéticos con Reiki Delfín y coaching angelical. Luisa Corral en Narón (A Coruña) y sesiones online en España desde 50€.',
     description:
       'Libera bloqueos emocionales y energéticos con Reiki Delfín y coaching angelical. Luisa Corral en Narón (Galicia) y online. Reserva sesión desde 50€.',
     keywords:
@@ -555,7 +582,7 @@ function hubBody() {
       </div>
       <h2 class="text-2xl font-bold text-[#2D1B3D] mb-3">${e.breadcrumb}</h2>
       <p class="text-[#6B5B7A] mb-4">${e.cardDesc}</p>
-      <span class="text-[#9B7EBD] font-semibold">Ver enfoque <i class="fa-solid fa-arrow-right ml-1"></i></span>
+      <span class="text-[#9B7EBD] font-semibold">Reservar este enfoque <i class="fa-solid fa-arrow-right ml-1"></i></span>
     </a>`
   ).join('')
 
@@ -572,6 +599,7 @@ function hubBody() {
       <span class="inline-block px-4 py-2 bg-[#E8D7F1] text-[#7A5FA0] rounded-full text-sm font-semibold mb-4">Cómo puedo ayudarte</span>
       <h1 class="text-4xl md:text-5xl font-bold text-[#2D1B3D] mb-6">Enfoques de <span class="text-[#9B7EBD]">transformación</span></h1>
       <p class="text-lg text-[#6B5B7A]">No necesitas encajar en una etiqueta concreta. Elige el resultado que buscas; en sesión diseñamos el camino con el servicio que mejor te acompañe.</p>
+      ${directAnswerBlock('Los enfoques de Luisa Corral son landings por resultado (ansiedad, propósito, equilibrio, mindfulness, desbloqueo). Atiende en Narón (Ferrolterra, A Coruña) y online en España desde 50€/sesión.')}
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">${cards}</div>
     <div class="mt-16 text-center">
@@ -581,6 +609,20 @@ function hubBody() {
     </div>
   </div>
 </section>
+${faqSection({
+  faqHeading: 'Preguntas sobre los <span class="text-[#9B7EBD]">enfoques</span>',
+  faqIntro: 'Respuestas rápidas antes de elegir tu camino.',
+  faqs: [
+    {
+      q: '¿Qué es un enfoque de coaching?',
+      a: 'Es una página orientada a un resultado concreto (ansiedad, propósito, equilibrio, etc.). En sesión elegimos el servicio que mejor encaje: coaching holístico, Flores de Bach, meditaciones o Reiki Delfín.',
+    },
+    {
+      q: '¿Puedo reservar online si no vivo en Galicia?',
+      a: 'Sí. Ofrezco sesiones por videollamada para toda España y Latinoamérica, además de presencial en Narón (comarca de Ferrolterra, A Coruña).',
+    },
+  ],
+})}
 ${ctaBlock()}`
 }
 
@@ -595,12 +637,34 @@ function buildSchema(e, isHub) {
           url: `${BASE}/enfoques`,
           description:
             'Enfoques transaccionales de Luisa Corral: estrés, propósito, equilibrio, mindfulness y desbloqueo emocional.',
+          about: { '@id': BUSINESS_ID },
         },
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${BASE}/` },
             { '@type': 'ListItem', position: 2, name: 'Enfoques', item: `${BASE}/enfoques` },
+          ],
+        },
+        {
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: '¿Qué es un enfoque de coaching?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Es una landing orientada a un resultado concreto (ansiedad, propósito, equilibrio, etc.). En sesión elegimos el servicio que mejor encaje: coaching holístico, Flores de Bach, meditaciones o Reiki Delfín.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '¿Puedo reservar online si no vivo en Galicia?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Sí. Luisa Corral ofrece sesiones por videollamada para toda España y Latinoamérica, además de presencial en Narón (comarca de Ferrolterra, A Coruña).',
+              },
+            },
           ],
         },
       ],
@@ -622,11 +686,8 @@ function buildSchema(e, isHub) {
         name: e.breadcrumb,
         description: e.description,
         url: `${BASE}/enfoques/${e.slug}`,
-        provider: {
-          '@type': 'Person',
-          name: 'Luisa Corral',
-          url: `${BASE}/sobre-mi`,
-        },
+        provider: BUSINESS_PROVIDER,
+        mentions: { '@id': BUSINESS_ID },
         areaServed: [
           { '@type': 'Country', name: 'España' },
           { '@type': 'AdministrativeArea', name: 'Galicia' },
@@ -695,7 +756,7 @@ writePage(
   'enfoques/index.html',
   hubBody(),
   {
-    title: 'Enfoques Coaching Holístico | Ansiedad, Propósito, Mindfulness · Reserva',
+    title: 'Enfoques Coaching Holístico | Ansiedad y más',
     description:
       'Elige tu enfoque: ansiedad, propósito vital, equilibrio, mindfulness o desbloqueo emocional. Coach holística Luisa Corral en Narón y online. Reserva desde 50€.',
     keywords:
