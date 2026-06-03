@@ -49,14 +49,14 @@ a.enfoque-service-card:hover,
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
-/* FAQ acordeón — igual que coaching-holistico y servicios */
+/* FAQ acordeón — solo botones (no h3) */
 [data-landingsite-faq-item] {
   border: 1px solid #e5d9f2;
   border-radius: 1rem;
   overflow: hidden;
 }
 
-[data-landingsite-faq-question] {
+button[data-landingsite-faq-question] {
   width: 100%;
   display: flex;
   align-items: center;
@@ -72,7 +72,7 @@ a.enfoque-service-card:hover,
   cursor: pointer;
 }
 
-[data-landingsite-faq-question]:hover {
+button[data-landingsite-faq-question]:hover {
   background-color: #f0eaf7;
 }
 
@@ -86,11 +86,11 @@ a.enfoque-service-card:hover,
   display: none;
 }
 
-[data-landingsite-faq-item].is-open [data-landingsite-faq-question] i.fa-chevron-down {
+[data-landingsite-faq-item].is-open button[data-landingsite-faq-question] i.fa-chevron-down {
   transform: rotate(180deg);
 }
 
-[data-landingsite-faq-question] i.fa-chevron-down {
+button[data-landingsite-faq-question] i.fa-chevron-down {
   flex-shrink: 0;
   color: #9b7ebd;
   transition: transform 0.2s ease;
@@ -196,10 +196,53 @@ section[class*='from-[#9B7EBD]'] .site-breadcrumb li.font-medium {
   font-weight: 600;
 }
 
-#next-level-cta .flex a {
+#next-level-cta .blog-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#next-level-cta .blog-cta-actions a {
   flex: 0 0 auto;
   width: auto;
   max-width: 100%;
+}
+
+.coaching-enfoques-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .coaching-enfoques-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .coaching-enfoques-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.coaching-enfoques-grid a {
+  display: block;
+  text-decoration: none;
+}
+
+#next-level-cta .max-w-3xl {
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#next-level-cta .bg-white.rounded-3xl {
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Separación header sticky → contenido */

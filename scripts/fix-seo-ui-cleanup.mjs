@@ -80,13 +80,18 @@ function fixBlogPurpleBreadcrumbs(html, rel) {
 function fixBlogCta(html, rel) {
   if (!rel.startsWith('blog/') || !html.includes('id="next-level-cta"')) return html
   return html.replace(
-    /<section id="next-level-cta" class="code-section py-16 bg-gradient-to-br from-\[#FAF7FC\] to-\[#F0EAF7\]">\s*<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">\s*<div class="bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-\[#E5D9F2\]">([\s\S]*?)<div class="flex flex-col sm:flex-row gap-3">([\s\S]*?)<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/,
-    `<section id="next-level-cta" class="code-section py-12 bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7]">
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <div class="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-[#E5D9F2]">$1<div class="flex flex-wrap gap-3 justify-center items-center">$2</div>
-    </div>
-  </div>
-</section>`
+    /<section id="next-level-cta"[\s\S]*?<\/section>/,
+    (block) => {
+      if (block.includes('blog-cta-actions')) return block
+      return block
+        .replace(/max-w-5xl/, 'max-w-3xl')
+        .replace(/py-16/, 'py-12')
+        .replace(/shadow-xl/, 'shadow-lg')
+        .replace(
+          /<div class="flex[^"]*">([\s\S]*?)<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/,
+          '<div class="blog-cta-actions">$1</div>\n    </div>\n  </div>\n</section>'
+        )
+    }
   )
 }
 
