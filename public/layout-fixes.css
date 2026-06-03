@@ -216,14 +216,46 @@ section[class*='from-[#9B7EBD]'] .site-breadcrumb li.font-medium {
   width: 100%;
 }
 
-#next-level-cta .blog-cta-actions a.blog-cta-btn,
-#next-level-cta .blog-cta-primary a {
+#next-level-cta .blog-cta-btn {
   display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
   flex: 0 0 auto;
   align-self: center !important;
   width: auto !important;
   max-width: 100%;
   margin: 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+#next-level-cta .blog-cta-btn--primary,
+#next-level-cta .blog-cta-primary a:not(.blog-cta-btn--contact) {
+  background-color: #9b7ebd !important;
+  color: #fff !important;
+}
+
+#next-level-cta .blog-cta-btn--primary:hover,
+#next-level-cta .blog-cta-primary a:not(.blog-cta-btn--contact):hover {
+  background-color: #7a5fa0 !important;
+  color: #fff !important;
+}
+
+#next-level-cta .blog-cta-btn--contact,
+#next-level-cta .blog-cta-primary a[href='/contacto'] {
+  background-color: #d4af37 !important;
+  color: #fff !important;
+}
+
+#next-level-cta .blog-cta-btn--contact:hover,
+#next-level-cta .blog-cta-primary a[href='/contacto']:hover {
+  background-color: #b8962e !important;
+  color: #fff !important;
 }
 
 #next-level-cta a.blog-cta-more {

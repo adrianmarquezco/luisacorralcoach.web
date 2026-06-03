@@ -83,8 +83,21 @@ function fixH3Faqs(html) {
   return h
 }
 
+function fixBlogCtaButtonClasses(html) {
+  return html
+    .replace(
+      /class="blog-cta-btn inline-flex items-center justify-center bg-\[#9B7EBD\][^"]*"/g,
+      'class="blog-cta-btn blog-cta-btn--primary"'
+    )
+    .replace(
+      /class="blog-cta-btn inline-flex items-center justify-center bg-\[#D4AF37\][^"]*"/g,
+      'class="blog-cta-btn blog-cta-btn--contact"'
+    )
+}
+
 function fixBlogCta(html) {
-  let h = html.replace(
+  let h = fixBlogCtaButtonClasses(html)
+  h = h.replace(
     /<div class="flex flex-wrap gap-3 justify-center items-center">/g,
     '<div class="blog-cta-actions flex flex-col items-center">'
   )
@@ -93,8 +106,8 @@ function fixBlogCta(html) {
     (_, serviceHref, serviceLabel, blogHref) =>
       `<div class="blog-cta-actions flex flex-col items-center">
         <div class="blog-cta-primary flex flex-wrap justify-center items-center gap-2">
-        <a href="${serviceHref}" class="blog-cta-btn inline-flex items-center justify-center bg-[#9B7EBD] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#7A5FA0] transition-colors">${serviceLabel}</a>
-        <a href="/contacto" class="blog-cta-btn inline-flex items-center justify-center bg-[#D4AF37] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#B8962E] transition-colors">Contactar</a>
+        <a href="${serviceHref}" class="blog-cta-btn blog-cta-btn--primary">${serviceLabel}</a>
+        <a href="/contacto" class="blog-cta-btn blog-cta-btn--contact">Contactar</a>
         </div>
         <a href="${blogHref}" class="blog-cta-more mt-2 text-[#6B5B7A] font-semibold hover:text-[#9B7EBD] transition-colors">Leer otro artículo</a>
       </div>`
@@ -165,7 +178,10 @@ for (const file of walk(ROOT)) {
   const orig = html
 
   html = fixH3Faqs(html)
-  if (rel.startsWith('blog/')) html = fixBlogCta(html)
+  if (rel.startsWith('blog/')) {
+    html = fixBlogCta(html)
+    html = fixBlogCtaButtonClasses(html)
+  }
   if (
     rel === 'coaching-angelical/index.html' ||
     rel === 'reiki-delfin/index.html'
