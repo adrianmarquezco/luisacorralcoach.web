@@ -84,10 +84,22 @@ function fixH3Faqs(html) {
 }
 
 function fixBlogCta(html) {
-  return html.replace(
+  let h = html.replace(
     /<div class="flex flex-wrap gap-3 justify-center items-center">/g,
-    '<div class="blog-cta-actions flex flex-col items-center gap-3">'
+    '<div class="blog-cta-actions flex flex-col items-center">'
   )
+  h = h.replace(
+    /<div class="blog-cta-actions flex flex-col items-center gap-3">\s*<a href="([^"]+)" class="inline-flex items-center justify-center bg-\[#9B7EBD\][^>]*>([^<]*)<\/a>\s*<a href="\/contacto" class="inline-flex items-center justify-center bg-\[#D4AF37\][^>]*>Contactar<\/a>\s*<a href="([^"]+)" class="inline-flex items-center justify-center bg-\[#F5F0FA\][^"]*">Leer otro artículo<\/a>\s*<\/div>/g,
+    (_, serviceHref, serviceLabel, blogHref) =>
+      `<div class="blog-cta-actions flex flex-col items-center">
+        <div class="blog-cta-primary flex flex-wrap justify-center items-center gap-2">
+        <a href="${serviceHref}" class="blog-cta-btn inline-flex items-center justify-center bg-[#9B7EBD] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#7A5FA0] transition-colors">${serviceLabel}</a>
+        <a href="/contacto" class="blog-cta-btn inline-flex items-center justify-center bg-[#D4AF37] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#B8962E] transition-colors">Contactar</a>
+        </div>
+        <a href="${blogHref}" class="blog-cta-more mt-2 text-[#6B5B7A] font-semibold hover:text-[#9B7EBD] transition-colors">Leer otro artículo</a>
+      </div>`
+  )
+  return h
 }
 
 const faqSectionRe =

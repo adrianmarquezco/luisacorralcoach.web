@@ -200,21 +200,46 @@ section[class*='from-[#9B7EBD]'] .site-breadcrumb li.font-medium {
   display: flex !important;
   flex-direction: column !important;
   flex-wrap: nowrap;
-  gap: 0.75rem;
+  gap: 0.5rem;
   justify-content: center !important;
   align-items: center !important;
   width: 100%;
   text-align: center;
 }
 
-#next-level-cta .blog-cta-actions a {
+#next-level-cta .blog-cta-primary {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+#next-level-cta .blog-cta-actions a.blog-cta-btn,
+#next-level-cta .blog-cta-primary a {
   display: inline-flex !important;
   flex: 0 0 auto;
   align-self: center !important;
   width: auto !important;
   max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
+}
+
+#next-level-cta a.blog-cta-more {
+  display: inline-block !important;
+  margin-top: 0.25rem;
+  padding: 0;
+  background: none !important;
+  border-radius: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #6b5b7a;
+  text-decoration: none;
+}
+
+#next-level-cta a.blog-cta-more:hover {
+  color: #9b7ebd;
 }
 
 .coaching-enfoques-grid {
