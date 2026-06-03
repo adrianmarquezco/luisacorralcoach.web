@@ -4,8 +4,6 @@ import {
   BASE,
   BUSINESS_ID,
   BUSINESS_PROVIDER,
-  directAnswerBlock,
-  LOCAL_LINE,
 } from './seo-shared.mjs'
 
 const ROOT = path.resolve(
@@ -175,7 +173,6 @@ function enfoqueBody(e) {
         <span class="inline-block px-4 py-2 bg-[#E8D7F1] text-[#7A5FA0] rounded-full text-sm font-semibold mb-4">Enfoque transaccional</span>
         <h1 class="text-4xl md:text-5xl font-bold text-[#2D1B3D] mb-6 leading-tight">${e.h1} <span class="text-[#9B7EBD]">${e.h1Accent}</span></h1>
         <p class="text-lg text-[#6B5B7A] mb-6">${e.heroLead}</p>
-        ${e.directAnswer ? directAnswerBlock(e.directAnswer) : ''}
         <div class="flex flex-col sm:flex-row gap-4 mb-6">
           <a href="/contacto" class="inline-flex items-center justify-center bg-[#9B7EBD] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#7A5FA0] transition-all shadow-md">Agenda tu sesión</a>
           <a href="https://wa.me/34616054001" target="_blank" rel="noopener noreferrer nofollow" class="inline-flex items-center justify-center bg-[#25D366] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#20BD5A] transition-all">WhatsApp</a>
@@ -599,7 +596,6 @@ function hubBody() {
       <span class="inline-block px-4 py-2 bg-[#E8D7F1] text-[#7A5FA0] rounded-full text-sm font-semibold mb-4">Cómo puedo ayudarte</span>
       <h1 class="text-4xl md:text-5xl font-bold text-[#2D1B3D] mb-6">Enfoques de <span class="text-[#9B7EBD]">transformación</span></h1>
       <p class="text-lg text-[#6B5B7A]">No necesitas encajar en una etiqueta concreta. Elige el resultado que buscas; en sesión diseñamos el camino con el servicio que mejor te acompañe.</p>
-      ${directAnswerBlock('Los enfoques de Luisa Corral son landings por resultado (ansiedad, propósito, equilibrio, mindfulness, desbloqueo). Atiende en Narón (Ferrolterra, A Coruña) y online en España desde 50€/sesión.')}
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">${cards}</div>
     <div class="mt-16 text-center">

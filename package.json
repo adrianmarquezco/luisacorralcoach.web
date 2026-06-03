@@ -12,7 +12,8 @@
     "generate:enfoques": "node scripts/generate-enfoques.mjs",
     "inject:footer-enfoques": "node scripts/inject-footer-enfoques.mjs",
     "fix:seo-batch": "node scripts/apply-seo-improvements.mjs",
-    "fix:seo-pending": "node scripts/apply-seo-pending.mjs"
+    "fix:seo-pending": "node scripts/apply-seo-pending.mjs",
+    "fix:seo-ui": "node scripts/fix-seo-ui-cleanup.mjs"
   },
   "devDependencies": {
     "cheerio": "^1.0.0",

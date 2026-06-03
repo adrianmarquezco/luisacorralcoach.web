@@ -17,11 +17,13 @@ const ROOT = path.resolve(
 const GENERIC_AI =
   /Luisa Corral es coach holística certificada con más de 8 años de experiencia\. Ofrece sesiones de Flores de Bach/
 
-const GEO_PAGES = [
+const SERVICE_PAGES = new Set([
+  'coaching-holistico/index.html',
   'flores-de-bach/index.html',
   'meditaciones-personalizadas/index.html',
-  'testimonios/index.html',
-]
+  'coaching-angelical/index.html',
+  'reiki-delfin/index.html',
+])
 
 function walk(d, o = []) {
   for (const e of fs.readdirSync(d, { withFileTypes: true })) {
@@ -229,23 +231,10 @@ for (const file of walk(ROOT)) {
     html = patchTestimoniosSchema(html)
     html = fixTwitterCard(html)
     if (meta?.breadcrumb) html = insertListingBreadcrumb(html, meta.breadcrumb)
-    if (meta?.directAnswer) html = insertDirectAnswerAfterHero(html, meta.directAnswer)
   }
 
-  if (GEO_PAGES.includes(rel)) html = addFerrolterraLine(html)
-
-  if (meta?.directAnswer) {
-    if (rel.startsWith('blog/') && rel !== 'blog/index.html') {
-      html = insertBlogDirectAnswer(html, meta.directAnswer)
-    } else if (
-      !rel.startsWith('blog/') &&
-      rel !== 'testimonios/index.html' &&
-      meta.directAnswer
-    ) {
-      if (html.includes('seo-direct-answer')) {
-        html = updateDirectAnswerText(html, meta.directAnswer)
-      }
-    }
+  if (meta?.directAnswer && SERVICE_PAGES.has(rel) && html.includes('seo-direct-answer')) {
+    html = updateDirectAnswerText(html, meta.directAnswer)
   }
 
   if (meta?.breadcrumb && rel.startsWith('blog/') && rel !== 'blog/index.html') {
