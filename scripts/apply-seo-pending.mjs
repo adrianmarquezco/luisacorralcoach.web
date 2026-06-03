@@ -233,15 +233,11 @@ for (const file of walk(ROOT)) {
     if (meta?.breadcrumb) html = insertListingBreadcrumb(html, meta.breadcrumb)
   }
 
-  if (meta?.directAnswer && SERVICE_PAGES.has(rel) && html.includes('seo-direct-answer')) {
-    html = updateDirectAnswerText(html, meta.directAnswer)
-  }
-
   if (meta?.breadcrumb && rel.startsWith('blog/') && rel !== 'blog/index.html') {
     if (!html.includes('site-breadcrumb')) {
       html = html.replace(
         /(<section class="py-20 bg-gradient-to-br from-\[#9B7EBD\][^>]*>[\s\S]*?<div class="max-w-4xl mx-auto[^"]*">)/,
-        `$1\n    ${breadcrumbNav(meta.breadcrumb)}`
+        `$1\n    ${breadcrumbNav(meta.breadcrumb, true)}`
       )
     }
   }

@@ -182,6 +182,26 @@ nav[aria-label='Breadcrumb'] [aria-current='page'],
   justify-content: flex-start;
 }
 
+section[class*='from-[#9B7EBD]'] .site-breadcrumb ol,
+section[class*='from-[#9B7EBD]'] .site-breadcrumb a {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+section[class*='from-[#9B7EBD]'] .site-breadcrumb a:hover {
+  color: #fff;
+}
+
+section[class*='from-[#9B7EBD]'] .site-breadcrumb li.font-medium {
+  color: #fff;
+  font-weight: 600;
+}
+
+#next-level-cta .flex a {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+}
+
 /* Separación header sticky → contenido */
 #global-header + section.code-section,
 #global-header + .code-section {

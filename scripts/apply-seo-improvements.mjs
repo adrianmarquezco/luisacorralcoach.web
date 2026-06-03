@@ -14,14 +14,6 @@ const ROOT = path.resolve(
   'C:/Users/USUARIO/Documents/Proyectos/Adrián Márquez/Web Adrián Márquez/luisacorralcoach-web'
 )
 
-const SERVICE_PAGES = new Set([
-  'coaching-holistico/index.html',
-  'flores-de-bach/index.html',
-  'meditaciones-personalizadas/index.html',
-  'coaching-angelical/index.html',
-  'reiki-delfin/index.html',
-])
-
 const GENERIC_AI =
   /Luisa Corral es coach holística certificada con más de 8 años de experiencia\. Ofrece sesiones de Flores de Bach/
 
@@ -259,9 +251,6 @@ for (const file of walk(ROOT)) {
     if (meta.aiDescription) html = setMeta(html, 'ai-description', meta.aiDescription)
     else if (GENERIC_AI.test(html) && meta.aiDescription) {
       html = setMeta(html, 'ai-description', meta.aiDescription)
-    }
-    if (meta.directAnswer && SERVICE_PAGES.has(rel)) {
-      html = insertDirectAnswer(html, meta.directAnswer)
     }
     if (meta.breadcrumb) html = insertBlogBreadcrumb(html, meta.breadcrumb)
   }
