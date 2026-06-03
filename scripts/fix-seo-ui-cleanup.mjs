@@ -89,7 +89,7 @@ function fixBlogCta(html, rel) {
         .replace(/shadow-xl/, 'shadow-lg')
         .replace(
           /<div class="flex[^"]*">([\s\S]*?)<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/,
-          '<div class="blog-cta-actions">$1</div>\n    </div>\n  </div>\n</section>'
+          '<div class="blog-cta-actions flex flex-col items-center gap-3">$1</div>\n    </div>\n  </div>\n</section>'
         )
     }
   )

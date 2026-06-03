@@ -86,7 +86,7 @@ function fixH3Faqs(html) {
 function fixBlogCta(html) {
   return html.replace(
     /<div class="flex flex-wrap gap-3 justify-center items-center">/g,
-    '<div class="blog-cta-actions">'
+    '<div class="blog-cta-actions flex flex-col items-center gap-3">'
   )
 }
 
