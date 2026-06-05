@@ -286,19 +286,19 @@
           <div>
             <label class="block text-[#2D1B3D] font-medium mb-2">¿Cómo prefieres que te contacte?</label>
             <div class="grid grid-cols-3 gap-2">
-              <label class="flex flex-col items-center justify-center gap-1 p-2 sm:p-3 rounded-xl border border-[#E5D9F2] cursor-pointer hover:border-[#9B7EBD] hover:bg-[#FAF7FC] transition-all has-[:checked]:border-[#9B7EBD] has-[:checked]:bg-[#E8D7F1]">
+              <label onclick="lcSelectMethod(this)" class="lc-contact-opt flex flex-col items-center justify-center gap-1 p-2 sm:p-3 rounded-xl border cursor-pointer transition-all" style="border-color:#9B7EBD;background-color:#E8D7F1;">
                 <input type="radio" name="contact_preference" value="whatsapp" class="sr-only" checked="">
-                <i class="fa-brands fa-whatsapp text-lg sm:text-xl"></i>
+                <i class="fa-brands fa-whatsapp text-lg sm:text-xl" aria-hidden="true"></i>
                 <span class="text-xs sm:text-sm font-medium text-center">WhatsApp</span>
               </label>
-              <label class="flex flex-col items-center justify-center gap-1 p-2 sm:p-3 rounded-xl border border-[#E5D9F2] cursor-pointer hover:border-[#9B7EBD] hover:bg-[#FAF7FC] transition-all has-[:checked]:border-[#9B7EBD] has-[:checked]:bg-[#E8D7F1]">
+              <label onclick="lcSelectMethod(this)" class="lc-contact-opt flex flex-col items-center justify-center gap-1 p-2 sm:p-3 rounded-xl border cursor-pointer transition-all" style="border-color:#E5D9F2;">
                 <input type="radio" name="contact_preference" value="phone" class="sr-only">
-                <i class="fa-solid fa-phone text-lg sm:text-xl"></i>
+                <i class="fa-solid fa-phone text-lg sm:text-xl" aria-hidden="true"></i>
                 <span class="text-xs sm:text-sm font-medium text-center">Llamada</span>
               </label>
-              <label class="flex flex-col items-center justify-center gap-1 p-2 sm:p-3 rounded-xl border border-[#E5D9F2] cursor-pointer hover:border-[#9B7EBD] hover:bg-[#FAF7FC] transition-all has-[:checked]:border-[#9B7EBD] has-[:checked]:bg-[#E8D7F1]">
+              <label onclick="lcSelectMethod(this)" class="lc-contact-opt flex flex-col items-center justify-center gap-1 p-2 sm:p-3 rounded-xl border cursor-pointer transition-all" style="border-color:#E5D9F2;">
                 <input type="radio" name="contact_preference" value="email" class="sr-only">
-                <i class="fa-solid fa-envelope text-lg sm:text-xl"></i>
+                <i class="fa-solid fa-envelope text-lg sm:text-xl" aria-hidden="true"></i>
                 <span class="text-xs sm:text-sm font-medium text-center">Email</span>
               </label>
             </div>
@@ -350,23 +350,14 @@
           </p>
         <input type="hidden" name="_next" value="/contacto?enviado=1"></form>
 <script>
-(function(){
-  var radios = document.querySelectorAll('input[name="contact_preference"]');
-  function update(){
-    radios.forEach(function(r){
-      var lbl = r.closest('label');
-      if(r.checked){
-        lbl.style.borderColor='#9B7EBD';
-        lbl.style.backgroundColor='#E8D7F1';
-      } else {
-        lbl.style.borderColor='#E5D9F2';
-        lbl.style.backgroundColor='';
-      }
-    });
-  }
-  radios.forEach(function(r){ r.addEventListener('change', update); });
-  update();
-})();
+function lcSelectMethod(lbl) {
+  document.querySelectorAll('.lc-contact-opt').forEach(function(el) {
+    el.style.borderColor = '#E5D9F2';
+    el.style.backgroundColor = '';
+  });
+  lbl.style.borderColor = '#9B7EBD';
+  lbl.style.backgroundColor = '#E8D7F1';
+}
 </script>
       </div>
     </div>
