@@ -349,6 +349,25 @@
             Tus datos están protegidos. Te responderé lo antes posible.
           </p>
         <input type="hidden" name="_next" value="/contacto?enviado=1"></form>
+<script>
+(function(){
+  var radios = document.querySelectorAll('input[name="contact_preference"]');
+  function update(){
+    radios.forEach(function(r){
+      var lbl = r.closest('label');
+      if(r.checked){
+        lbl.style.borderColor='#9B7EBD';
+        lbl.style.backgroundColor='#E8D7F1';
+      } else {
+        lbl.style.borderColor='#E5D9F2';
+        lbl.style.backgroundColor='';
+      }
+    });
+  }
+  radios.forEach(function(r){ r.addEventListener('change', update); });
+  update();
+})();
+</script>
       </div>
     </div>
   </div>
