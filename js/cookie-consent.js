@@ -7,7 +7,7 @@
   banner.setAttribute('aria-label', 'Aviso de cookies');
   banner.innerHTML = [
     '<div style="position:fixed;bottom:0;left:0;right:0;background:#2D1B3D;color:#fff;',
-    'padding:1rem 1.5rem;z-index:99999;display:flex;flex-wrap:wrap;align-items:center;',
+    'padding:1rem 1.5rem;z-index:48;display:flex;flex-wrap:wrap;align-items:center;',
     'justify-content:space-between;gap:1rem;font-family:Nunito Sans,sans-serif;',
     'box-shadow:0 -4px 20px rgba(0,0,0,.4);">',
     '<p style="margin:0;font-size:.9rem;flex:1;min-width:200px;line-height:1.5">',
