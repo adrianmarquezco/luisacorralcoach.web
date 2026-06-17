@@ -391,6 +391,14 @@ function initSocialAriaLabels() {
   })
 }
 
+function fixWhatsAppZIndex() {
+  // The WA button lives inside <header z-50> which creates a stacking context,
+  // capping its effective z-index below the cookie banner (z-99999).
+  // Moving it to <body> makes it a root-level stacking context participant.
+  const btn = document.querySelector('#global-header a[href*="wa.me"][style*="2147483647"]')
+  if (btn) document.body.appendChild(btn)
+}
+
 function run() {
   initBreadcrumbs()
   initHeaderLogo()
@@ -403,6 +411,7 @@ function run() {
   initFaqAccessibility()
   initSocialAriaLabels()
   initDeveloperCredit()
+  fixWhatsAppZIndex()
 }
 
 if (document.readyState === 'loading') {
