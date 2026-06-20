@@ -56,6 +56,13 @@ a.enfoque-service-card:hover,
   overflow: hidden;
 }
 
+/* Reset márgenes del h3 dentro de botones FAQ */
+[data-landingsite-faq-question] h3 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 600;
+}
+
 button[data-landingsite-faq-question] {
   width: 100%;
   display: flex;
