@@ -34,6 +34,10 @@
 .object-cover { object-fit: cover; }
 
 .rounded-2xl { border-radius: 1rem; }
+.rounded-3xl { border-radius: 1.5rem; }
+
+.from-\[\#FAF7FC\] { --tw-gradient-from: #FAF7FC; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(250 247 252 / 0)); }
+.to-\[\#F0EAF7\] { --tw-gradient-to: #F0EAF7; }
 
 .hover\:shadow-lg:hover {
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
