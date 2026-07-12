@@ -220,6 +220,12 @@ const ENFOQUES_MENU_LINKS = [
     label: 'Desbloqueo energético',
     icon: 'fa-water',
   },
+  { href: '/enfoques/creencias-limitantes', label: 'Creencias limitantes', icon: 'fa-brain' },
+  {
+    href: '/enfoques/mentalidad-de-abundancia',
+    label: 'Mentalidad de abundancia',
+    icon: 'fa-seedling',
+  },
 ]
 
 function initEnfoquesNav() {
