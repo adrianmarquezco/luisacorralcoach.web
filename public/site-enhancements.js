@@ -340,16 +340,16 @@ function initHeaderLogo() {
   const mq = window.matchMedia('(min-width: 768px)')
   const apply = () => {
     const desktop = mq.matches
-    const logoHeight = desktop ? '5.5rem' : '3.5rem'
+    const logoHeight = desktop ? '4rem' : '2.75rem'
     const container = header.querySelector(':scope > .max-w-7xl')
     const row = container?.querySelector(':scope > .flex.justify-between.items-center')
 
     if (container) {
-      container.style.paddingTop = desktop ? '1rem' : '0.75rem'
+      container.style.paddingTop = desktop ? '0.75rem' : '0.5rem'
       container.style.paddingBottom = desktop ? '0.5rem' : '0.25rem'
     }
     if (row) {
-      row.style.minHeight = desktop ? '7.5rem' : '5rem'
+      row.style.minHeight = desktop ? '5rem' : '3.5rem'
       row.style.alignItems = 'center'
     }
 
