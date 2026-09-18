@@ -278,7 +278,7 @@ function initEnfoquesNav() {
       '<span class="block text-[#2D1B3D] font-semibold py-2">' +
       '<i class="fa-solid fa-compass mr-2 text-[#9B7EBD]"></i>Enfoques</span>' +
       `<div class="pl-4 border-l-2 border-[#E5D9F2] ml-2 space-y-2">${sublinks}</div>`
-    mobileMenu.insertBefore(block, testimoniosMobile)
+    testimoniosMobile.parentElement.insertBefore(block, testimoniosMobile)
   }
 }
 
