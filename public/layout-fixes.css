@@ -214,6 +214,27 @@ section[class*='from-[#9B7EBD]'] .site-breadcrumb li.font-medium {
   font-weight: 600;
 }
 
+#next-level-cta > div > div {
+  padding: 2.5rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  #next-level-cta > div > div {
+    padding: 3rem 3rem;
+  }
+}
+
+#next-level-cta h2 {
+  margin: 0 0 0.75rem;
+  line-height: 1.25;
+}
+
+#next-level-cta p {
+  max-width: 34rem;
+  margin: 0 auto 1.75rem;
+  line-height: 1.6;
+}
+
 #next-level-cta .blog-cta-actions {
   display: flex !important;
   flex-direction: column !important;
@@ -278,9 +299,11 @@ section[class*='from-[#9B7EBD]'] .site-breadcrumb li.font-medium {
 
 #next-level-cta a.blog-cta-more {
   display: inline-block !important;
-  margin-top: 0.25rem;
+  margin-top: 1rem;
   padding: 0;
   background: none !important;
+  text-decoration: underline !important;
+  text-underline-offset: 4px;
   border-radius: 0;
   font-size: 0.9375rem;
   font-weight: 600;
