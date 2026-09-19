@@ -477,3 +477,7 @@ section[class*='from-[#9B7EBD]'] .site-breadcrumb li.font-medium {
 .photo-split .photo-split-text{text-align:left}
 @media (min-width:640px){.photo-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (min-width:768px){.photo-split{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:3rem}}
+
+/* Evita que el email/enlaces del pie desborden la columna y creen scroll horizontal */
+#global-footer .footer-with-enfoques > * { min-width: 0; }
+#global-footer a[href^='mailto:'], #global-footer a[href^='tel:'] { overflow-wrap: anywhere; word-break: break-word; }
