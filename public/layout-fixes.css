@@ -467,3 +467,13 @@ section[class*='from-[#9B7EBD]'] .site-breadcrumb li.font-medium {
 @media (min-width:768px){
   .md\:p-10{padding:2.5rem}
 }
+
+/* Fotos reales de pedidos */
+.photo-gallery{display:grid;gap:1.25rem;margin-top:2.5rem}
+.photo-gallery figure,.photo-split figure{margin:0}
+.photo-gallery img,.photo-split img{display:block;width:100%;height:auto;border-radius:1.5rem;box-shadow:0 10px 25px -8px rgba(45,27,61,.25)}
+.photo-gallery figcaption,.photo-split figcaption{margin-top:.75rem;font-size:.875rem;line-height:1.4;color:#6b5b7a;text-align:center}
+.photo-split{display:grid;gap:2rem;align-items:center;text-align:left}
+.photo-split .photo-split-text{text-align:left}
+@media (min-width:640px){.photo-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:768px){.photo-split{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:3rem}}
