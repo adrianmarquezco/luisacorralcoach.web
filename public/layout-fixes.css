@@ -588,3 +588,7 @@ main h2[id] { scroll-margin-top: 7rem; }
 }
 .related-region__list a:hover,
 .related-region__list a:focus-visible { background: #9b7ebd; border-color: #9b7ebd; color: #fff; }
+
+.related-region__more { margin: 1.25rem auto 0; max-width: 40rem; font-size: 0.95rem; line-height: 1.6; color: #6b5b7a; }
+.related-region__more a { color: #7a5fa0; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.related-region__more a:hover, .related-region__more a:focus-visible { color: #2d1b3d; }
