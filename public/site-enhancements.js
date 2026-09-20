@@ -410,8 +410,105 @@ function fixWhatsAppZIndex() {
   if (btn) document.body.appendChild(btn)
 }
 
+// Índice "En este artículo" de las entradas del blog (/blog/<slug>).
+// Se genera a partir de los h2 del contenido (hasta "Preguntas frecuentes"), asigna un id a
+// cada h2 que no lo tenga y, si la entrada ya trae el índice en el HTML, lo sincroniza.
+// Así cualquier entrada nueva lo incluye sin tocar nada.
+function tocSlug(text) {
+  let s = text
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+  if (s.length > 60) {
+    s = s.slice(0, 60)
+    const i = s.lastIndexOf('-')
+    if (i > 30) s = s.slice(0, i)
+  }
+  return s.replace(/-+$/, '')
+}
+
+function initBlogToc() {
+  const segments = window.location.pathname.replace(/\/index\.html$/, '').split('/').filter(Boolean)
+  if (segments[0] !== 'blog' || segments.length !== 2) return
+
+  const root = document.querySelector('main') || document.body
+  const headings = []
+  for (const h of root.querySelectorAll('h2')) {
+    const text = h.textContent.replace(/\s+/g, ' ').replace(/\s+([?.,;:!])/g, '$1').trim()
+    if (!text) continue
+    if (/preguntas frecuentes/i.test(text)) {
+      headings.push([h, text])
+      break
+    }
+    if (/art[ií]culos relacionados|siguiente paso/i.test(text)) break
+    headings.push([h, text])
+  }
+  if (headings.length < 2) return
+
+  const used = new Set(Array.from(document.querySelectorAll('[id]')).map((e) => e.id))
+  const items = headings.map(([h, text]) => {
+    if (!h.id) {
+      const base = tocSlug(text) || 'seccion'
+      let id = base
+      let n = 1
+      while (used.has(id)) id = base + '-' + ++n
+      h.id = id
+      used.add(id)
+    }
+    return { id: h.id, text }
+  })
+
+  const buildList = (ol) => {
+    ol.textContent = ''
+    for (const it of items) {
+      const li = document.createElement('li')
+      const a = document.createElement('a')
+      a.href = '#' + it.id
+      a.textContent = it.text
+      li.appendChild(a)
+      ol.appendChild(li)
+    }
+  }
+
+  const existing = document.querySelector('[data-blog-toc]')
+  if (existing) {
+    const ol = existing.querySelector('.blog-toc__list')
+    if (ol) buildList(ol)
+    return
+  }
+
+  const section = document.createElement('section')
+  section.className = 'blog-toc-section'
+  section.setAttribute('aria-label', 'Índice del artículo')
+  const nav = document.createElement('nav')
+  nav.className = 'blog-toc'
+  nav.setAttribute('data-blog-toc', '')
+  nav.setAttribute('aria-labelledby', 'toc-title')
+  const title = document.createElement('p')
+  title.className = 'blog-toc__title'
+  title.id = 'toc-title'
+  const icon = document.createElement('i')
+  icon.className = 'fa-solid fa-list-ul'
+  icon.setAttribute('aria-hidden', 'true')
+  title.appendChild(icon)
+  title.appendChild(document.createTextNode(' En este artículo'))
+  const ol = document.createElement('ol')
+  ol.className = 'blog-toc__list'
+  buildList(ol)
+  nav.appendChild(title)
+  nav.appendChild(ol)
+  section.appendChild(nav)
+
+  const first = headings[0][0]
+  const anchor = first.closest('main > section') || first.closest('section') || first
+  anchor.parentNode.insertBefore(section, anchor)
+}
+
 function run() {
   initBreadcrumbs()
+  initBlogToc()
   initHeaderLogo()
   initEnfoquesNav()
   initEnfoquesFooter()
