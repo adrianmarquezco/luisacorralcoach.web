@@ -487,3 +487,13 @@ a.flex[href^='mailto:'] > div:not([class*='w-']) { min-width: 0; }
 a.flex[href^='mailto:'] p { overflow-wrap: anywhere; }
 @media (max-width: 420px) { a.flex[href^='mailto:'] p:last-child { font-size: 0.875rem; } }
 @media (max-width: 340px) { a.flex[href^='mailto:'] p:last-child { font-size: 0.75rem; } }
+
+/* Móviles muy pequeños: los títulos largos no deben desbordar */
+@media (max-width: 340px) {
+  h1[class], h2[class] { overflow-wrap: anywhere; }
+  h1[class] { font-size: 1.875rem; line-height: 1.15; }
+}
+
+/* Mientras el aviso de cookies está visible, el botón de WhatsApp no debe tapar sus botones ni su texto */
+body:has(#lc-cookie-banner) a.fixed[href^='https://wa.me/34616054001'] { bottom: 10rem; }
+@media (min-width: 768px) { body:has(#lc-cookie-banner) a.fixed[href^='https://wa.me/34616054001'] { bottom: 6rem; } }
