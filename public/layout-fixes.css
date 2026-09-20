@@ -351,7 +351,8 @@ section[class*='from-[#9B7EBD]'] .site-breadcrumb li.font-medium {
 
 /* Separación header sticky → contenido */
 #global-header + section.code-section,
-#global-header + .code-section {
+#global-header + .code-section,
+#global-header + main > .code-section:first-child {
   scroll-margin-top: 6rem;
 }
 

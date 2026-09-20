@@ -7,6 +7,11 @@
   ;(document.head || document.documentElement).appendChild(link)
 })()
 
+function contentStart(header) {
+  const nx = header?.nextElementSibling
+  return nx && nx.tagName === 'MAIN' ? nx.firstElementChild : nx
+}
+
 const SERVICE_BREADCRUMBS = {
   'flores-de-bach': 'Flores de Bach',
   'coaching-holistico': 'Coaching holístico',
@@ -64,7 +69,7 @@ function initBreadcrumbs() {
       { href: '/blog', label: 'Blog' },
       { label: title },
     ]
-    const first = document.getElementById('global-header')?.nextElementSibling
+    const first = contentStart(document.getElementById('global-header'))
     light = Boolean(
       first &&
         (first.className.includes('from-[#9B7EBD]') ||
@@ -88,7 +93,7 @@ function initBreadcrumbs() {
   if (!items) return
 
   const header = document.getElementById('global-header')
-  const firstSection = header?.nextElementSibling
+  const firstSection = contentStart(header)
   if (!firstSection) return
 
   const nav = createBreadcrumbEl(items, light)
