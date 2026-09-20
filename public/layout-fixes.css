@@ -565,3 +565,26 @@ body:has(#lc-cookie-banner) a.fixed[href^='https://wa.me/34616054001'] { bottom:
 }
 main h2[id] { scroll-margin-top: 7rem; }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+/* Enlaces cruzados entre servicios/regiones y entre situaciones */
+.related-region { background: #fff; padding: 2.5rem 1rem; }
+.related-region__inner { max-width: 64rem; margin: 0 auto; text-align: center; }
+.related-region__title { margin: 0 0 1.25rem; font-size: 1.25rem; font-weight: 700; color: #2d1b3d; }
+.related-region__list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+.related-region__list li { margin: 0; max-width: 100%; }
+.related-region__list a {
+  display: inline-block;
+  max-width: 100%;
+  padding: 0.65rem 1.1rem;
+  border: 1px solid #e5d9f2;
+  border-radius: 9999px;
+  background: #faf7fc;
+  color: #7a5fa0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.related-region__list a:hover,
+.related-region__list a:focus-visible { background: #9b7ebd; border-color: #9b7ebd; color: #fff; }

@@ -173,15 +173,6 @@ function initFormSuccessBanner() {
   }
 }
 
-async function initCookieBannerOnce() {
-  if (window.__cookieBannerLoaded) return
-  window.__cookieBannerLoaded = true
-  try {
-    const { initCookieBanner } = await import('/js/modules/cookie-consent.js')
-    initCookieBanner()
-  } catch (_) {}
-}
-
 function initFaqAccessibility() {
   document.querySelectorAll('[data-landingsite-faq-item]').forEach((item, index) => {
     const btn = item.querySelector('[data-landingsite-faq-question]')
@@ -515,7 +506,6 @@ function run() {
   initContactPreferenceRadios()
   initExternalLinksNewTab()
   initFormSuccessBanner()
-  initCookieBannerOnce()
   initFaqAccessibility()
   initSocialAriaLabels()
   initDeveloperCredit()

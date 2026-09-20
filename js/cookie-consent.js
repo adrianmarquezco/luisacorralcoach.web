@@ -1,5 +1,5 @@
 (function () {
-  if (localStorage.getItem('lc-cookie-consent')) return;
+  if (localStorage.getItem('lc-cookie-consent') || localStorage.getItem('cookieConsent')) return;
 
   var banner = document.createElement('div');
   banner.id = 'lc-cookie-banner';
