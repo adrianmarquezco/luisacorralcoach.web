@@ -4,3 +4,7 @@ package.json
 package-lock.json
 .git
 FORMSPREE.md
+README.md
+DEPLOY-COOLIFY.md
+.claude
+.gitignore
