@@ -8,3 +8,9 @@ README.md
 DEPLOY-COOLIFY.md
 .claude
 .gitignore
+.dockerignore
+*.md
+assets/provider/istock/*.jpg
+assets/image-manifest.json
+public/site.css
+js/modules
