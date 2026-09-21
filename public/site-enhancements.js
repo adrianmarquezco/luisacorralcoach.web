@@ -19,6 +19,7 @@ const SERVICE_BREADCRUMBS = {
   'coaching-angelical': 'Coaching angelical',
   'reiki-delfin': 'Reiki Delfín',
   'sakh-majat': 'Sakh Majat',
+  'retiros-espirituales': 'Retiros espirituales',
 }
 
 function createBreadcrumbEl(items, light) {

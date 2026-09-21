@@ -239,15 +239,27 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Retiros Espirituales",
-  "description": "Retiros de bienestar en plena naturaleza, en distintas zonas de España. Sesiones de Reiki Delfín, Flores de Bach, meditación guiada y coaching personal. Grupos reducidos de máximo 8 personas. Formatos de fin de semana y retiros más largos de 3 a 5 días.",
+  "name": "Retiro espiritual de fin de semana en Galicia",
+  "description": "Retiro espiritual en Galicia con Luisa Corral: Reiki Delfín, Flores de Bach, retiro de meditación guiada y coaching personal en grupos de máximo 8 personas. Formato de fin de semana (viernes a domingo) y retiros más largos de 3 a 5 días. Lista de espera abierta para las primeras convocatorias de 2026-2027.",
   "url": "https://www.luisacorralcoach.com/retiros-espirituales",
-  "provider": { "@id": "https://www.luisacorralcoach.com/#business" },
-  "areaServed": "España",
+  "provider": {
+    "@id": "https://www.luisacorralcoach.com/#business"
+  },
+  "areaServed": [
+    {
+      "@type": "AdministrativeArea",
+      "name": "Galicia"
+    },
+    {
+      "@type": "Country",
+      "name": "España"
+    }
+  ],
   "audience": {
     "@type": "Audience",
     "audienceType": "Mujeres que buscan transformación personal y bienestar emocional"
-  }
+  },
+  "serviceType": "Retiro espiritual y de meditación"
 }
 </script>
 <script type="application/ld+json">
@@ -260,7 +272,22 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
   ]
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","speakable":{"@type":"SpeakableSpecification","cssSelector":[".speakable-intro",".speakable-faq"]},"url":"https://www.luisacorralcoach.com/retiros-espirituales","name":"Retiro Espiritual en Galicia · Grupo de 8 · Luisa Corral"}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      ".speakable-intro",
+      ".speakable-faq"
+    ]
+  },
+  "url": "https://www.luisacorralcoach.com/retiros-espirituales",
+  "name": "Retiro espiritual de fin de semana en Galicia | Luisa Corral",
+  "description": "Retiro espiritual de fin de semana en Galicia: Reiki, Flores de Bach, meditación y coaching 1:1 en grupo de 8. Apúntate a la lista de espera."
+}
+</script>
     <link rel="modulepreload" href="/js/retiros/index.js">
     <script src="/js/cookie-consent.js" defer></script>
 </head>
