@@ -18,6 +18,7 @@ const SERVICE_BREADCRUMBS = {
   'meditaciones-personalizadas': 'Meditaciones personalizadas',
   'coaching-angelical': 'Coaching angelical',
   'reiki-delfin': 'Reiki Delfín',
+  'sakh-majat': 'Sakh Majat',
 }
 
 function createBreadcrumbEl(items, light) {
