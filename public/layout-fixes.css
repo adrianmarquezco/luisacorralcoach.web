@@ -592,3 +592,18 @@ main h2[id] { scroll-margin-top: 7rem; }
 .related-region__more { margin: 1.25rem auto 0; max-width: 40rem; font-size: 0.95rem; line-height: 1.6; color: #6b5b7a; }
 .related-region__more a { color: #7a5fa0; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
 .related-region__more a:hover, .related-region__more a:focus-visible { color: #2d1b3d; }
+
+/* Cabecera sin saltos: mismas medidas que aplica el JS, ya en el primer pintado */
+#global-header > .max-w-7xl { padding-top: 0.5rem; padding-bottom: 0.25rem; }
+#global-header > .max-w-7xl > .flex.justify-between.items-center { min-height: 3.5rem; align-items: center; }
+#global-header img[data-logo] { height: 2.75rem; width: auto; max-width: none; object-fit: contain; }
+@media (min-width: 768px) {
+  #global-header > .max-w-7xl { padding-top: 0.75rem; padding-bottom: 0.5rem; }
+  #global-header > .max-w-7xl > .flex.justify-between.items-center { min-height: 5rem; }
+  #global-header img[data-logo] { height: 4rem; }
+}
+
+/* Tipografías: fuente de respaldo con medidas parecidas para que el texto no salte al cargar Nunito Sans / Outfit */
+@font-face { font-family: "Nunito Sans Fallback"; src: local("Arial"), local("Helvetica"), local("Liberation Sans"); size-adjust: 104%; ascent-override: 97%; descent-override: 34%; line-gap-override: 0%; }
+@font-face { font-family: "Outfit Fallback"; src: local("Arial"), local("Helvetica"), local("Liberation Sans"); size-adjust: 102%; ascent-override: 98%; descent-override: 25%; line-gap-override: 0%; }
+:root { --font-family-body: "Nunito Sans", "Nunito Sans Fallback", sans-serif; --font-family-heading: "Outfit", "Outfit Fallback", sans-serif; }

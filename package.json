@@ -14,7 +14,9 @@
     "fix:seo-batch": "node scripts/apply-seo-improvements.mjs",
     "fix:seo-pending": "node scripts/apply-seo-pending.mjs",
     "fix:seo-ui": "node scripts/fix-seo-ui-cleanup.mjs",
-    "fix:layout-ui": "node scripts/fix-layout-ui.mjs"
+    "fix:layout-ui": "node scripts/fix-layout-ui.mjs",
+    "monitor": "node scripts/healthcheck.mjs",
+    "monitor:render": "node scripts/render-check.mjs"
   },
   "devDependencies": {
     "cheerio": "^1.0.0",

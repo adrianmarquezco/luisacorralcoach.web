@@ -1,0 +1,83 @@
+name: Vigilante de la web
+
+# Revisa luisacorralcoach.com cada 3 horas y 5 minutos después de cada push (cuando Coolify ya ha desplegado).
+# Si algo falla abre una incidencia en GitHub (te llega por email) y la cierra sola cuando se arregla.
+on:
+  schedule:
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: vigilante
+  cancel-in-progress: true
+
+jobs:
+  vigilar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Esperar al despliegue (solo tras un push)
+        if: github.event_name == 'push'
+        run: sleep 300
+
+      - name: Comprobación HTTP (páginas, enlaces, velocidad, archivos internos)
+        id: http
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          (node scripts/healthcheck.mjs || (echo 'Reintentando en 90 s...' && sleep 90 && node scripts/healthcheck.mjs)) | tee http.txt
+
+      - name: Instalar navegador
+        run: |
+          npm i --no-save playwright
+          npx playwright install --with-deps chromium
+
+      - name: Comprobación en navegador (errores JS, imágenes, saltos, FAQ, menú móvil)
+        id: render
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          (node scripts/render-check.mjs || (echo 'Reintentando en 90 s...' && sleep 90 && node scripts/render-check.mjs)) | tee render.txt
+
+      - name: Abrir o actualizar la incidencia si hay fallos
+        if: steps.http.outcome == 'failure' || steps.render.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TITLE="ALERTA: luisacorralcoach.com tiene problemas"
+          {
+            echo "La comprobación automática ha encontrado fallos. Ejecución: $RUN_URL"
+            echo
+            echo '```'
+            head -c 30000 http.txt 2>/dev/null
+            echo
+            head -c 30000 render.txt 2>/dev/null
+            echo '```'
+          } > body.md
+          N=$(gh issue list --state open --search "$TITLE in:title" --json number -q '.[0].number')
+          if [ -n "$N" ]; then gh issue comment "$N" --body-file body.md; else gh issue create --title "$TITLE" --body-file body.md; fi
+
+      - name: Cerrar la incidencia si ya está todo bien
+        if: steps.http.outcome == 'success' && steps.render.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          N=$(gh issue list --state open --search "ALERTA: luisacorralcoach.com in:title" --json number -q '.[0].number')
+          if [ -n "$N" ]; then gh issue close "$N" --comment "Resuelto: la última comprobación es correcta."; fi
+
+      - name: Marcar el trabajo como fallido
+        if: steps.http.outcome == 'failure' || steps.render.outcome == 'failure'
+        run: exit 1
