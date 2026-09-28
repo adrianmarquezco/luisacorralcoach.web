@@ -1,5 +1,5 @@
 ;(function loadLayoutFixes() {
-  if (document.querySelector('link[data-layout-fixes]')) return
+  if (document.querySelector('[data-layout-fixes]')) return
   const link = document.createElement('link')
   link.rel = 'stylesheet'
   link.href = '/public/layout-fixes.css'
