@@ -71,7 +71,7 @@ await pool(urls, async (u) => {
     try { JSON.parse(m[1]) } catch { fail(path, 'JSON-LD inválido') }
   }
   // FAQ visible = FAQ schema
-  const qs = (body.match(/data-landingsite-faq-question|faq-trigger/g) || []).length
+  const qs = (vis.match(/data-landingsite-faq-question|faq-trigger/g) || []).length
   const sq = (body.match(/"@type":\s*"Question"/g) || []).length
   if (qs && sq && qs !== sq) fail(path, `FAQ visibles (${qs}) ≠ FAQ en schema (${sq})`)
   // enlaces y recursos internos
