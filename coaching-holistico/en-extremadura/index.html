@@ -107,6 +107,15 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       <script src="/js/cookie-consent.js" defer></script>
 <style data-layout-fixes="1">/* Utilidades Tailwind usadas en HTML pero ausentes del CSS purgado por página */
 
+.px-8 { padding-left: 2rem; padding-right: 2rem; }
+.py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+.max-w-4xl { max-width: 56rem; }
+.from-\[\#25D366\] { --tw-gradient-from: #25D366; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(37 211 102 / 0)); }
+.to-\[\#20BD5A\] { --tw-gradient-to: #20BD5A; }
+@media (min-width: 768px) {
+  .md\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
+}
+
 .mb-2 { margin-bottom: 0.5rem; }
 .mb-3 { margin-bottom: 0.75rem; }
 .mb-10 { margin-bottom: 2.5rem; }
@@ -715,6 +724,55 @@ main h2[id] { scroll-margin-top: 7rem; }
   #global-header img[data-logo] { height: 4rem; }
 }
 
+/* Utilidades Tailwind usadas en HTML pero ausentes del CSS purgado por página (2ª tanda) */
+.bg-\[\#D4AF37\]{background-color:#D4AF37}
+.bg-\[\#E0F4F7\]{background-color:#E0F4F7}
+.bg-\[\#E8D7F1\]\/50{background-color:rgb(232 215 241 / 0.5)}
+.bg-\[\#F0EAF7\]{background-color:#F0EAF7}
+.border-\[\#D4AF37\]{border-color:#D4AF37}
+.group:hover .group-hover\:bg-\[\#D4B5E8\]{background-color:#D4B5E8}
+.group:hover .group-hover\:text-\[\#9B7EBD\]{color:#9B7EBD}
+.hover\:bg-\[\#F0EAF7\]:hover{background-color:#F0EAF7}
+.hover\:bg-\[\#FAF7FC\]:hover{background-color:#FAF7FC}
+.hover\:text-\[\#F0EAF7\]:hover{color:#F0EAF7}
+.hover\:underline:hover{text-decoration-line:underline}
+.focus\:border-\[\#9B7EBD\]:focus{border-color:#9B7EBD}
+.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),0 0 #0000}
+.focus\:ring-\[\#9B7EBD\]:focus{--tw-ring-color:#9B7EBD}
+.-bottom-4{bottom:-1rem}
+.-left-4{left:-1rem}
+.-right-4{right:-1rem}
+.-z-10{z-index:-10}
+.blur-3xl{--tw-blur:blur(64px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia)}
+.h-12{height:3rem}
+.h-48{height:12rem}
+.h-auto{height:auto}
+.w-48{width:12rem}
+.w-8{width:2rem}
+.mb-1{margin-bottom:.25rem}
+.mb-5{margin-bottom:1.25rem}
+.mb-12{margin-bottom:3rem}
+.mt-6{margin-top:1.5rem}
+.pb-6{padding-bottom:1.5rem}
+.pt-4{padding-top:1rem}
+.max-w-2xl{max-width:42rem}
+.flex-1{flex:1 1 0%}
+.self-center{align-self:center}
+.rounded{border-radius:.25rem}
+.outline-none{outline:2px solid transparent;outline-offset:2px}
+.resize-none{resize:none}
+.not-italic{font-style:normal}
+.min-h-\[7\.5rem\]{min-height:7.5rem}
+.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:150ms}
+.underline-offset-2{text-underline-offset:2px}
+.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+@media (min-width:640px){
+  .sm\:col-span-2{grid-column:span 2 / span 2}
+}
+@media (min-width:1024px){
+  .lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
 /* Tipografías: fuente de respaldo con medidas parecidas para que el texto no salte al cargar Nunito Sans / Outfit */
 @font-face { font-family: "Nunito Sans Fallback"; src: local("Arial"), local("Helvetica"), local("Liberation Sans"); size-adjust: 104%; ascent-override: 97%; descent-override: 34%; line-gap-override: 0%; }
 @font-face { font-family: "Outfit Fallback"; src: local("Arial"), local("Helvetica"), local("Liberation Sans"); size-adjust: 102%; ascent-override: 98%; descent-override: 25%; line-gap-override: 0%; }
@@ -1278,6 +1336,10 @@ main h2[id] { scroll-margin-top: 7rem; }
           <li class="flex items-center gap-2 text-[#B8A4C9]">
             <i class="fa-brands fa-whatsapp text-[#25D366]"></i>
             <span>+34 616 054 001</span>
+          </li>
+          <li class="flex items-center gap-2 text-[#B8A4C9]">
+            <i class="fa-brands fa-whatsapp text-[#25D366]"></i>
+            <a href="https://whatsapp.com/channel/0029Vb94Dy90Vyc7xskxbT3A" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Canal de WhatsApp</a>
           </li>
           <li class="flex items-center gap-2 text-[#B8A4C9]">
             <i class="fa-solid fa-phone text-[#9B7EBD]"></i>
