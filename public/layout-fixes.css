@@ -670,3 +670,8 @@ main h2[id] { scroll-margin-top: 7rem; }
 @font-face { font-family: "Nunito Sans Fallback"; src: local("Arial"), local("Helvetica"), local("Liberation Sans"); size-adjust: 104%; ascent-override: 97%; descent-override: 34%; line-gap-override: 0%; }
 @font-face { font-family: "Outfit Fallback"; src: local("Arial"), local("Helvetica"), local("Liberation Sans"); size-adjust: 102%; ascent-override: 98%; descent-override: 25%; line-gap-override: 0%; }
 :root { --font-family-body: "Nunito Sans", "Nunito Sans Fallback", sans-serif; --font-family-heading: "Outfit", "Outfit Fallback", sans-serif; }
+
+.mt-auto { margin-top: auto; }
+@media (min-width: 768px) {
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
