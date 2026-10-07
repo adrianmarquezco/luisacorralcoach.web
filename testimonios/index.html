@@ -115,13 +115,32 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
           "name": "Colombia"
         }
       ],
-      "serviceType": [
-        "Flores de Bach",
-        "Coaching Holístico",
-        "Meditaciones Personalizadas",
-        "Reiki Delfín",
-        "Coaching Angelical"
-      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Flores de Bach", "serviceType": "Flores de Bach" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Coaching Holístico", "serviceType": "Coaching Holístico" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Meditaciones Personalizadas", "serviceType": "Meditaciones Personalizadas" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Reiki Delfín", "serviceType": "Reiki Delfín" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Coaching Angelical", "serviceType": "Coaching Angelical" }
+          }
+        ]
+      },
       "priceRange": "€€",
       "geo": {
         "@type": "GeoCoordinates",
