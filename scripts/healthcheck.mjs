@@ -119,6 +119,14 @@ for (const [from, to] of [['/que-es-coach-holistico', '/blog/que-es-coach-holist
   const { res } = await get('http://' + BASE.replace(/^https?:\/\//, '') + '/', { redirect: 'manual', method: 'HEAD' })
   if (res && res.status !== 301 && res.status !== 308) warn('http→https', `redirección ${res.status} (debería ser 301)`)
 }
+if (/\/\/www\./.test(BASE)) {
+  const apex = BASE.replace('//www.', '//')
+  for (const p of ['/', '/flores-de-bach']) {
+    const { res } = await get(apex + p, { redirect: 'manual', method: 'HEAD' })
+    const loc = (res && res.headers.get('location')) || ''
+    if (!res || res.status !== 301 || !loc.startsWith(BASE)) fail('sin www ' + p, `la versión sin www debe redirigir 301 a www (da ${res ? res.status : 'error'} ${loc})`)
+  }
+}
 
 report()
 
