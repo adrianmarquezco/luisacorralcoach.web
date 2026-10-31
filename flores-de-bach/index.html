@@ -215,7 +215,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
   "name": "Terapia de Flores de Bach",
   "description": "Remedios florales personalizados para restablecer el equilibrio emocional. El sistema del Dr. Edward Bach con 38 esencias trata estados emocionales como miedo, ansiedad, incertidumbre o soledad. Sesiones en Narón y online.",
   "url": "https://www.luisacorralcoach.com/flores-de-bach",
-  "provider": { "@id": "https://www.luisacorralcoach.com/#business" },
+  "provider": { "@type": "LocalBusiness", "@id": "https://www.luisacorralcoach.com/#business", "name": "Luisa Corral Coach", "telephone": "+34616054001", "email": "luisacorralcoach@gmail.com", "address": { "@type": "PostalAddress", "streetAddress": "Comarca de Ferrolterra", "addressLocality": "Narón", "addressRegion": "A Coruña", "postalCode": "15570", "addressCountry": "ES" }, "url": "https://www.luisacorralcoach.com/" },
   "areaServed": "España",
   "offers": [
     {
@@ -223,15 +223,13 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       "name": "Consulta de valoración",
       "description": "Consulta inicial gratuita para conocer tu caso y orientarte, por videollamada, llamada, WhatsApp o email",
       "price": "0",
-      "priceCurrency": "EUR"
-    },
+      "priceCurrency": "EUR", "availability": "https://schema.org/InStock" },
     {
       "@type": "Offer",
       "name": "Preparado Personalizado de Flores de Bach",
       "description": "Frasco elaborado con las esencias que tu caso necesite. El precio final depende de las esencias y gotas utilizadas.",
       "price": "25",
-      "priceCurrency": "EUR"
-    }
+      "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
   ]
 }
 </script>
@@ -751,7 +749,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-4">
-        Resultados reales: <span class="text-[#9B7EBD]">valoración 5/5 en 6 reseñas</span>
+        Flores de Bach y la valoración de Luisa Corral: <span class="text-[#9B7EBD]">5/5 en 6 reseñas de Google</span>
       </h2>
       <p class="text-lg text-[#6B5B7A] max-w-2xl mx-auto">
         Resultados reales de personas que han transformado su equilibrio
@@ -1677,7 +1675,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       ¿Tienes dudas?
     </span>
     <h2 class="text-3xl md:text-4xl font-bold text-[#2D1B3D] mb-6">
-      ¿Quieres equilibrar tus<span class="text-[#9B7EBD]">emociones?</span>
+      ¿Quieres equilibrar tus <span class="text-[#9B7EBD]">emociones?</span>
     </h2>
     <p class="text-lg text-[#6B5B7A] mb-8 max-w-2xl mx-auto">
       La terapia con flores de Bach online puede ayudarte a encontrar el
