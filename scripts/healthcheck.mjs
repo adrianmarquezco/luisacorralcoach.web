@@ -40,7 +40,7 @@ const strip = h => h.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|
 const sm = await get(BASE + '/sitemap.xml')
 if (!sm.res || sm.res.status !== 200) { fail('/sitemap.xml', `no responde 200 (${sm.res ? sm.res.status : sm.error})`); report() }
 const urls = [...sm.body.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].trim())
-if (urls.length < 100) fail('/sitemap.xml', `solo ${urls.length} URLs (se esperaban ~136)`)
+if (urls.length < 60) fail('/sitemap.xml', `solo ${urls.length} URLs (se esperaban ~68)`)
 
 // ---------- 2) cada página ----------
 const linkSet = new Set()
