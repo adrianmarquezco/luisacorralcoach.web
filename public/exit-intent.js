@@ -1,9 +1,11 @@
 (function () {
   'use strict';
 
-  // No se muestra en /contacto (ya es la página de conversión).
-  var path = location.pathname.replace(/\/$/, '');
-  if (path === '/contacto') return;
+  // No se muestra en la página de conversión ni en páginas legales/técnicas sin intención comercial.
+  // Se normaliza la ruta por si se sirve sin pasar por las reglas de nginx (ej. en pruebas locales).
+  var path = location.pathname.replace(/\/index\.html?$/, '').replace(/\/$/, '') || '/';
+  var EXCLUDED_PATHS = ['/contacto', '/aviso-legal', '/politica-de-privacidad', '/politica-de-cookies', '/llms'];
+  if (EXCLUDED_PATHS.indexOf(path) !== -1) return;
 
   var STORAGE_KEY = 'exitPopupShownAt';
   var COOLDOWN_MS = 7 * 24 * 60 * 60 * 1000; // 7 días
