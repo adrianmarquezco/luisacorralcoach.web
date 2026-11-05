@@ -1,0 +1,160 @@
+/* Popup de salida (exit-intent). Usa las variables de diseño de css-root-vars.css. */
+.exit-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(45, 27, 61, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2147483000;
+  padding: 20px;
+}
+.exit-overlay.is-visible {
+  display: flex;
+  animation: exitOverlayIn 0.35s ease forwards;
+}
+@keyframes exitOverlayIn { from { opacity: 0; } to { opacity: 1; } }
+
+.exit-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 40px 32px 32px;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.92) translateY(8px);
+  animation: exitCardIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.05s forwards;
+}
+@keyframes exitCardIn { to { opacity: 1; transform: scale(1) translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  .exit-overlay.is-visible, .exit-overlay.is-visible .exit-card { animation: none !important; opacity: 1 !important; transform: none !important; }
+}
+
+.exit-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  border: none;
+  background: var(--light-background-color);
+  color: var(--gray-text-color);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+.exit-close:hover { background: var(--medium-background-color); color: var(--dark-text-color); }
+.exit-close:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 2px; }
+
+.exit-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 20px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--primary-color), var(--dark-border-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgba(155, 126, 189, 0.35);
+}
+.exit-icon i { color: #fff; font-size: 28px; }
+
+.exit-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--accent2-color);
+  color: var(--dark-border-color);
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  font-family: var(--font-family-body);
+}
+
+.exit-title {
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  font-size: 1.65rem;
+  line-height: 1.25;
+  color: var(--dark-text-color);
+  margin: 0 0 10px;
+}
+.exit-title span { color: var(--primary-color); }
+
+.exit-subtitle {
+  font-family: var(--font-family-body);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--gray-text-color);
+  margin: 0 0 24px;
+}
+
+.exit-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  background: var(--primary-color);
+  color: #fff;
+  font-family: var(--font-family-body);
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: var(--button-padding-y) var(--button-padding-x);
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+.exit-cta:hover {
+  background: var(--primary-button-hover-bg-color);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+.exit-cta:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 3px; }
+
+.exit-secondary {
+  display: block;
+  margin-top: 14px;
+  font-size: 0.875rem;
+  color: var(--gray-text-color);
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family-body);
+  width: 100%;
+}
+.exit-secondary:hover { color: var(--dark-text-color); }
+.exit-secondary:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 2px; }
+
+.exit-trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--light-border-color);
+  font-size: 0.8rem;
+  color: var(--gray-text-color);
+}
+.exit-trust i { color: var(--accent-color); }
+
+@media (max-width: 480px) {
+  .exit-overlay.is-visible { align-items: flex-end; padding: 16px; }
+  .exit-card { padding: 32px 22px 24px; margin-bottom: 8px; }
+  .exit-title { font-size: 1.4rem; }
+}
