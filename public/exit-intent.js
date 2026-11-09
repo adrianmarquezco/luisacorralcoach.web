@@ -49,7 +49,10 @@
     overlay.innerHTML =
       '<div class="exit-card">' +
         '<button type="button" class="exit-close" aria-label="Cerrar"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>' +
-        '<div class="exit-icon"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></div>' +
+        '<div class="exit-icon">' +
+          '<img src="/assets/images/luisa-corral-retrato-sobre-mi-640w.webp" alt="Luisa Corral" width="72" height="72" loading="eager" decoding="async">' +
+          '<span class="exit-icon-badge"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span>' +
+        '</div>' +
         '<span class="exit-badge">Antes de irte</span>' +
         '<h2 class="exit-title" id="exit-popup-title">Antes de irte, cuéntame qué te trae por aquí</h2>' +
         '<p class="exit-subtitle">Puedes escribirme ahora mismo y te respondo yo misma, Luisa. No hace falta que lo tengas todo decidido.</p>' +
