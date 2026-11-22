@@ -69,13 +69,36 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".speakable-intro", ".speakable-faq"] }
     },
     {
-      "@type": "Service",
+      "@type": "Service", "serviceType": "Coaching holístico",
       "name": "Coaching Holístico para la Separación o el Divorcio",
       "description": "Acompañamiento integral para la identidad tras la ruptura, la gestión de la ira y la tristeza, y la reconstrucción de la rutina tras una separación o divorcio, con coaching holístico y herramientas complementarias.",
       "url": "https://www.luisacorralcoach.com/coaching-holistico/para-la-separacion",
       "provider": { "@id": "https://www.luisacorralcoach.com/#business" },
       "areaServed": "España",
-      "hasOfferCatalog": {
+  "offers": [
+      {
+          "@type": "Offer",
+          "name": "Sesión Única de Coaching Holístico",
+          "description": "60-90 minutos de sesión por videollamada",
+          "price": "50",
+          "priceCurrency": "EUR"
+      },
+      {
+          "@type": "Offer",
+          "name": "Pack 4 Sesiones de Coaching Holístico",
+          "description": "Proceso completo con seguimiento entre sesiones y meditación personalizada",
+          "price": "180",
+          "priceCurrency": "EUR"
+      },
+      {
+          "@type": "Offer",
+          "name": "Pack 8 Sesiones de Coaching Holístico",
+          "description": "8 semanas de acompañamiento con soporte por WhatsApp y sesión extra de regalo",
+          "price": "320",
+          "priceCurrency": "EUR"
+      }
+  ],
+        "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Sesiones de Coaching Holístico para la Separación",
         "itemListElement": [
@@ -108,7 +131,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
     }
   ,
     {
-        "@type": "BlogPosting",
+        "@type": "BlogPosting", "@id": "https://www.luisacorralcoach.com/coaching-holistico/para-la-separacion#blogposting",
         "headline": "Coaching Holístico para la Separación",
         "description": "Identidad tras la ruptura, ira, tristeza y reconstrucción de rutina: coaching holístico para la separación con Luisa Corral. Desde 50€. Primera sesión gratis.",
         "author": {

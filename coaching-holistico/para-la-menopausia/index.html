@@ -69,13 +69,36 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".speakable-intro", ".speakable-faq"] }
     },
     {
-      "@type": "Service",
+      "@type": "Service", "serviceType": "Coaching holístico",
       "name": "Coaching Holístico para la Menopausia",
       "description": "Acompañamiento integral para los cambios de identidad, los sofocos y la ansiedad asociada a la menopausia, con coaching holístico y herramientas complementarias.",
       "url": "https://www.luisacorralcoach.com/coaching-holistico/para-la-menopausia",
       "provider": { "@id": "https://www.luisacorralcoach.com/#business" },
       "areaServed": "España",
-      "hasOfferCatalog": {
+  "offers": [
+      {
+          "@type": "Offer",
+          "name": "Sesión Única de Coaching Holístico",
+          "description": "60-90 minutos de sesión por videollamada",
+          "price": "50",
+          "priceCurrency": "EUR"
+      },
+      {
+          "@type": "Offer",
+          "name": "Pack 4 Sesiones de Coaching Holístico",
+          "description": "Proceso completo con seguimiento entre sesiones y meditación personalizada",
+          "price": "180",
+          "priceCurrency": "EUR"
+      },
+      {
+          "@type": "Offer",
+          "name": "Pack 8 Sesiones de Coaching Holístico",
+          "description": "8 semanas de acompañamiento con soporte por WhatsApp y sesión extra de regalo",
+          "price": "320",
+          "priceCurrency": "EUR"
+      }
+  ],
+        "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Sesiones de Coaching Holístico para la Menopausia",
         "itemListElement": [
@@ -108,7 +131,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
     }
   ,
     {
-        "@type": "BlogPosting",
+        "@type": "BlogPosting", "@id": "https://www.luisacorralcoach.com/coaching-holistico/para-la-menopausia#blogposting",
         "headline": "Coaching Holístico para la Menopausia Online",
         "description": "Sofocos, ansiedad y cambios de identidad en la menopausia: coaching holístico online con Luisa Corral. Sesión desde 50€. Reserva tu primera valoración gratis.",
         "author": {
