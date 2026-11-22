@@ -52,4 +52,15 @@ Cada página = carpeta con `index.html` dentro (URLs limpias).
 editar en local → git push → Coolify despliega automáticamente
 ```
 
+## IndexNow
+
+Tras cada despliegue real, avisa a los buscadores que lo soportan (Bing, Yandex, Naver, Seznam.cz) de qué URLs han cambiado, para que las rastreen antes:
+
+```
+node scripts/indexnow-submit.mjs                 # todo el sitemap
+node scripts/indexnow-submit.mjs /blog/un-articulo  # solo esa URL
+```
+
+La clave de verificación vive en `c31b0d69bd09bb014bb00c1ddc263d88.txt` (raíz del sitio) — no borrarla ni moverla sin actualizar también `scripts/indexnow-submit.mjs`. No hay CI que lo dispare automáticamente (el despliegue en Coolify es manual), así que es un paso manual más tras desplegar.
+
 Al crear una página nueva: copiar `<head>` de otra página, añadir el enlace en nav y footer de **todas** las páginas existentes, y actualizar `sitemap.xml`.
