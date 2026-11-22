@@ -4,6 +4,20 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  (function(){
+    var consent = 'denied';
+    try {
+      var stored = localStorage.getItem('lc-cookie-consent') || localStorage.getItem('cookieConsent');
+      if (stored === 'accepted') { consent = 'granted'; }
+    } catch (e) {}
+    gtag('consent', 'default', {
+      'ad_storage': consent,
+      'analytics_storage': consent,
+      'ad_user_data': consent,
+      'ad_personalization': consent,
+      'wait_for_update': 500
+    });
+  })();
   gtag('js', new Date());
   gtag('config', 'G-F4LRB81MPV');
 </script>
