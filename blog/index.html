@@ -4,6 +4,20 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  (function(){
+    var consent = 'denied';
+    try {
+      var stored = localStorage.getItem('lc-cookie-consent') || localStorage.getItem('cookieConsent');
+      if (stored === 'accepted') { consent = 'granted'; }
+    } catch (e) {}
+    gtag('consent', 'default', {
+      'ad_storage': consent,
+      'analytics_storage': consent,
+      'ad_user_data': consent,
+      'ad_personalization': consent,
+      'wait_for_update': 500
+    });
+  })();
   gtag('js', new Date());
   gtag('config', 'AW-18254510015');
   gtag('config', 'G-F4LRB81MPV');
@@ -103,7 +117,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       <script src="/public/exit-intent.js" defer></script>
 <link rel="stylesheet" href="/public/css-layout-fixes.css">
 </head>
-  <body style="font-family:var(--font-family-body);"><header id="global-header" class="code-section bg-[#FAF7FC] shadow-sm sticky top-0 z-50">
+  <body style="font-family:var(--font-family-body);"><a href="#main-content" class="skip-link">Saltar al contenido</a><style>.skip-link{position:absolute;left:-9999px;top:0;z-index:9999;background:#2D1B3D;color:#fff;padding:.5rem 1rem;border-radius:0 0 .5rem 0;font-size:.875rem;font-weight:600;text-decoration:none}.skip-link:focus{left:0}</style><header id="global-header" class="code-section bg-[#FAF7FC] shadow-sm sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16 md:h-20">
       <!-- Logo -->

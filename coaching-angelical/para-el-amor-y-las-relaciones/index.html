@@ -4,6 +4,20 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  (function(){
+    var consent = 'denied';
+    try {
+      var stored = localStorage.getItem('lc-cookie-consent') || localStorage.getItem('cookieConsent');
+      if (stored === 'accepted') { consent = 'granted'; }
+    } catch (e) {}
+    gtag('consent', 'default', {
+      'ad_storage': consent,
+      'analytics_storage': consent,
+      'ad_user_data': consent,
+      'ad_personalization': consent,
+      'wait_for_update': 500
+    });
+  })();
   gtag('js', new Date());
   gtag('config', 'AW-18254510015');
   gtag('config', 'G-F4LRB81MPV');
@@ -114,40 +128,8 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
         {"@type":"Question","name":"¿Cómo reservo mi sesión de coaching angelical para el amor y las relaciones?","acceptedAnswer":{"@type":"Answer","text":"Escribe por WhatsApp al +34 616 054 001 o por email a luisacorralcoach@gmail.com contándome brevemente tu situación, y te propongo la modalidad más adecuada."}}
       ]
     }
-  ,
-    {
-        "@type": "BlogPosting", "@id": "https://www.luisacorralcoach.com/coaching-angelical/para-el-amor-y-las-relaciones#blogposting",
-        "headline": "Coaching Angelical para el Amor y Relaciones",
-        "description": "Coaching angelical para el amor y las relaciones: claridad y autoconocimiento con guía de ángeles y arcángeles. Sesión online desde 60€ con Luisa Corral.",
-        "author": {
-            "@type": "Person",
-            "name": "Luisa Corral",
-            "jobTitle": "Coach Holística",
-            "url": "https://www.luisacorralcoach.com/sobre-mi",
-            "image": "https://www.luisacorralcoach.com/assets/images/luisa-corral-retrato-sobre-mi.webp",
-            "sameAs": [
-                "https://www.instagram.com/luisacorralcoach/",
-                "https://www.tiktok.com/@luisacorral_coach"
-            ]
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Luisa Corral - Coach Holística",
-            "url": "https://www.luisacorralcoach.com/",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.luisacorralcoach.com/assets/uploads/b3f76780-ddae-46b6-b492-f8eaf4baab97/7cec306b-129e-4df9-bd7e-4bd3b2f7e77d.webp"
-            }
-        },
-        "datePublished": "2026-09-18",
-        "dateModified": "2026-11-05",
-        "image": "https://www.luisacorralcoach.com/assets/provider/istock/2245001493.webp",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://www.luisacorralcoach.com/coaching-angelical/para-el-amor-y-las-relaciones"
-        },
-        "inLanguage": "es-ES"
-    }
+  
+    
   ]
 }
 </script>
@@ -157,7 +139,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       <script src="/public/exit-intent.js" defer></script>
 <link rel="stylesheet" href="/public/css-layout-fixes.css">
 </head>
-  <body style="font-family:var(--font-family-body);"><header id="global-header" class="code-section bg-[#FAF7FC] shadow-sm sticky top-0 z-50">
+  <body style="font-family:var(--font-family-body);"><a href="#main-content" class="skip-link">Saltar al contenido</a><style>.skip-link{position:absolute;left:-9999px;top:0;z-index:9999;background:#2D1B3D;color:#fff;padding:.5rem 1rem;border-radius:0 0 .5rem 0;font-size:.875rem;font-weight:600;text-decoration:none}.skip-link:focus{left:0}</style><header id="global-header" class="code-section bg-[#FAF7FC] shadow-sm sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16 md:h-20">
       <!-- Logo -->

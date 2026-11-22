@@ -4,6 +4,20 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  (function(){
+    var consent = 'denied';
+    try {
+      var stored = localStorage.getItem('lc-cookie-consent') || localStorage.getItem('cookieConsent');
+      if (stored === 'accepted') { consent = 'granted'; }
+    } catch (e) {}
+    gtag('consent', 'default', {
+      'ad_storage': consent,
+      'analytics_storage': consent,
+      'ad_user_data': consent,
+      'ad_personalization': consent,
+      'wait_for_update': 500
+    });
+  })();
   gtag('js', new Date());
   gtag('config', 'AW-18254510015');
   gtag('config', 'G-F4LRB81MPV');
@@ -177,40 +191,8 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
           }
         }
       ]
-    },
-    {
-        "@type": "BlogPosting", "@id": "https://www.luisacorralcoach.com/enfoques/gestion-estres-emociones#blogposting",
-        "headline": "Coach Ansiedad y Estrés Online",
-        "description": "Ansiedad, agobio o burnout: qué los diferencia, señales de alerta y cómo coaching holístico y Flores de Bach acompañan el proceso. Online, toda España.",
-        "author": {
-            "@type": "Person",
-            "name": "Luisa Corral",
-            "jobTitle": "Coach Holística",
-            "url": "https://www.luisacorralcoach.com/sobre-mi",
-            "image": "https://www.luisacorralcoach.com/assets/images/luisa-corral-retrato-sobre-mi.webp",
-            "sameAs": [
-                "https://www.instagram.com/luisacorralcoach/",
-                "https://www.tiktok.com/@luisacorral_coach"
-            ]
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Luisa Corral - Coach Holística",
-            "url": "https://www.luisacorralcoach.com/",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.luisacorralcoach.com/assets/uploads/b3f76780-ddae-46b6-b492-f8eaf4baab97/7cec306b-129e-4df9-bd7e-4bd3b2f7e77d.webp"
-            }
-        },
-        "datePublished": "2026-09-18",
-        "dateModified": "2026-11-05",
-        "image": "https://www.luisacorralcoach.com/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-deb7eaa8-16d2-4e89-e023-fecfec881600.webp",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://www.luisacorralcoach.com/enfoques/gestion-estres-emociones"
-        },
-        "inLanguage": "es-ES"
     }
+    
   ]
 }
 </script>
@@ -220,7 +202,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       <script src="/public/exit-intent.js" defer></script>
 <link rel="stylesheet" href="/public/css-layout-fixes.css">
 </head>
-  <body style="font-family:var(--font-family-body);"><header id="global-header" class="code-section bg-[#FAF7FC] shadow-sm sticky top-0 z-50">
+  <body style="font-family:var(--font-family-body);"><a href="#main-content" class="skip-link">Saltar al contenido</a><style>.skip-link{position:absolute;left:-9999px;top:0;z-index:9999;background:#2D1B3D;color:#fff;padding:.5rem 1rem;border-radius:0 0 .5rem 0;font-size:.875rem;font-weight:600;text-decoration:none}.skip-link:focus{left:0}</style><header id="global-header" class="code-section bg-[#FAF7FC] shadow-sm sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16 md:h-20">
       <!-- Logo -->
@@ -470,7 +452,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       <li class="flex items-start gap-3 text-[#6B5B7A]"><span class="flex-shrink-0 w-7 h-7 bg-[#9B7EBD] text-white rounded-full flex items-center justify-center text-sm font-bold">4</span><span><strong class="text-[#2D1B3D]">Plan de autocuidado real:</strong> adaptado a tu ritmo y circunstancias, no genérico.</span></li>
       <li class="flex items-start gap-3 text-[#6B5B7A]"><span class="flex-shrink-0 w-7 h-7 bg-[#9B7EBD] text-white rounded-full flex items-center justify-center text-sm font-bold">5</span><span><strong class="text-[#2D1B3D]">Seguimiento entre sesiones:</strong> acompañamiento para que los cambios no se queden solo en consulta.</span></li>
     </ol>
-    <p class="text-[#6B5B7A] mb-6">Las sesiones son <strong>online por videollamada para toda España</strong>; si vives en Narón (Galicia) y prefieres presencial, escríbeme y lo estudiamos. El proceso habitual es de 4 a 8 sesiones, aunque muchas clientas notan mejora significativa desde la primera.</p>
+    <p class="text-[#6B5B7A] mb-6">Las sesiones son <strong>online por videollamada para toda España</strong>; si vives en Narón (Galicia) y prefieres presencial, escríbeme y lo estudiamos. El proceso habitual es de 4 a 8 sesiones, adaptado al ritmo de cada clienta.</p>
     <div class="flex flex-col sm:flex-row gap-4">
       <a href="/flores-de-bach" class="inline-flex items-center gap-2 text-[#9B7EBD] font-semibold hover:underline"><i class="fa-solid fa-flower"></i> Terapia floral de Bach para la ansiedad</a>
       <a href="/coaching-holistico" class="inline-flex items-center gap-2 text-[#9B7EBD] font-semibold hover:underline"><i class="fa-solid fa-heart"></i> Cómo funciona el coaching holístico</a>
