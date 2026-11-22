@@ -30,11 +30,27 @@
 
   document.getElementById('lc-cookie-accept').addEventListener('click', function () {
     localStorage.setItem('lc-cookie-consent', 'accepted');
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
+      });
+    }
     banner.remove();
   });
 
   document.getElementById('lc-cookie-reject').addEventListener('click', function () {
     localStorage.setItem('lc-cookie-consent', 'rejected');
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    }
     banner.remove();
   });
 })();
