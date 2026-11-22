@@ -87,6 +87,22 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
   "@context": "https://schema.org",
   "@graph": [
     {
+        "@type": "WebPage",
+        "@id": "https://www.luisacorralcoach.com/meditaciones-personalizadas/para-ninos#webpage",
+        "name": "Meditación Guiada para Niños Online desde 10€",
+        "url": "https://www.luisacorralcoach.com/meditaciones-personalizadas/para-ninos",
+        "description": "Meditación guiada para niños personalizada: cuentos guiados y lenguaje adaptado, sesiones cortas para calmar rabietas y mejorar el sueño infantil. Desde 10€.",
+        "inLanguage": "es-ES",
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [
+                "h1",
+                "h2"
+            ]
+        }
+    },
+  
+    {
       "@type": "Service",
       "name": "Meditación Guiada para Niños",
       "description": "Meditación guiada personalizada para niños: cuentos guiados, lenguaje adaptado y sesiones cortas para calma, sueño y gestión emocional infantil. Online, con base en Narón. En Narón y alrededores puede estudiarse la opción presencial.",
@@ -122,11 +138,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
           "price": "120",
           "priceCurrency": "EUR"
         }
-      ],
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", "h2"]
-      }
+      ]
     }
   ,
     {
