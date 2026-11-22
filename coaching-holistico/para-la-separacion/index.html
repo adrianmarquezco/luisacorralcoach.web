@@ -69,13 +69,36 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".speakable-intro", ".speakable-faq"] }
     },
     {
-      "@type": "Service",
+      "@type": "Service", "serviceType": "Coaching holístico",
       "name": "Coaching Holístico para la Separación o el Divorcio",
       "description": "Acompañamiento integral para la identidad tras la ruptura, la gestión de la ira y la tristeza, y la reconstrucción de la rutina tras una separación o divorcio, con coaching holístico y herramientas complementarias.",
       "url": "https://www.luisacorralcoach.com/coaching-holistico/para-la-separacion",
       "provider": { "@id": "https://www.luisacorralcoach.com/#business" },
       "areaServed": "España",
-      "hasOfferCatalog": {
+  "offers": [
+      {
+          "@type": "Offer",
+          "name": "Sesión Única de Coaching Holístico",
+          "description": "60-90 minutos de sesión por videollamada",
+          "price": "50",
+          "priceCurrency": "EUR"
+      },
+      {
+          "@type": "Offer",
+          "name": "Pack 4 Sesiones de Coaching Holístico",
+          "description": "Proceso completo con seguimiento entre sesiones y meditación personalizada",
+          "price": "180",
+          "priceCurrency": "EUR"
+      },
+      {
+          "@type": "Offer",
+          "name": "Pack 8 Sesiones de Coaching Holístico",
+          "description": "8 semanas de acompañamiento con soporte por WhatsApp y sesión extra de regalo",
+          "price": "320",
+          "priceCurrency": "EUR"
+      }
+  ],
+        "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Sesiones de Coaching Holístico para la Separación",
         "itemListElement": [
@@ -108,7 +131,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
     }
   ,
     {
-        "@type": "BlogPosting",
+        "@type": "BlogPosting", "@id": "https://www.luisacorralcoach.com/coaching-holistico/para-la-separacion#blogposting",
         "headline": "Coaching Holístico para la Separación",
         "description": "Identidad tras la ruptura, ira, tristeza y reconstrucción de rutina: coaching holístico para la separación con Luisa Corral. Desde 50€. Primera sesión gratis.",
         "author": {
@@ -487,6 +510,41 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
   </div>
 </section>
 
+<section class="code-section py-16 bg-[#FAF7FC]" id="autora">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-3xl p-8 shadow-lg border border-[#E5D9F2]">
+      <div class="flex flex-col md:flex-row gap-8 items-center">
+        <div class="flex-shrink-0">
+          <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-[#E5D9F2]">
+            <img src="/assets/images/luisa-corral-avatar.webp" alt="Luisa Corral - Coach Holística Certificada" class="w-full h-full object-cover" width="160" height="160" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-[#2D1B3D] mb-2">Luisa Corral</h3>
+          <p class="text-[#9B7EBD] font-semibold mb-4">
+            Coach Holística Certificada
+          </p>
+          <p class="text-[#6B5B7A] mb-4 leading-relaxed">
+            Con más de 8 años de experiencia acompañando a personas en su
+            proceso de transformación personal, especializada en Coaching
+            Holístico, Flores de Bach, Coaching Angelical, Meditaciones
+            Personalizadas y Reiki Delfín.
+          </p>
+          <p class="text-[#6B5B7A] mb-4 leading-relaxed">
+            Mi objetivo es ayudarte a conectar con tu esencia, armonizar tus
+            emociones y encontrar el equilibrio que buscas para vivir una vida
+            más plena y significativa.
+          </p>
+          <div class="flex gap-3 flex-wrap">
+            <a href="/sobre-mi" class="inline-flex items-center text-[#9B7EBD] font-semibold hover:text-[#7A5FA0] transition-colors">
+              Conoce más sobre mí <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="code-section py-12 bg-white">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-2xl font-bold text-[#2D1B3D] mb-8 text-center">También te puede <span class="text-[#9B7EBD]">interesar</span></h2>
