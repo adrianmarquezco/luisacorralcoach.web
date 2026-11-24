@@ -24,7 +24,7 @@
 </script>
 <script>
 function gtag_report_conversion_wa(){gtag("event","conversion",{"send_to":"AW-18254510015/NnuGCO7OhMocEL_vtoBE"});return true;}
-function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="undefined"){window.location=url;}};gtag("event","conversion",{"send_to":"AW-18254510015/8fJICI3NtMwcEL_vtoBE","value":1.0,"currency":"EUR","event_callback":cb});return false;}
+function gtag_report_conversion_tel(url){var done=false;var cb=function(){if(done)return;done=true;if(typeof(url)!="undefined"){window.location=url;}};gtag("event","conversion",{"send_to":"AW-18254510015/8fJICI3NtMwcEL_vtoBE","value":1.0,"currency":"EUR","event_callback":cb});setTimeout(cb,800);return false;}
 </script>
     <script src="/public/main.umd.js" defer=""></script>
     <meta charset="utf-8">
@@ -248,7 +248,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
     </div>
   </div>
 </header>
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 
 <div class="bg-[#FAF7FC] border-b border-[#E5D9F2]">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
@@ -303,7 +303,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
         <div class="relative rounded-3xl overflow-hidden shadow-2xl">
           <img src="/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-7b43f64e-a404-472d-bb2a-31e31d6f7500.webp" srcset="/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-7b43f64e-a404-472d-bb2a-31e31d6f7500-640w.webp 640w, /assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-7b43f64e-a404-472d-bb2a-31e31d6f7500-960w.webp 960w, /assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-7b43f64e-a404-472d-bb2a-31e31d6f7500.webp 1559w" sizes="100vw" alt="Frasco de preparado personalizado de Flores de Bach sobre notas manuscritas" data-media="{&quot;id&quot;:&quot;2157347206&quot;,&quot;src&quot;:&quot;iStock&quot;,&quot;type&quot;:&quot;image&quot;}" class="w-full h-[450px] object-cover" width="1559" height="1080" loading="eager" fetchpriority="high" decoding="async">
         </div>
-        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl">
+        <div class="absolute -bottom-6 -left-2 md:-left-6 bg-white rounded-2xl p-4 shadow-xl">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 bg-[#D4AF37] rounded-full flex items-center justify-center">
               <i class="fa-solid fa-flower text-white text-xl"></i>
@@ -753,10 +753,11 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       <p class="text-[#B8A4C9] text-sm">
         © 2026 Luisa Corral - Coach Holística. Todos los derechos reservados.
       </p>
-      <div class="flex gap-6 text-sm">
+      <div class="flex gap-6 text-sm" style="flex-wrap:wrap;row-gap:.5rem;justify-content:center">
         <a href="/aviso-legal" class="text-[#B8A4C9] hover:text-white transition-colors">Aviso Legal</a>
         <a href="/politica-de-privacidad" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Privacidad</a>
         <a href="/politica-de-cookies" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Cookies</a>
+        <a href="#" onclick="lcOpenCookieBanner();return false;" class="text-[#B8A4C9] hover:text-white transition-colors">Configurar cookies</a>
       </div>
     </div>
   </div>

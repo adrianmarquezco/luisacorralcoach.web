@@ -24,7 +24,7 @@
 </script>
 <script>
 function gtag_report_conversion_wa(){gtag("event","conversion",{"send_to":"AW-18254510015/NnuGCO7OhMocEL_vtoBE"});return true;}
-function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="undefined"){window.location=url;}};gtag("event","conversion",{"send_to":"AW-18254510015/8fJICI3NtMwcEL_vtoBE","value":1.0,"currency":"EUR","event_callback":cb});return false;}
+function gtag_report_conversion_tel(url){var done=false;var cb=function(){if(done)return;done=true;if(typeof(url)!="undefined"){window.location=url;}};gtag("event","conversion",{"send_to":"AW-18254510015/8fJICI3NtMwcEL_vtoBE","value":1.0,"currency":"EUR","event_callback":cb});setTimeout(cb,800);return false;}
 </script>
     <script src="/public/main.umd.js" defer=""></script>
     <meta charset="utf-8">
@@ -86,7 +86,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
   },
   "publisher": {"@type":"Organization","name":"Luisa Corral Coach","url":"https://www.luisacorralcoach.com/","logo":{"@type":"ImageObject","url":"https://www.luisacorralcoach.com/assets/uploads/b3f76780-ddae-46b6-b492-f8eaf4baab97/7cec306b-129e-4df9-bd7e-4bd3b2f7e77d.webp"}},
   "datePublished": "2026-05-20",
-  "dateModified": "2026-10-07",
+  "dateModified": "2026-11-24",
   "image": "https://www.luisacorralcoach.com/assets/images/cf/xaKlCos5cTg_1RWzIu_h-A-b7ac26c3-2f94-41ef-879e-4cc248799100-publicContain.webp",
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -343,7 +343,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
     </div>
   </div>
 </header>
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 <section class="py-20 bg-gradient-to-br from-[#9B7EBD] to-[#7A5FA0] code-section" id="sxq2co">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <nav class="site-breadcrumb site-breadcrumb--light mb-8" aria-label="Breadcrumb">
@@ -1120,7 +1120,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
         <a aria-label="Compartir en LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.luisacorralcoach.com%2Fblog%2Fque-es-coach-holistico" target="_blank" rel="noopener noreferrer nofollow" class="w-12 h-12 bg-[#0077b5] text-white rounded-full flex items-center justify-center hover:opacity-90 transition-opacity">
           <i class="fa-brands fa-linkedin-in text-xl"></i>
         </a>
-        <a aria-label="Compartir por WhatsApp" rel="noopener noreferrer" href="https://wa.me/?text=¿Qué%20es%20un%20Coach%20Holístico%3F%20Descubre%20cómo%20transforma%20tu%20vida%20%20https%3A%2F%2Fwww.luisacorralcoach.com%2Fblog%2Fque-es-coach-holistico" target="_blank" rel="noopener noreferrer nofollow" class="w-12 h-12 bg-[#25d366] text-white rounded-full flex items-center justify-center hover:opacity-90 transition-opacity">
+        <a rel="noopener noreferrer nofollow" aria-label="Compartir por WhatsApp" href="https://wa.me/?text=¿Qué%20es%20un%20Coach%20Holístico%3F%20Descubre%20cómo%20transforma%20tu%20vida%20%20https%3A%2F%2Fwww.luisacorralcoach.com%2Fblog%2Fque-es-coach-holistico" target="_blank" class="w-12 h-12 bg-[#25d366] text-white rounded-full flex items-center justify-center hover:opacity-90 transition-opacity">
           <i class="fa-brands fa-whatsapp text-xl"></i>
         </a>
       </div>
@@ -1302,10 +1302,11 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       <p class="text-[#B8A4C9] text-sm">
         © 2026 Luisa Corral - Coach Holística. Todos los derechos reservados.
       </p>
-      <div class="flex gap-6 text-sm">
+      <div class="flex gap-6 text-sm" style="flex-wrap:wrap;row-gap:.5rem;justify-content:center">
         <a href="/aviso-legal" class="text-[#B8A4C9] hover:text-white transition-colors">Aviso Legal</a>
         <a href="/politica-de-privacidad" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Privacidad</a>
         <a href="/politica-de-cookies" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Cookies</a>
+        <a href="#" onclick="lcOpenCookieBanner();return false;" class="text-[#B8A4C9] hover:text-white transition-colors">Configurar cookies</a>
       </div>
     </div>
   </div>
