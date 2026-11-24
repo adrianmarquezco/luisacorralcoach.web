@@ -54,3 +54,47 @@
     banner.remove();
   });
 })();
+(function () {
+  var WA_PREFIX = 'https://wa.me/';
+
+  function pageLabel() {
+    var t = (document.title || '').split('|')[0].trim();
+    return t || 'página de inicio';
+  }
+
+  function addWhatsAppText(a) {
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf(WA_PREFIX) !== 0 || /[?&]text=/.test(href)) return;
+    var msg = 'Hola Luisa, vengo de tu web (' + pageLabel() + ') y me gustaría información.';
+    a.setAttribute('href', href + (href.indexOf('?') === -1 ? '?' : '&') + 'text=' + encodeURIComponent(msg));
+  }
+
+  function prefillAll() {
+    var links = document.querySelectorAll('a[href^="' + WA_PREFIX + '"]');
+    for (var i = 0; i < links.length; i++) addWhatsAppText(links[i]);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', prefillAll);
+  } else {
+    prefillAll();
+  }
+
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    var method = null;
+    if (href.indexOf(WA_PREFIX) === 0) {
+      addWhatsAppText(a);
+      method = 'whatsapp';
+    } else if (href.indexOf('tel:') === 0) {
+      method = 'phone';
+    } else if (href.indexOf('mailto:') === 0) {
+      method = 'email';
+    }
+    if (method && typeof gtag === 'function') {
+      gtag('event', 'generate_lead', { method: method, page_path: location.pathname });
+    }
+  }, true);
+})();
