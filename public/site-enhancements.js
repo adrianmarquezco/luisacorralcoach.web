@@ -157,6 +157,13 @@ function initFormSuccessBanner() {
   const text = messages[enviado] || messages['1']
   if (!text) return
 
+  if (typeof gtag === 'function') {
+    gtag('event', enviado === 'newsletter' ? 'sign_up' : 'generate_lead', {
+      method: enviado === 'newsletter' ? 'newsletter' : 'form',
+      page_path: window.location.pathname,
+    })
+  }
+
   const banner = document.createElement('div')
   banner.setAttribute('role', 'status')
   banner.className =
