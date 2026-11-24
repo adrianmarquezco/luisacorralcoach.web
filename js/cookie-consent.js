@@ -29,6 +29,20 @@
     }
   }
 
+  function deleteTrackingCookies() {
+    try {
+      var host = location.hostname.replace(/^www\./, '');
+      var domains = ['', '.' + host, '.www.' + host];
+      document.cookie.split(';').forEach(function (c) {
+        var name = c.split('=')[0].trim();
+        if (!/^(_ga|_gid|_gcl_)/.test(name)) return;
+        domains.forEach(function (d) {
+          document.cookie = name + '=;Max-Age=0;path=/' + (d ? ';domain=' + d : '');
+        });
+      });
+    } catch (e) {}
+  }
+
   var BTN = 'padding:.5rem 1.25rem;border-radius:9999px;cursor:pointer;font-size:.875rem;' +
     'font-family:inherit;font-weight:600;white-space:nowrap;min-width:7rem;';
 
@@ -68,6 +82,7 @@
     document.getElementById('lc-cookie-reject').addEventListener('click', function () {
       setStored('rejected');
       updateConsent('denied');
+      deleteTrackingCookies();
       banner.remove();
     });
   }

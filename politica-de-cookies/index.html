@@ -228,7 +228,10 @@ function gtag_report_conversion_tel(url){var done=false;var cb=function(){if(don
             3. Detalle de las cookies y del almacenamiento utilizados
           </h2>
           <div class="overflow-x-auto mt-4">
-            <table class="w-full text-sm border-collapse">
+            <style>
+@media (max-width:640px){.cookie-table,.cookie-table tbody,.cookie-table tr,.cookie-table td{display:block;width:100%}.cookie-table thead{display:none}.cookie-table tr{margin-bottom:1rem;border:1px solid #E5D9F2;border-radius:.75rem;overflow:hidden}.cookie-table td{border:0!important;border-bottom:1px solid #E5D9F2!important;padding:.5rem .75rem!important}.cookie-table td:last-child{border-bottom:0!important}.cookie-table td::before{content:attr(data-label);display:block;font-weight:700;color:#2D1B3D;font-size:.75rem;margin-bottom:.125rem}}
+</style>
+            <table class="cookie-table w-full text-sm border-collapse">
               <thead>
                 <tr class="bg-[#FAF7FC]">
                   <th class="text-left p-3 border border-[#E5D9F2] font-bold text-[#2D1B3D]">
@@ -247,22 +250,22 @@ function gtag_report_conversion_tel(url){var done=false;var cb=function(){if(don
               </thead>
               <tbody>
                 <tr>
-                  <td class="p-3 border border-[#E5D9F2]">lc-cookie-consent</td>
-                  <td class="p-3 border border-[#E5D9F2]">Almacenamiento local (técnica)</td>
-                  <td class="p-3 border border-[#E5D9F2]">Persistente, hasta que la borres o cambies tu elección</td>
-                  <td class="p-3 border border-[#E5D9F2]">Recordar si has aceptado o rechazado las cookies. No identifica a la persona.</td>
+                  <td data-label="Nombre" class="p-3 border border-[#E5D9F2]">lc-cookie-consent</td>
+                  <td data-label="Tipo" class="p-3 border border-[#E5D9F2]">Almacenamiento local (técnica)</td>
+                  <td data-label="Duración" class="p-3 border border-[#E5D9F2]">Persistente, hasta que la borres o cambies tu elección</td>
+                  <td data-label="Finalidad" class="p-3 border border-[#E5D9F2]">Recordar si has aceptado o rechazado las cookies. No identifica a la persona.</td>
                 </tr>
                 <tr>
-                  <td class="p-3 border border-[#E5D9F2]">_ga, _ga_*</td>
-                  <td class="p-3 border border-[#E5D9F2]">Analítica (Google Analytics 4)</td>
-                  <td class="p-3 border border-[#E5D9F2]">Hasta 2 años</td>
-                  <td class="p-3 border border-[#E5D9F2]">Medir de forma estadística cuántas personas visitan la web y qué páginas consultan. Solo se instalan si pulsas «Aceptar».</td>
+                  <td data-label="Nombre" class="p-3 border border-[#E5D9F2]">_ga, _ga_*</td>
+                  <td data-label="Tipo" class="p-3 border border-[#E5D9F2]">Analítica (Google Analytics 4)</td>
+                  <td data-label="Duración" class="p-3 border border-[#E5D9F2]">Hasta 2 años</td>
+                  <td data-label="Finalidad" class="p-3 border border-[#E5D9F2]">Medir de forma estadística cuántas personas visitan la web y qué páginas consultan. Solo se instalan si pulsas «Aceptar».</td>
                 </tr>
                 <tr>
-                  <td class="p-3 border border-[#E5D9F2]">_gcl_au y otras de Google Ads</td>
-                  <td class="p-3 border border-[#E5D9F2]">Publicidad / medición de conversiones (Google Ads)</td>
-                  <td class="p-3 border border-[#E5D9F2]">Hasta 90 días</td>
-                  <td class="p-3 border border-[#E5D9F2]">Saber si una visita que llega desde un anuncio termina en un contacto (por ejemplo, un clic en WhatsApp o en el teléfono). Solo se instalan si pulsas «Aceptar».</td>
+                  <td data-label="Nombre" class="p-3 border border-[#E5D9F2]">_gcl_au y otras de Google Ads</td>
+                  <td data-label="Tipo" class="p-3 border border-[#E5D9F2]">Publicidad / medición de conversiones (Google Ads)</td>
+                  <td data-label="Duración" class="p-3 border border-[#E5D9F2]">Hasta 90 días</td>
+                  <td data-label="Finalidad" class="p-3 border border-[#E5D9F2]">Saber si una visita que llega desde un anuncio termina en un contacto (por ejemplo, un clic en WhatsApp o en el teléfono). Solo se instalan si pulsas «Aceptar».</td>
                 </tr>
               </tbody>
             </table>

@@ -159,8 +159,8 @@ function initFormSuccessBanner() {
 
   if (typeof gtag === 'function') {
     gtag('event', enviado === 'newsletter' ? 'sign_up' : 'generate_lead', {
+      send_to: 'G-F4LRB81MPV',
       method: enviado === 'newsletter' ? 'newsletter' : 'form',
-      page_path: window.location.pathname,
     })
   }
 
