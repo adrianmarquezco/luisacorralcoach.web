@@ -24,7 +24,7 @@
 </script>
 <script>
 function gtag_report_conversion_wa(){gtag("event","conversion",{"send_to":"AW-18254510015/NnuGCO7OhMocEL_vtoBE"});return true;}
-function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="undefined"){window.location=url;}};gtag("event","conversion",{"send_to":"AW-18254510015/8fJICI3NtMwcEL_vtoBE","value":1.0,"currency":"EUR","event_callback":cb});return false;}
+function gtag_report_conversion_tel(url){var done=false;var cb=function(){if(done)return;done=true;if(typeof(url)!="undefined"){window.location=url;}};gtag("event","conversion",{"send_to":"AW-18254510015/8fJICI3NtMwcEL_vtoBE","value":1.0,"currency":"EUR","event_callback":cb});setTimeout(cb,800);return false;}
 </script>
     <script src="/public/main.umd.js" defer=""></script>
     <meta charset="utf-8">
@@ -57,7 +57,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
 <meta name="keywords" content="flores de bach para niños, flores de bach niños miedos, flores de bach rabietas, terapia floral infantil, flores de bach adaptación escolar">
 <meta name="language" content="es">
 <meta name="robots" content="index, follow">
-<meta property="og:title" content="Flores de Bach para Niños - Ayuda Emocional Natural">
+<meta property="og:title" content="Flores de Bach para Niños - Apoyo emocional complementario">
 <meta property="og:description" content="Fórmula personalizada de Flores de Bach para niños: miedos, rabietas, adaptación escolar y ansiedad infantil. Primera consulta gratuita · Luisa Corral.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
@@ -78,7 +78,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
 }
 </script>
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Flores de Bach para Niños - Ayuda Emocional Natural">
+<meta name="twitter:title" content="Flores de Bach para Niños - Apoyo emocional complementario">
 <meta name="twitter:description" content="Terapia floral de Bach para niños: miedos, rabietas y adaptación escolar. Luisa Corral, Narón y online.">
 <script type="application/ld+json">
 {
@@ -242,7 +242,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
     </div>
   </div>
 </header>
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 
 <div class="bg-[#FAF7FC] border-b border-[#E5D9F2]">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
@@ -269,7 +269,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
         <p class="text-lg text-[#6B5B7A] mb-8">
           Fórmula personalizada de esencias florales para miedos, rabietas,
           ansiedad por separación y adaptación a cambios como empezar el
-          colegio. De origen natural.
+          colegio.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a target="_blank" rel="noopener noreferrer nofollow" href="https://wa.me/34616054001?text=Hola%20Luisa,%20me%20interesa%20la%20terapia%20de%20Flores%20de%20Bach%20para%20mi%20hijo/a.%20¿Puedo%20reservar%20una%20consulta?" onclick="return gtag_report_conversion_wa();" class="inline-flex items-center justify-center bg-[#9B7EBD] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#7A5FA0] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
@@ -295,14 +295,14 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
         <div class="relative rounded-3xl overflow-hidden shadow-2xl">
           <img src="/assets/provider/istock/2207681224.webp" srcset="/assets/provider/istock/2207681224-640w.webp 640w, /assets/provider/istock/2207681224-960w.webp 960w, /assets/provider/istock/2207681224.webp 1200w" sizes="100vw" alt="Botella de flores de Bach para niños sobre notas manuscritas" class="w-full h-[450px] object-cover" width="1559" height="1080" loading="eager" fetchpriority="high" decoding="async">
         </div>
-        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl">
+        <div class="absolute -bottom-6 -left-2 md:-left-6 bg-white rounded-2xl p-4 shadow-xl">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 bg-[#D4AF37] rounded-full flex items-center justify-center">
               <i class="fa-solid fa-child text-white text-xl"></i>
             </div>
             <div>
               <p class="font-bold text-[#2D1B3D]">Consúltalo antes con tu pediatra</p>
-              <p class="text-sm text-[#6B5B7A]">Consúltalo antes con tu pediatra</p>
+              <p class="text-sm text-[#6B5B7A]">Uso complementario</p>
             </div>
           </div>
         </div>
@@ -843,10 +843,11 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       <p class="text-[#B8A4C9] text-sm">
         © 2026 Luisa Corral - Coach Holística. Todos los derechos reservados.
       </p>
-      <div class="flex gap-6 text-sm">
+      <div class="flex gap-6 text-sm" style="flex-wrap:wrap;row-gap:.5rem;justify-content:center">
         <a href="/aviso-legal" class="text-[#B8A4C9] hover:text-white transition-colors">Aviso Legal</a>
         <a href="/politica-de-privacidad" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Privacidad</a>
         <a href="/politica-de-cookies" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Cookies</a>
+        <a href="#" onclick="lcOpenCookieBanner();return false;" class="text-[#B8A4C9] hover:text-white transition-colors">Configurar cookies</a>
       </div>
     </div>
   </div>

@@ -24,7 +24,7 @@
 </script>
 <script>
 function gtag_report_conversion_wa(){gtag("event","conversion",{"send_to":"AW-18254510015/NnuGCO7OhMocEL_vtoBE"});return true;}
-function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="undefined"){window.location=url;}};gtag("event","conversion",{"send_to":"AW-18254510015/8fJICI3NtMwcEL_vtoBE","value":1.0,"currency":"EUR","event_callback":cb});return false;}
+function gtag_report_conversion_tel(url){var done=false;var cb=function(){if(done)return;done=true;if(typeof(url)!="undefined"){window.location=url;}};gtag("event","conversion",{"send_to":"AW-18254510015/8fJICI3NtMwcEL_vtoBE","value":1.0,"currency":"EUR","event_callback":cb});setTimeout(cb,800);return false;}
 </script>
     <script src="/public/main.umd.js" defer=""></script>
     <meta charset="utf-8">
@@ -107,7 +107,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
         {"@type":"Question","name":"¿En qué se diferencia del coaching holístico?","acceptedAnswer":{"@type":"Answer","text":"El coaching holístico es la otra vía concreta: un marco integral de desarrollo personal centrado en la conversación, los objetivos y el acompañamiento emocional, sin foco específico en ángeles o energía."}},
         {"@type":"Question","name":"¿Necesito tener creencias religiosas o esotéricas?","acceptedAnswer":{"@type":"Answer","text":"No. El coaching espiritual trabaja la espiritualidad en un sentido amplio, no religioso. Cualquier persona curiosa por explorar su dimensión interior puede beneficiarse, tenga las creencias que tenga."}},
         {"@type":"Question","name":"¿Cuánto cuesta una sesión de coaching espiritual online?","acceptedAnswer":{"@type":"Answer","text":"La primera conversación es gratuita y sin compromiso. El precio de las sesiones depende del camino que elijamos: desde 50€ en coaching holístico o desde 60€ en coaching angelical."}},
-        {"@type":"Question","name":"¿Las sesiones son online?","acceptedAnswer":{"@type":"Answer","text":"Sí, por videollamada para toda España. En Narón (A Coruña) y alrededores puede estudiarse también la opción presencial."}},
+        {"@type":"Question","name":"¿Las sesiones son online?","acceptedAnswer":{"@type":"Answer","text":"Sí, por videollamada para toda España. En Narón (A Coruña) y alrededores también hay sesiones presenciales."}},
         {"@type":"Question","name":"¿Puedo tener un coach espiritual online si vivo en Barcelona, Madrid o Málaga?","acceptedAnswer":{"@type":"Answer","text":"Sí. Todas las sesiones de coaching espiritual son por videollamada, así que da igual en qué ciudad o comunidad autónoma vivas: la primera conversación es gratuita y se hace online, igual que el resto del proceso."}},
         {"@type":"Question","name":"¿Es lo mismo un coach espiritual que una guía espiritual online?","acceptedAnswer":{"@type":"Answer","text":"Se parecen, pero el enfoque cambia: una guía espiritual suele orientarte desde su propia visión, mientras que el coaching espiritual te acompaña para que escuches tu intuición y tomes tus propias decisiones. Si buscas una guía espiritual online, la primera conversación gratuita sirve para ver si este acompañamiento encaja contigo."}},
         {"@type":"Question","name":"¿El coaching espiritual sustituye a la terapia psicológica?","acceptedAnswer":{"@type":"Answer","text":"No. Es un acompañamiento complementario de desarrollo personal; no diagnostica ni trata enfermedades y no sustituye la atención médica ni psicológica."}},
@@ -248,7 +248,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
     </div>
   </div>
 </header>
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 <section class="code-section py-20 bg-gradient-to-br from-[#FAF7FC] to-[#E8D7F1]" id="hero-coaching-espiritual">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <nav class="site-breadcrumb mb-8" aria-label="Breadcrumb"><ol><li><a href="/">Inicio</a></li><li aria-hidden="true">/</li><li aria-current="page">Coaching espiritual</li></ol></nav>
@@ -295,7 +295,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
         <div class="relative rounded-3xl overflow-hidden shadow-2xl">
           <img src="/assets/provider/istock/1409039743.webp" srcset="/assets/provider/istock/1409039743-640w.webp 640w, /assets/provider/istock/1409039743-960w.webp 960w, /assets/provider/istock/1409039743.webp 1200w" sizes="100vw" alt="Mujer meditando en el bosque representando paz interior y conexión espiritual" width="1200" height="799" loading="eager" fetchpriority="high" decoding="async" class="w-full h-[450px] object-cover">
         </div>
-        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl">
+        <div class="absolute -bottom-6 -left-2 md:-left-6 bg-white rounded-2xl p-4 shadow-xl">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 bg-[#D4AF37] rounded-full flex items-center justify-center">
               <i class="fa-solid fa-om text-white text-xl"></i>
@@ -522,7 +522,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
           <i class="fa-solid fa-chevron-down text-[#9B7EBD] transition-transform"></i>
         </button>
         <div class="p-6 bg-white hidden" data-landingsite-faq-answer="">
-          <p class="text-[#6B5B7A]">Sí, por videollamada para toda España. En Narón (A Coruña) y alrededores puede estudiarse también la opción presencial.</p>
+          <p class="text-[#6B5B7A]">Sí, por videollamada para toda España. En Narón (A Coruña) y alrededores también hay sesiones presenciales.</p>
         </div>
       </div>
       <div class="border border-[#E5D9F2] rounded-2xl overflow-hidden" data-landingsite-faq-item="">
@@ -820,10 +820,11 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       <p class="text-[#B8A4C9] text-sm">
         © 2026 Luisa Corral - Coach Holística. Todos los derechos reservados.
       </p>
-      <div class="flex gap-6 text-sm">
+      <div class="flex gap-6 text-sm" style="flex-wrap:wrap;row-gap:.5rem;justify-content:center">
         <a href="/aviso-legal" class="text-[#B8A4C9] hover:text-white transition-colors">Aviso Legal</a>
         <a href="/politica-de-privacidad" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Privacidad</a>
         <a href="/politica-de-cookies" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Cookies</a>
+        <a href="#" onclick="lcOpenCookieBanner();return false;" class="text-[#B8A4C9] hover:text-white transition-colors">Configurar cookies</a>
       </div>
     </div>
   </div>

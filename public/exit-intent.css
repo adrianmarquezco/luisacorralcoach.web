@@ -178,3 +178,5 @@
   .exit-card { padding: 32px 22px 24px; margin-bottom: 8px; }
   .exit-title { font-size: 1.4rem; }
 }
+
+body.lc-exit-open a[href^="https://wa.me/"].fixed{display:none !important}

@@ -24,7 +24,7 @@
 </script>
 <script>
 function gtag_report_conversion_wa(){gtag("event","conversion",{"send_to":"AW-18254510015/NnuGCO7OhMocEL_vtoBE"});return true;}
-function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="undefined"){window.location=url;}};gtag("event","conversion",{"send_to":"AW-18254510015/8fJICI3NtMwcEL_vtoBE","value":1.0,"currency":"EUR","event_callback":cb});return false;}
+function gtag_report_conversion_tel(url){var done=false;var cb=function(){if(done)return;done=true;if(typeof(url)!="undefined"){window.location=url;}};gtag("event","conversion",{"send_to":"AW-18254510015/8fJICI3NtMwcEL_vtoBE","value":1.0,"currency":"EUR","event_callback":cb});setTimeout(cb,800);return false;}
 </script>
     <script src="/public/main.umd.js" defer=""></script>
     <meta charset="utf-8">
@@ -53,7 +53,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
     <link rel="stylesheet" href="/public/css-root-vars.css">
 <style>.pt-6{padding-top:1.5rem}.mx-2{margin-left:.5rem;margin-right:.5rem}.p-5{padding:1.25rem}.w-8{width:2rem}.h-8{height:2rem}.pb-8{padding-bottom:2rem}</style>
     <title>Meditación Guiada para Niños Online desde 10€ | L. Corral</title>
-<meta name="description" content="Meditación guiada para niños personalizada: cuentos guiados y lenguaje adaptado, sesiones cortas para calmar rabietas y mejorar el sueño infantil. Desde 10€.">
+<meta name="description" content="Meditación guiada personalizada para niños: cuentos guiados, lenguaje adaptado y sesiones cortas para calmar rabietas y dormir mejor. Desde 10€.">
 <meta name="language" content="es">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Meditación Guiada para Niños | Luisa Corral - Coach Holística">
@@ -119,7 +119,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
     {
       "@type": "Service", "serviceType": "Meditación personalizada",
       "name": "Meditación Guiada para Niños",
-      "description": "Meditación guiada personalizada para niños: cuentos guiados, lenguaje adaptado y sesiones cortas para calma, sueño y gestión emocional infantil. Online, con base en Narón. En Narón y alrededores puede estudiarse la opción presencial.",
+      "description": "Meditación guiada personalizada para niños: cuentos guiados, lenguaje adaptado y sesiones cortas para calma, sueño y gestión emocional infantil. Online, con base en Narón. En Narón y alrededores también hay sesiones presenciales.",
       "url": "https://www.luisacorralcoach.com/meditaciones-personalizadas/para-ninos",
       "provider": { "@id": "https://www.luisacorralcoach.com/#business" },
       "areaServed": "España",
@@ -280,7 +280,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
     </div>
   </div>
 </header>
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 <div class="bg-[#FAF7FC] border-b border-[#E5D9F2]">
 <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-3 text-sm text-[#6B5B7A]" aria-label="Miga de pan">
   <a href="/" class="hover:text-[#9B7EBD] transition-colors">Inicio</a>
@@ -302,7 +302,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
           Meditación guiada <span class="text-[#9B7EBD]">para Niños</span>
         </h1>
         <p class="text-lg text-[#6B5B7A] mb-8">
-          Una meditación guiada personalizada para niños y niñas, con lenguaje adaptado a su edad, cuentos guiados y sesiones cortas, pensada para ayudarles a dormir mejor, calmar rabietas o mejorar su concentración. Online para toda España, con base en Narón, Galicia. Si vives cerca y prefieres una sesión presencial, escríbeme y estudiamos esa posibilidad.
+          Una meditación guiada personalizada para niños y niñas, con lenguaje adaptado a su edad, cuentos guiados y sesiones cortas, pensada para ayudarles a dormir mejor, calmar rabietas o mejorar su concentración. Online para toda España, con base en Narón, Galicia. Si vives cerca de Narón y prefieres una sesión presencial, también puedes venir en persona.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="#contacto" class="inline-flex items-center justify-center bg-[#9B7EBD] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-[#7A5FA0] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
@@ -328,7 +328,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
         <div class="relative rounded-3xl overflow-hidden shadow-2xl">
           <img src="/assets/provider/istock/2271081070.webp" srcset="/assets/provider/istock/2271081070-640w.webp 640w, /assets/provider/istock/2271081070-960w.webp 960w, /assets/provider/istock/2271081070.webp 1200w" sizes="100vw" alt="Niño escuchando un cuento guiado de meditación antes de dormir" class="w-full h-[450px] object-cover" width="1920" height="1280" loading="eager" fetchpriority="high" decoding="async">
         </div>
-        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl">
+        <div class="absolute -bottom-6 -left-2 md:-left-6 bg-white rounded-2xl p-4 shadow-xl">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 bg-[#D4AF37] rounded-full flex items-center justify-center">
               <i class="fa-solid fa-book text-white text-xl"></i>
@@ -893,10 +893,11 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       <p class="text-[#B8A4C9] text-sm">
         © 2026 Luisa Corral - Coach Holística. Todos los derechos reservados.
       </p>
-      <div class="flex gap-6 text-sm">
+      <div class="flex gap-6 text-sm" style="flex-wrap:wrap;row-gap:.5rem;justify-content:center">
         <a href="/aviso-legal" class="text-[#B8A4C9] hover:text-white transition-colors">Aviso Legal</a>
         <a href="/politica-de-privacidad" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Privacidad</a>
         <a href="/politica-de-cookies" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Cookies</a>
+        <a href="#" onclick="lcOpenCookieBanner();return false;" class="text-[#B8A4C9] hover:text-white transition-colors">Configurar cookies</a>
       </div>
     </div>
   </div>

@@ -87,6 +87,7 @@
     if (!overlay) return;
     try { localStorage.setItem(STORAGE_KEY, String(Date.now())); } catch (e) {}
     overlay.remove();
+    document.body.classList.remove('lc-exit-open');
     document.removeEventListener('keydown', onKeydown);
     overlay = null;
     if (lastFocusedEl && lastFocusedEl.focus) lastFocusedEl.focus();
@@ -103,6 +104,7 @@
     lastFocusedEl = document.activeElement;
     overlay = buildPopup();
     overlay.classList.add('is-visible');
+    document.body.classList.add('lc-exit-open');
 
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) closePopup();

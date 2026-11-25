@@ -1,70 +1,121 @@
 (function () {
-  if (localStorage.getItem('lc-cookie-consent') || localStorage.getItem('cookieConsent')) return;
+  function getStored() {
+    try {
+      return localStorage.getItem('lc-cookie-consent') || localStorage.getItem('cookieConsent');
+    } catch (e) {
+      return null;
+    }
+  }
 
-  var banner = document.createElement('div');
-  banner.id = 'lc-cookie-banner';
-  banner.setAttribute('role', 'dialog');
-  banner.setAttribute('aria-label', 'Aviso de cookies');
-  banner.innerHTML = [
-    '<div style="position:fixed;bottom:0;left:0;right:0;background:#2D1B3D;color:#fff;',
-    'padding:1rem 1.5rem;z-index:48;display:flex;flex-wrap:wrap;align-items:center;',
-    'justify-content:space-between;gap:1rem;font-family:Nunito Sans,sans-serif;',
-    'box-shadow:0 -4px 20px rgba(0,0,0,.4);">',
-    '<p style="margin:0;font-size:.9rem;flex:1;min-width:200px;line-height:1.5">',
-    'Usamos cookies propias y de terceros para mejorar tu experiencia de navegación. ',
-    '<a href="/politica-de-cookies" style="color:#9B7EBD;text-decoration:underline">',
-    'Política de cookies</a>',
-    '</p>',
-    '<div style="display:flex;gap:.75rem;flex-shrink:0">',
-    '<button id="lc-cookie-reject" style="background:transparent;border:1px solid #9B7EBD;',
-    'color:#9B7EBD;padding:.5rem 1.25rem;border-radius:9999px;cursor:pointer;',
-    'font-size:.875rem;font-family:inherit;white-space:nowrap">Rechazar</button>',
-    '<button id="lc-cookie-accept" style="background:#9B7EBD;border:none;color:#fff;',
-    'padding:.5rem 1.25rem;border-radius:9999px;cursor:pointer;font-size:.875rem;',
-    'font-family:inherit;white-space:nowrap">Aceptar</button>',
-    '</div>',
-    '</div>'
-  ].join('');
+  function setStored(value) {
+    try { localStorage.setItem('lc-cookie-consent', value); } catch (e) {}
+  }
 
-  document.body.appendChild(banner);
+  function clearStored() {
+    try {
+      localStorage.removeItem('lc-cookie-consent');
+      localStorage.removeItem('cookieConsent');
+    } catch (e) {}
+  }
 
-  document.getElementById('lc-cookie-accept').addEventListener('click', function () {
-    localStorage.setItem('lc-cookie-consent', 'accepted');
+  function updateConsent(state) {
     if (typeof gtag === 'function') {
       gtag('consent', 'update', {
-        'ad_storage': 'granted',
-        'analytics_storage': 'granted',
-        'ad_user_data': 'granted',
-        'ad_personalization': 'granted'
+        'ad_storage': state,
+        'analytics_storage': state,
+        'ad_user_data': state,
+        'ad_personalization': state
       });
     }
-    banner.remove();
-  });
+  }
 
-  document.getElementById('lc-cookie-reject').addEventListener('click', function () {
-    localStorage.setItem('lc-cookie-consent', 'rejected');
-    if (typeof gtag === 'function') {
-      gtag('consent', 'update', {
-        'ad_storage': 'denied',
-        'analytics_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied'
+  function deleteTrackingCookies() {
+    try {
+      var host = location.hostname.replace(/^www\./, '');
+      var domains = ['', '.' + host, '.www.' + host];
+      document.cookie.split(';').forEach(function (c) {
+        var name = c.split('=')[0].trim();
+        if (!/^(_ga|_gid|_gcl_)/.test(name)) return;
+        domains.forEach(function (d) {
+          document.cookie = name + '=;Max-Age=0;path=/' + (d ? ';domain=' + d : '');
+        });
       });
+    } catch (e) {}
+  }
+
+  var BTN = 'padding:.5rem 1.25rem;border-radius:9999px;cursor:pointer;font-size:.875rem;' +
+    'font-family:inherit;font-weight:600;white-space:nowrap;min-width:7rem;';
+
+  function showBanner() {
+    if (document.getElementById('lc-cookie-banner')) return;
+    var banner = document.createElement('div');
+    banner.id = 'lc-cookie-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-label', 'Aviso de cookies');
+    banner.innerHTML = [
+      '<div style="position:fixed;bottom:0;left:0;right:0;background:#2D1B3D;color:#fff;',
+      'padding:1rem 1.5rem;z-index:48;display:flex;flex-wrap:wrap;align-items:center;',
+      'justify-content:space-between;gap:1rem;font-family:Nunito Sans,sans-serif;',
+      'box-shadow:0 -4px 20px rgba(0,0,0,.4);">',
+      '<p style="margin:0;font-size:.9rem;flex:1;min-width:200px;line-height:1.5">',
+      'Usamos cookies propias y de terceros para mejorar tu experiencia de navegación. ',
+      '<a href="/politica-de-cookies" style="color:#C9B3E0;text-decoration:underline">',
+      'Política de cookies</a>',
+      '</p>',
+      '<div style="display:flex;gap:.75rem;flex-shrink:0">',
+      '<button type="button" id="lc-cookie-reject" style="background:transparent;border:2px solid #C9B3E0;',
+      'color:#fff;' + BTN + '">Rechazar</button>',
+      '<button type="button" id="lc-cookie-accept" style="background:#7A5FA0;border:2px solid #7A5FA0;',
+      'color:#fff;' + BTN + '">Aceptar</button>',
+      '</div>',
+      '</div>'
+    ].join('');
+
+    document.body.appendChild(banner);
+
+    document.getElementById('lc-cookie-accept').addEventListener('click', function () {
+      setStored('accepted');
+      updateConsent('granted');
+      banner.remove();
+    });
+
+    document.getElementById('lc-cookie-reject').addEventListener('click', function () {
+      setStored('rejected');
+      updateConsent('denied');
+      deleteTrackingCookies();
+      banner.remove();
+    });
+  }
+
+  window.lcOpenCookieBanner = function () {
+    clearStored();
+    showBanner();
+  };
+
+  if (!getStored()) {
+    if (document.body) {
+      showBanner();
+    } else {
+      document.addEventListener('DOMContentLoaded', showBanner);
     }
-    banner.remove();
-  });
+  }
 })();
 (function () {
   var WA_PREFIX = 'https://wa.me/';
+  var WA_CONTACT = /^https:\/\/wa\.me\/\d/;
 
   function pageLabel() {
-    var t = (document.title || '').split('|')[0].trim();
-    return t || 'página de inicio';
+    if (location.pathname === '/' || location.pathname === '/index.html') return 'la página de inicio';
+    var h1 = document.querySelector('h1');
+    var t = h1 ? (h1.textContent || '').replace(/\s+/g, ' ').trim() : '';
+    if (!t) t = (document.title || '').split('|')[0].trim();
+    if (t.length > 60) t = t.slice(0, 60).replace(/\s+\S*$/, '') + '…';
+    return t || 'tu web';
   }
 
   function addWhatsAppText(a) {
     var href = a.getAttribute('href') || '';
-    if (href.indexOf(WA_PREFIX) !== 0 || /[?&]text=/.test(href)) return;
+    if (!WA_CONTACT.test(href) || /[?&]text=/.test(href)) return;
     var msg = 'Hola Luisa, vengo de tu web (' + pageLabel() + ') y me gustaría información.';
     a.setAttribute('href', href + (href.indexOf('?') === -1 ? '?' : '&') + 'text=' + encodeURIComponent(msg));
   }
@@ -85,7 +136,7 @@
     if (!a) return;
     var href = a.getAttribute('href') || '';
     var method = null;
-    if (href.indexOf(WA_PREFIX) === 0) {
+    if (WA_CONTACT.test(href)) {
       addWhatsAppText(a);
       method = 'whatsapp';
     } else if (href.indexOf('tel:') === 0) {
@@ -94,7 +145,7 @@
       method = 'email';
     }
     if (method && typeof gtag === 'function') {
-      gtag('event', 'generate_lead', { method: method, page_path: location.pathname });
+      gtag('event', 'generate_lead', { send_to: 'G-F4LRB81MPV', method: method });
     }
   }, true);
 })();

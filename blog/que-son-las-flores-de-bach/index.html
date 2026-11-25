@@ -24,7 +24,7 @@
 </script>
 <script>
 function gtag_report_conversion_wa(){gtag("event","conversion",{"send_to":"AW-18254510015/NnuGCO7OhMocEL_vtoBE"});return true;}
-function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="undefined"){window.location=url;}};gtag("event","conversion",{"send_to":"AW-18254510015/8fJICI3NtMwcEL_vtoBE","value":1.0,"currency":"EUR","event_callback":cb});return false;}
+function gtag_report_conversion_tel(url){var done=false;var cb=function(){if(done)return;done=true;if(typeof(url)!="undefined"){window.location=url;}};gtag("event","conversion",{"send_to":"AW-18254510015/8fJICI3NtMwcEL_vtoBE","value":1.0,"currency":"EUR","event_callback":cb});setTimeout(cb,800);return false;}
 </script>
     <script src="/public/main.umd.js" defer=""></script>
     <meta charset="utf-8">
@@ -67,7 +67,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
   },
   "publisher": {"@type":"Organization","name":"Luisa Corral Coach","url":"https://www.luisacorralcoach.com/","logo":{"@type":"ImageObject","url":"https://www.luisacorralcoach.com/assets/uploads/b3f76780-ddae-46b6-b492-f8eaf4baab97/7cec306b-129e-4df9-bd7e-4bd3b2f7e77d.webp"}},
   "datePublished": "2026-02-15",
-  "dateModified": "2026-09-21",
+  "dateModified": "2026-11-24",
   "image": "https://www.luisacorralcoach.com/assets/provider/istock/901677912.webp",
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -282,7 +282,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
     </div>
   </div>
 </header>
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 <section class="py-20 bg-gradient-to-br from-[#9B7EBD] to-[#7A5FA0] code-section" id="s7ugoo">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <nav class="site-breadcrumb site-breadcrumb--light mb-8" aria-label="Breadcrumb">
@@ -299,7 +299,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       sus 38 esencias, para qué se utilizan y cómo se toman.
     </p>
     <div class="flex flex-wrap justify-center gap-4 text-white/80 text-sm">
-      <span><i class="fa-regular fa-calendar mr-2"></i>15 Febrero 2026</span>
+      <span><i class="fa-regular fa-calendar mr-2"></i>15 de febrero de 2026</span>
       <span><i class="fa-regular fa-clock mr-2"></i>6 min de lectura</span>
       <span><i class="fa-regular fa-user mr-2"></i>Luisa Corral</span>
     </div>
@@ -979,10 +979,11 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       <p class="text-[#B8A4C9] text-sm">
         © 2026 Luisa Corral - Coach Holística. Todos los derechos reservados.
       </p>
-      <div class="flex gap-6 text-sm">
+      <div class="flex gap-6 text-sm" style="flex-wrap:wrap;row-gap:.5rem;justify-content:center">
         <a href="/aviso-legal" class="text-[#B8A4C9] hover:text-white transition-colors">Aviso Legal</a>
         <a href="/politica-de-privacidad" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Privacidad</a>
         <a href="/politica-de-cookies" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Cookies</a>
+        <a href="#" onclick="lcOpenCookieBanner();return false;" class="text-[#B8A4C9] hover:text-white transition-colors">Configurar cookies</a>
       </div>
     </div>
   </div>

@@ -24,7 +24,7 @@
 </script>
 <script>
 function gtag_report_conversion_wa(){gtag("event","conversion",{"send_to":"AW-18254510015/NnuGCO7OhMocEL_vtoBE"});return true;}
-function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="undefined"){window.location=url;}};gtag("event","conversion",{"send_to":"AW-18254510015/8fJICI3NtMwcEL_vtoBE","value":1.0,"currency":"EUR","event_callback":cb});return false;}
+function gtag_report_conversion_tel(url){var done=false;var cb=function(){if(done)return;done=true;if(typeof(url)!="undefined"){window.location=url;}};gtag("event","conversion",{"send_to":"AW-18254510015/8fJICI3NtMwcEL_vtoBE","value":1.0,"currency":"EUR","event_callback":cb});setTimeout(cb,800);return false;}
 </script>
     <script src="/public/main.umd.js" defer=""></script>
     <meta charset="utf-8">
@@ -255,7 +255,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
     </div>
   </div>
 </header>
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 
 <!-- Breadcrumb -->
 <div class="bg-[#FAF7FC] border-b border-[#E5D9F2]">
@@ -304,7 +304,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
         <div class="relative rounded-3xl overflow-hidden shadow-2xl">
           <img src="/assets/provider/istock/2245001493.webp" srcset="/assets/provider/istock/2245001493-640w.webp 640w, /assets/provider/istock/2245001493-960w.webp 960w, /assets/provider/istock/2245001493.webp 1200w" sizes="100vw" alt="Mujer con mochila en montaña al atardecer representando camino de transformación y aventura espiritual" class="w-full h-[450px] object-cover" width="1600" height="1067" loading="eager" fetchpriority="high" decoding="async">
         </div>
-        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl">
+        <div class="absolute -bottom-6 -left-2 md:-left-6 bg-white rounded-2xl p-4 shadow-xl">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 bg-[#D4AF37] rounded-full flex items-center justify-center">
               <i class="fa-solid fa-heart text-white text-xl"></i>
@@ -851,10 +851,11 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       <p class="text-[#B8A4C9] text-sm">
         © 2026 Luisa Corral - Coach Holística. Todos los derechos reservados.
       </p>
-      <div class="flex gap-6 text-sm">
+      <div class="flex gap-6 text-sm" style="flex-wrap:wrap;row-gap:.5rem;justify-content:center">
         <a href="/aviso-legal" class="text-[#B8A4C9] hover:text-white transition-colors">Aviso Legal</a>
         <a href="/politica-de-privacidad" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Privacidad</a>
         <a href="/politica-de-cookies" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Cookies</a>
+        <a href="#" onclick="lcOpenCookieBanner();return false;" class="text-[#B8A4C9] hover:text-white transition-colors">Configurar cookies</a>
       </div>
     </div>
   </div>

@@ -24,7 +24,7 @@
 </script>
 <script>
 function gtag_report_conversion_wa(){gtag("event","conversion",{"send_to":"AW-18254510015/NnuGCO7OhMocEL_vtoBE"});return true;}
-function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="undefined"){window.location=url;}};gtag("event","conversion",{"send_to":"AW-18254510015/8fJICI3NtMwcEL_vtoBE","value":1.0,"currency":"EUR","event_callback":cb});return false;}
+function gtag_report_conversion_tel(url){var done=false;var cb=function(){if(done)return;done=true;if(typeof(url)!="undefined"){window.location=url;}};gtag("event","conversion",{"send_to":"AW-18254510015/8fJICI3NtMwcEL_vtoBE","value":1.0,"currency":"EUR","event_callback":cb});setTimeout(cb,800);return false;}
 </script>
     <script src="/public/main.umd.js" defer=""></script>
     <meta charset="utf-8">
@@ -183,7 +183,7 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
     </div>
   </div>
 </header>
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 <section class="code-section py-16 bg-gradient-to-br from-[#FAF7FC] to-[#F0EAF7]" id="s2hzy7u">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 <nav class="site-breadcrumb mb-8" aria-label="Breadcrumb"><ol><li><a href="/">Inicio</a></li><li aria-hidden="true">/</li><li aria-current="page">Política de cookies</li></ol></nav>
@@ -213,37 +213,29 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
 
         <div>
           <h2 class="text-xl font-bold text-[#2D1B3D] mb-2">
-            2. Tipos de cookies que utilizamos
+            2. Qué cookies y tecnologías utilizamos
           </h2>
-          <ul class="list-disc pl-6 space-y-2 mt-2">
-            <li>
-              <strong>Cookies técnicas:</strong> Son aquellas necesarias para la
-              navegación y el funcionamiento del sitio web. Permiten, por
-              ejemplo, controlar el tráfico y la comunicación de datos.
-            </li>
-            <li>
-              <strong>Cookies de análisis:</strong> Nos permiten cuantificar el
-              número de usuarios y realizar mediciones y análisis estadísticos
-              de la utilización del sitio web.
-            </li>
-            <li>
-              <strong>Cookies de preferencias:</strong> Permiten recordar
-              información que cambia el aspecto o comportamiento del sitio web
-              (idioma, región, etc.).
-            </li>
-          </ul>
+          <p>
+            Esta web utiliza una tecnología técnica imprescindible para recordar
+            tu elección sobre las cookies y, <strong>solo si das tu
+            consentimiento</strong>, cookies de análisis (Google Analytics 4) y
+            de publicidad y medición de conversiones (Google Ads).
+          </p>
         </div>
 
         <div>
           <h2 class="text-xl font-bold text-[#2D1B3D] mb-2">
-            3. Cookies específicas utilizadas
+            3. Detalle de las cookies y del almacenamiento utilizados
           </h2>
           <div class="overflow-x-auto mt-4">
-            <table class="w-full text-sm border-collapse">
+            <style>
+@media (max-width:640px){.cookie-table,.cookie-table tbody,.cookie-table tr,.cookie-table td{display:block;width:100%}.cookie-table thead{display:none}.cookie-table tr{margin-bottom:1rem;border:1px solid #E5D9F2;border-radius:.75rem;overflow:hidden}.cookie-table td{border:0!important;border-bottom:1px solid #E5D9F2!important;padding:.5rem .75rem!important}.cookie-table td:last-child{border-bottom:0!important}.cookie-table td::before{content:attr(data-label);display:block;font-weight:700;color:#2D1B3D;font-size:.75rem;margin-bottom:.125rem}}
+</style>
+            <table class="cookie-table w-full text-sm border-collapse">
               <thead>
                 <tr class="bg-[#FAF7FC]">
                   <th class="text-left p-3 border border-[#E5D9F2] font-bold text-[#2D1B3D]">
-                    Cookie
+                    Nombre
                   </th>
                   <th class="text-left p-3 border border-[#E5D9F2] font-bold text-[#2D1B3D]">
                     Tipo
@@ -258,88 +250,105 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
               </thead>
               <tbody>
                 <tr>
-                  <td class="p-3 border border-[#E5D9F2]">session_id</td>
-                  <td class="p-3 border border-[#E5D9F2]">Técnica</td>
-                  <td class="p-3 border border-[#E5D9F2]">Sesión</td>
-                  <td class="p-3 border border-[#E5D9F2]">Gestión de sesión</td>
+                  <td data-label="Nombre" class="p-3 border border-[#E5D9F2]">lc-cookie-consent</td>
+                  <td data-label="Tipo" class="p-3 border border-[#E5D9F2]">Almacenamiento local (técnica)</td>
+                  <td data-label="Duración" class="p-3 border border-[#E5D9F2]">Persistente, hasta que la borres o cambies tu elección</td>
+                  <td data-label="Finalidad" class="p-3 border border-[#E5D9F2]">Recordar si has aceptado o rechazado las cookies. No identifica a la persona.</td>
                 </tr>
                 <tr>
-                  <td class="p-3 border border-[#E5D9F2]">cookies_consent</td>
-                  <td class="p-3 border border-[#E5D9F2]">Técnica</td>
-                  <td class="p-3 border border-[#E5D9F2]">1 año</td>
-                  <td class="p-3 border border-[#E5D9F2]">
-                    Recordar consentimiento
-                  </td>
+                  <td data-label="Nombre" class="p-3 border border-[#E5D9F2]">_ga, _ga_*</td>
+                  <td data-label="Tipo" class="p-3 border border-[#E5D9F2]">Analítica (Google Analytics 4)</td>
+                  <td data-label="Duración" class="p-3 border border-[#E5D9F2]">Hasta 2 años</td>
+                  <td data-label="Finalidad" class="p-3 border border-[#E5D9F2]">Medir de forma estadística cuántas personas visitan la web y qué páginas consultan. Solo se instalan si pulsas «Aceptar».</td>
+                </tr>
+                <tr>
+                  <td data-label="Nombre" class="p-3 border border-[#E5D9F2]">_gcl_au y otras de Google Ads</td>
+                  <td data-label="Tipo" class="p-3 border border-[#E5D9F2]">Publicidad / medición de conversiones (Google Ads)</td>
+                  <td data-label="Duración" class="p-3 border border-[#E5D9F2]">Hasta 90 días</td>
+                  <td data-label="Finalidad" class="p-3 border border-[#E5D9F2]">Saber si una visita que llega desde un anuncio termina en un contacto (por ejemplo, un clic en WhatsApp o en el teléfono). Solo se instalan si pulsas «Aceptar».</td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <p class="mt-4">
+            Las cookies de Google Analytics y Google Ads son de terceros:
+            las instala y gestiona Google. Más información en la
+            <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer nofollow" class="text-[#9B7EBD] hover:underline">política de cookies de Google</a>.
+          </p>
         </div>
 
         <div>
           <h2 class="text-xl font-bold text-[#2D1B3D] mb-2">
-            4. Cómo gestionar las cookies
+            4. Modo de consentimiento de Google (Consent Mode v2)
           </h2>
           <p>
-            Puede configurar su navegador para rechazar todas las cookies o para
-            recibir un aviso cuando se instala una cookie. La mayoría de los
-            navegadores permiten la gestión de cookies de las siguientes formas:
+            Esta web utiliza el modo de consentimiento de Google. Mientras no
+            pulses «Aceptar», Google Analytics y Google Ads funcionan con el
+            consentimiento denegado: no instalan cookies en tu dispositivo,
+            aunque Google puede recibir señales básicas sin cookies (por
+            ejemplo, que se ha cargado una página) para estimar estadísticas de
+            forma agregada. Si pulsas «Rechazar», se mantiene ese estado.
           </p>
-          <ul class="list-disc pl-6 space-y-2 mt-2">
-            <li>Denegar cookies para todos los sitios</li>
-            <li>Permitir solo cookies de sitios de confianza</li>
-            <li>Eliminar cookies específicas</li>
-          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-bold text-[#2D1B3D] mb-2">
+            5. Recursos de terceros que no instalan cookies
+          </h2>
+          <p>
+            Para mostrar las tipografías y los iconos, la web carga recursos de
+            Google Fonts y de Font Awesome. Estos servicios no instalan cookies,
+            pero, como cualquier servidor al que se conecta tu navegador,
+            reciben tu dirección IP para poder enviarte esos archivos.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-bold text-[#2D1B3D] mb-2">
+            6. Consentimiento y cómo cambiarlo o retirarlo
+          </h2>
+          <p>
+            La primera vez que visitas la web te mostramos un aviso para que
+            elijas entre «Aceptar» o «Rechazar». Las cookies de análisis y de
+            publicidad solo se instalan si pulsas «Aceptar»; navegar por la web
+            no supone aceptarlas.
+          </p>
           <p class="mt-2">
-            Tenga en cuenta que si desactiva las cookies, algunas
-            funcionalidades del sitio web pueden no funcionar correctamente.
+            Puedes cambiar o retirar tu consentimiento en cualquier momento, de
+            forma tan sencilla como lo diste, desde el enlace
+            <strong>«Configurar cookies»</strong> que encontrarás al pie de
+            todas las páginas: volverá a aparecer el aviso para que elijas de
+            nuevo.
           </p>
         </div>
 
         <div>
           <h2 class="text-xl font-bold text-[#2D1B3D] mb-2">
-            5. Cookies de terceros
+            7. Cómo gestionar las cookies desde tu navegador
           </h2>
           <p>
-            Este sitio web puede utilizar servicios de terceros que establecen
-            cookies cuando visita nuestro sitio web. Estos son:
-          </p>
-          <ul class="list-disc pl-6 space-y-2 mt-2">
-            <li>
-              <strong>Google Analytics:</strong> Para análisis de tráfico y
-              estadísticas de uso. Puede consultar la política de cookies de
-              Google
-              <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener noreferrer nofollow" class="text-[#9B7EBD] hover:underline">aquí</a>.
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h2 class="text-xl font-bold text-[#2D1B3D] mb-2">
-            6. Consentimiento
-          </h2>
-          <p>
-            Al continuar navegando en este sitio web, usted consiente el uso de
-            cookies en los términos establecidos en esta política. Puede revocar
-            su consentimiento en cualquier momento eliminando las cookies de su
-            navegador.
+            Además, puedes configurar tu navegador para bloquear o eliminar las
+            cookies y los datos de los sitios web. Ten en cuenta que borrar las
+            cookies no elimina tu elección guardada en el almacenamiento local:
+            para cambiarla, usa el enlace «Configurar cookies» o borra los
+            datos del sitio desde la configuración de tu navegador.
           </p>
         </div>
 
         <div>
           <h2 class="text-xl font-bold text-[#2D1B3D] mb-2">
-            7. Actualizaciones
+            8. Actualizaciones
           </h2>
           <p>
-            Esta política de cookies puede actualizarse periódicamente. Le
-            recomendamos que revise esta página para estar informado de
-            cualquier cambio.
+            Esta política de cookies puede actualizarse cuando cambien los
+            servicios que utiliza la web. Te recomendamos revisarla
+            periódicamente.
           </p>
         </div>
       </div>
 
       <p class="mt-8 text-sm text-[#6B5B7A]">
-        <strong>Última actualización:</strong> Febrero 2026
+        <strong>Última actualización:</strong> Noviembre de 2026
       </p>
     </div>
   </div>
@@ -490,14 +499,16 @@ function gtag_report_conversion_tel(url){var cb=function(){if(typeof(url)!="unde
       <p class="text-[#B8A4C9] text-sm">
         © 2026 Luisa Corral - Coach Holística. Todos los derechos reservados.
       </p>
-      <div class="flex gap-6 text-sm">
+      <div class="flex gap-6 text-sm" style="flex-wrap:wrap;row-gap:.5rem;justify-content:center">
         <a href="/aviso-legal" class="text-[#B8A4C9] hover:text-white transition-colors">Aviso Legal</a>
         <a href="/politica-de-privacidad" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Privacidad</a>
         <a href="/politica-de-cookies" class="text-[#B8A4C9] hover:text-white transition-colors">Política de Cookies</a>
+        <a href="#" onclick="lcOpenCookieBanner();return false;" class="text-[#B8A4C9] hover:text-white transition-colors">Configurar cookies</a>
       </div>
     </div>
   </div>
 </footer>
 <script defer="" src="/public/fontawesome-kit.js" crossorigin="anonymous"></script>
 <script src="/public/site-enhancements.js" defer></script>
+<!-- Texto actualizado nov-2026 por adecuación técnica; pendiente revisión jurídica -->
 </body></html>
